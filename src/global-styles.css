@@ -12,7 +12,7 @@
 
 body {
   background-color: var(--mantine-color-orangeBlack-0);
-  color: var(--mantine-color-fontDarkerWhite-0);
+  color: var(--mantine-color-fontWhite-0);
 }
 
 // image reset & make sure they are responsive

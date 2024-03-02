@@ -2,13 +2,10 @@ import { createTheme } from "@mantine/core";
 
 const mantineUItheme = createTheme({
   colors: {
-    orangePrimary: ["#ED592B"],
-    orangeDark: ["#8F2D0E"],
-    orangeLight: ["#FFD7C9"],
-    orangeBlack: ["#1D1C1B"],
+    orangeBrenta: ["#ED592B", "#8F2D0E", "#FFD7C9"],
+    orangeBlack: ["#1D1C1B", "#292520", "#372f25"],
     bluePrimary: ["#2BBFED"],
-    fontPureWhite: ["#FFFFFF"],
-    fontDarkerWhite: ["#E9E9E9"],
+    fontWhite: ["#E9E9E9", "#FFFFFF"],
   },
   primaryShade: { primaryShade: 0 },
   fontFamily: "Inter, sans serif",

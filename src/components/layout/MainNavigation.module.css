@@ -15,31 +15,24 @@
   color: var(--mantine-color-fontDarkerWhite-0);
   font-size: var(--mantine-font-size-sm);
   font-weight: 500;
+  cursor: pointer;
+}
 
+.primaryLink {
   @mixin hover {
-    background-color: light-dark(
-      var(--mantine-color-gray-0),
-      var(--mantine-color-dark-6)
-    );
+    background-color: var(--mantine-color-orangeBlack-0);
   }
 }
 
-.linkActive {
-    display: block;
-  line-height: 1;
-  padding: rem(8px) rem(12px);
-  border-radius: var(--mantine-radius-sm);
-  text-decoration: underline;
-  color: var(--mantine-color-fontDarkerWhite-0);
-  font-size: var(--mantine-font-size-sm);
-  font-weight: 500;
-
-  @mixin hover {
-    background-color: light-dark(
-      var(--mantine-color-gray-0),
-      var(--mantine-color-dark-6)
-    );
-  }
+.navMobile {
+  background-color: alpha(var(--mantine-color-orangeBlack-0),0.5);
+  backdrop-filter: blur(10px);
+  width:100vw;
+  height:100vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-top: rem(56px);
 }
 
 .linkLabel {

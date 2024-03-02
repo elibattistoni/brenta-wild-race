@@ -1,15 +1,25 @@
-import { Menu, Group, Center, Burger, Container } from "@mantine/core";
-import { useDisclosure } from "@mantine/hooks";
+import {
+  Menu,
+  Group,
+  Center,
+  Burger,
+  Container,
+  Stack,
+  Portal,
+  em,
+} from "@mantine/core";
+import { useDisclosure, useMediaQuery } from "@mantine/hooks";
 import { IconChevronDown } from "@tabler/icons-react";
 import classes from "./MainNavigation.module.css";
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
 
-const links = [
+const linksArray = [
   { link: "/", label: "Home" },
   {
-    link: "/gara",
     label: "Gara",
     links: [
+      { link: "/gara", label: "Panoramica" },
       { link: "/gara/percorso-varianti", label: "Percorso e Varianti" },
       { link: "/gara/programma", label: "Programma" },
       { link: "/gara/regolamento", label: "Regolamento" },
@@ -23,41 +33,59 @@ const links = [
 ];
 
 const MainNavigation = () => {
-  const [opened, { toggle }] = useDisclosure(false);
+  const [portalOpened, { toggle: togglePortal }] = useDisclosure(false);
 
-  const items = links.map((link) => {
-    const menuItems = link.links?.map((item) => (
-      <Menu.Item key={item.link}>
-        <NavLink to={item.link} className={classes.link} end>
-          <span className={link.linkLabel}>{item.label}</span>
-        </NavLink>
-      </Menu.Item>
-    ));
+  const isMobile = useMediaQuery(`(max-width: ${em(768)})`);
 
-    if (menuItems) {
+  const closePortalHandler = () => {
+    if (isMobile) {
+      togglePortal();
+    }
+  };
+
+  const navItems = linksArray.map((navItem) => {
+    // check if sub-items
+    if (navItem.links) {
+      const navSubItems = navItem.links?.map((subItem) => (
+        <Menu.Item key={subItem.link}>
+          <NavLink
+            to={subItem.link}
+            className={classes.link}
+            end
+            onClick={closePortalHandler}
+          >
+            <span className={classes.linkLabel}>{subItem.label}</span>
+          </NavLink>
+        </Menu.Item>
+      ));
+
       return (
         <Menu
-          key={link.label}
-          trigger="hover"
+          key={navItem.label}
+          trigger="click"
           transitionProps={{ exitDuration: 0 }}
-          withinPortal
+          withinPortal={false}
         >
-          <Menu.Target>
-            <NavLink to={link.link} className={classes.link} end>
-              <Center>
-                <span className={classes.linkLabel}>{link.label}</span>
-                <IconChevronDown size="0.9rem" stroke={1.5} />
-              </Center>
-            </NavLink>
+          <Menu.Target className={`${classes.link} ${classes.primaryLink}`}>
+            <Center>
+              <span className={classes.linkLabel}>{navItem.label}</span>
+              <IconChevronDown size="0.9rem" stroke={1.5} />
+            </Center>
           </Menu.Target>
-          <Menu.Dropdown>{menuItems}</Menu.Dropdown>
+          <Menu.Dropdown>{navSubItems}</Menu.Dropdown>
         </Menu>
       );
     }
 
     return (
-      <NavLink key={link.label} to={link.link} className={classes.link} end>
-        <span className={classes.linkLabel}>{link.label}</span>
+      <NavLink
+        key={navItem.label}
+        to={navItem.link}
+        className={`${classes.link} ${classes.primaryLink}`}
+        end
+        onClick={closePortalHandler}
+      >
+        <span className={classes.linkLabel}>{navItem.label}</span>
       </NavLink>
     );
   });
@@ -70,9 +98,25 @@ const MainNavigation = () => {
         style={{ width: "100%" }}
         visibleFrom="sm"
       >
-        {items}
+        {navItems}
       </Group>
-      <Burger opened={opened} onClick={toggle} size="sm" hiddenFrom="sm" />
+      {portalOpened && (
+        <Portal>
+          <div className={classes.navMobile}>
+            <Stack justify="center" align="center">
+              {navItems}
+            </Stack>
+          </div>
+        </Portal>
+      )}
+      <Burger
+        opened={portalOpened}
+        onClick={togglePortal}
+        size="sm"
+        hiddenFrom="sm"
+        aria-label="Toggle navigation"
+        style={{ zIndex: 1 }}
+      />
     </nav>
   );
 };

@@ -4,7 +4,7 @@ import EditionsHomePage from "./pages/editions/EditionsHomePage";
 import SponsorsPage from "./pages/SponsorsPage";
 import AboutPage from "./pages/AboutPage";
 import ErrorPage from "./pages/ErrorPage";
-import RootLayout from "./components/RootLayout";
+import RootLayout from "./components/layout/RootLayout";
 import TrailPathVariantsPage from "./pages/trail/TrailPathVariantsPage";
 import TrailPrizesPage from "./pages/trail/TrailPrizesPage";
 import TrailProgramPage from "./pages/trail/TrailProgramPage";

@@ -72,7 +72,9 @@ const MainNavigation = () => {
               <IconChevronDown size="0.9rem" stroke={1.5} />
             </Center>
           </Menu.Target>
-          <Menu.Dropdown>{navSubItems}</Menu.Dropdown>
+          <Menu.Dropdown className={classes.dropdown}>
+            {navSubItems}
+          </Menu.Dropdown>
         </Menu>
       );
     }

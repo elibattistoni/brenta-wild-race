@@ -1,16 +1,10 @@
 import { Outlet } from "react-router-dom";
+import MainNavigation from "./MainNavigation";
 
 const RootLayout = () => {
   return (
     <>
-      <nav>
-        <ul>
-          <li>ZERO</li>
-          <li>UNO</li>
-          <li>DUE</li>
-          <li>TRE</li>
-        </ul>
-      </nav>
+      <MainNavigation />
       <main>
         <Outlet />
       </main>

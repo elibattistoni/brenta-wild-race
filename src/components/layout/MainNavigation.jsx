@@ -1,36 +1,9 @@
-import {
-  Menu,
-  Group,
-  Center,
-  Burger,
-  Container,
-  Stack,
-  Portal,
-  em,
-} from "@mantine/core";
+import { Menu, Group, Center, Burger, Stack, Portal, em } from "@mantine/core";
 import { useDisclosure, useMediaQuery } from "@mantine/hooks";
 import { IconChevronDown } from "@tabler/icons-react";
 import classes from "./MainNavigation.module.css";
 import { NavLink } from "react-router-dom";
-import { useState } from "react";
-
-const linksArray = [
-  { link: "/", label: "Home" },
-  {
-    label: "Gara",
-    links: [
-      { link: "/gara", label: "Panoramica" },
-      { link: "/gara/percorso-varianti", label: "Percorso e Varianti" },
-      { link: "/gara/programma", label: "Programma" },
-      { link: "/gara/regolamento", label: "Regolamento" },
-      { link: "/gara/montepremi", label: "Montepremi" },
-      { link: "/gara/iscrizione", label: "Iscrizione" },
-    ],
-  },
-  { link: "/edizioni", label: "Edizioni" },
-  { link: "/sponsor", label: "Sponsor" },
-  { link: "/contatti", label: "Contatti" },
-];
+import { mainNavPaths } from "../../utils/paths";
 
 const MainNavigation = () => {
   const [portalOpened, { toggle: togglePortal }] = useDisclosure(false);
@@ -43,7 +16,7 @@ const MainNavigation = () => {
     }
   };
 
-  const navItems = linksArray.map((navItem) => {
+  const navItems = mainNavPaths.map((navItem) => {
     // check if sub-items
     if (navItem.links) {
       const navSubItems = navItem.links?.map((subItem) => (

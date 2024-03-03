@@ -1,9 +1,19 @@
-import { Menu, Group, Center, Burger, Stack, Portal, em } from "@mantine/core";
+import {
+  Menu,
+  Group,
+  Center,
+  Burger,
+  Stack,
+  Portal,
+  em,
+  rem,
+} from "@mantine/core";
 import { useDisclosure, useMediaQuery } from "@mantine/hooks";
 import { IconChevronDown } from "@tabler/icons-react";
 import classes from "./MainNavigation.module.css";
 import { NavLink } from "react-router-dom";
 import { mainNavPaths } from "../../utils/paths";
+import BrentaWRLogo from "../../assets/brentawildracelogo.svg?react";
 
 const MainNavigation = () => {
   const [portalOpened, { toggle: togglePortal }] = useDisclosure(false);
@@ -67,6 +77,9 @@ const MainNavigation = () => {
 
   return (
     <nav className={classes.nav}>
+      <NavLink to="/" style={{ paddingTop: rem(8) }}>
+        <BrentaWRLogo className={classes.logo} />
+      </NavLink>
       <Group
         gap={5}
         justify="flex-end"

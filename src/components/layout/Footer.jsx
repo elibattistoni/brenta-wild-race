@@ -31,7 +31,7 @@ const Footer = () => {
         {footerLinks}
       </Container>
       <Container className={classes.afterFooter}>
-        <Text c="dimmed" size="sm">
+        <Text c="dimmed" size="xs">
           © 2024 - www.brentawildrace.it - Associazione Sportiva K40 - 38010 -
           Campodenno (TN) - Tutti i diritti riservati
         </Text>
@@ -47,20 +47,14 @@ const Footer = () => {
             color="var(--mantine-color-orangeBrenta-0)"
             variant="subtle"
           >
-            <IconBrandFacebook
-              style={{ width: rem(18), height: rem(18) }}
-              stroke={1.5}
-            />
+            <IconBrandFacebook className={classes.icons} stroke={1.5} />
           </ActionIcon>
           <ActionIcon
             size="lg"
             color="var(--mantine-color-orangeBrenta-0)"
             variant="subtle"
           >
-            <IconBrandInstagram
-              style={{ width: rem(18), height: rem(18) }}
-              stroke={1.5}
-            />
+            <IconBrandInstagram className={classes.icons} stroke={1.5} />
           </ActionIcon>
         </Group>
       </Container>

@@ -20,7 +20,7 @@
 }
 
 .title {
-  font-size: var(--mantine-font-size-sm);
+  font-size: var(--mantine-font-size-xs);
   font-weight: 600;
   margin-bottom: calc(var(--mantine-spacing-xs) / 2);
   color: var(--mantine-color-fontWhite-0);
@@ -29,7 +29,7 @@
 .link {
   display: block;
   color: var(--mantine-color-fontWhite-0);
-  font-size: var(--mantine-font-size-sm);
+  font-size: var(--mantine-font-size-xs);
   padding-top: rem(3px);
   padding-bottom: rem(3px);
   text-decoration: none;
@@ -46,6 +46,7 @@
   @media (max-width: $mantine-breakpoint-sm) {
     flex-direction: column;
     align-items: center;
+    gap: rem(24px);
   }
 }
 
@@ -64,5 +65,16 @@
 .social {
   @media (max-width: $mantine-breakpoint-sm) {
     margin-top: var(--mantine-spacing-xs);
+    gap:rem(24px) !important
+  }
+}
+
+.icons {
+  width: rem(18px);
+  height: rem(18px);
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    width: rem(24px);
+    height: rem(24px);
   }
 }

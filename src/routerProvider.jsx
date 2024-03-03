@@ -10,6 +10,7 @@ import TrailPrizesPage from "./pages/trail/TrailPrizesPage";
 import TrailProgramPage from "./pages/trail/TrailProgramPage";
 import TrailRegistrationPage from "./pages/trail/TrailRegistrationPage";
 import TrailRulesPage from "./pages/trail/TrailRulesPage";
+import EditionsDetailsPage from "./pages/editions/EditionDetailsPage";
 
 import { createBrowserRouter } from "react-router-dom";
 
@@ -35,6 +36,7 @@ const routeDefinitions = [
         ],
       },
       { path: "/edizioni", element: <EditionsHomePage /> },
+      { path: "/edizioni/:year", element: <EditionsDetailsPage /> },
       { path: "/sponsor", element: <SponsorsPage /> },
       { path: "/contatti", element: <AboutPage /> },
     ],

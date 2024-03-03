@@ -8,9 +8,11 @@ const ErrorPage = () => {
   return (
     <>
       <MainNavigation />
-      <div>ErrorPage -- under construction</div>
-      <div>{error.status}</div>
-      <div>{error.statusText}</div>
+      <main style={{ minHeight: "100vh" }}>
+        <div>ErrorPage -- under construction</div>
+        <div>{error.status}</div>
+        <div>{error.statusText}</div>
+      </main>
       <Footer />
     </>
   );

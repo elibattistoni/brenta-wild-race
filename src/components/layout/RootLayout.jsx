@@ -6,7 +6,7 @@ const RootLayout = () => {
   return (
     <>
       <MainNavigation />
-      <main>
+      <main style={{ minHeight: "100vh" }}>
         <Outlet />
       </main>
       <Footer />

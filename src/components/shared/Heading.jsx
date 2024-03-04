@@ -1,13 +1,14 @@
 import { Container, Title, rem } from "@mantine/core";
+import classes from "./Heading.module.css";
 
 const Heading = ({ subtitle, title }) => {
   return (
     <Container fluid mt="xl">
       <header>
-        <Title order={5} pl={rem(2)}>
+        <Title order={5} className={classes.subtitle}>
           {subtitle}
         </Title>
-        <Title order={2} c="orangeBrenta.0">
+        <Title order={2} className={classes.title}>
           {title}
         </Title>
       </header>

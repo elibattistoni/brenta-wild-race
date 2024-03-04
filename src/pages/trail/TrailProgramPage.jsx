@@ -12,19 +12,7 @@ import {
 } from "@mantine/core";
 import MountainDrawing from "../../assets/program-mountain.svg?react";
 import classes from "./TrailProgramPage.module.css";
-
-const Heading = ({ subtitle, title }) => {
-  return (
-    <Container fluid mt="xl">
-      <header>
-        <Title order={5}>{subtitle}</Title>
-        <Title order={2} c="orangeBrenta.0">
-          {title}
-        </Title>
-      </header>
-    </Container>
-  );
-};
+import Heading from "../../components/shared/Heading";
 
 const ProgramDayDate = ({ day, date }) => {
   return (

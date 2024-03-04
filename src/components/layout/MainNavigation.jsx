@@ -7,6 +7,7 @@ import {
   Portal,
   em,
   rem,
+  Text,
 } from "@mantine/core";
 import { useDisclosure, useMediaQuery } from "@mantine/hooks";
 import { IconChevronDown } from "@tabler/icons-react";
@@ -37,7 +38,9 @@ const MainNavigation = () => {
             end
             onClick={closePortalHandler}
           >
-            <span className={classes.linkLabel}>{subItem.label}</span>
+            <Text mr={rem(5)} size="md">
+              {subItem.label}
+            </Text>
           </NavLink>
         </Menu.Item>
       ));
@@ -51,7 +54,9 @@ const MainNavigation = () => {
         >
           <Menu.Target className={`${classes.link} ${classes.primaryLink}`}>
             <Center>
-              <span className={classes.linkLabel}>{navItem.label}</span>
+              <Text mr={rem(5)} size="md">
+                {navItem.label}
+              </Text>
               <IconChevronDown size="0.9rem" stroke={1.5} />
             </Center>
           </Menu.Target>
@@ -70,7 +75,9 @@ const MainNavigation = () => {
         end
         onClick={closePortalHandler}
       >
-        <span className={classes.linkLabel}>{navItem.label}</span>
+        <Text mr={rem(5)} size="md">
+          {navItem.label}
+        </Text>
       </NavLink>
     );
   });

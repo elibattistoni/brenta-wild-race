@@ -3,7 +3,6 @@ import { IconBrandInstagram, IconBrandFacebook } from "@tabler/icons-react";
 import classes from "./Footer.module.css";
 import { footerPaths } from "../../utils/paths";
 import { NavLink } from "react-router-dom";
-// import { ReactComponent as BrentaWRLogo } from "../../assets/brentawildracelogo.svg";
 import BrentaWRLogo from "../../assets/brentawildracelogo.svg?react";
 
 const Footer = () => {

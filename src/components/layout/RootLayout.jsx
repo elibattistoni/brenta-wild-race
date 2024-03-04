@@ -5,10 +5,12 @@ import Footer from "./Footer";
 const RootLayout = () => {
   return (
     <>
-      <MainNavigation />
-      <main style={{ minHeight: "100vh" }}>
-        <Outlet />
-      </main>
+      <div style={{ maxWidth: "1700px", margin: "0 auto" }}>
+        <MainNavigation />
+        <main style={{ minHeight: "100vh" }}>
+          <Outlet />
+        </main>
+      </div>
       <Footer />
     </>
   );

@@ -6,6 +6,7 @@ import classes from "./ErrorPage.module.css";
 
 const ErrorPage = () => {
   const error = useRouteError();
+  console.log(error);
 
   return (
     <>
@@ -13,19 +14,19 @@ const ErrorPage = () => {
       <main className={classes.main}>
         <Container className={classes.container} pt="xl">
           <Text size="lg" pt="xl">
-            OOOPS!
+            {error.status ? "OOOPS!" : "ATTENZIONE"}
           </Text>
           <Title order={1} c="orangeBrenta.0" pt="xs" pb="xs">
-            {error.status}
+            {error.status ?? "OOOPS!"}
           </Title>
           <Text size="sm" pb="xl">
-            {error.statusText}
+            {error.statusText ?? "Something went wrong."}
           </Text>
           <Text size="lg" pt="xl">
             Qualcosa è andato storto.
           </Text>
           <Text size="lg" pt="xs" pb="xl">
-            Mi sa che hai sbagliato sentiero. Ti tocca tornare alla partenza!
+            Mi sa che hai sbagliato sentiero. Ti tocca tornare alla partenza! :)
           </Text>
           <NavLink to="/" className={classes.link}>
             Home

@@ -7,6 +7,7 @@ import { IconBrandInstagram, IconBrandFacebook } from "@tabler/icons-react";
 import PageSectionTitle from "../components/shared/PageSectionTitle";
 import { NavLink } from "react-router-dom";
 import classes from "./AboutPage.module.css";
+import HighlightedText from "../components/shared/HighlightedText";
 
 const iconStyle = {
   width: rem(64),
@@ -22,8 +23,8 @@ const AboutPage = () => {
       <PageContainer>
         <PageSection>
           <ParagraphText>
-            <span className="highlight">Gruppo Sportivo K40</span> - via
-            Pontevecchio, 38010 Campodenno (TN)
+            <HighlightedText text="Gruppo Sportivo K40" /> - via Pontevecchio,
+            38010 Campodenno (TN)
           </ParagraphText>
           <Stack gap={rem(4)}>
             <Text>Presidente: Antonio - 338 5205357</Text>
@@ -31,7 +32,7 @@ const AboutPage = () => {
             <Text>Info iscrizioni: Danilo - 335 1240212</Text>
           </Stack>
           <ParagraphText>
-            email: <span className="highlight">info@brentawildrace.it</span>
+            email: <HighlightedText text="info@brentawildrace.it" />
           </ParagraphText>
           <Flex gap={rem(24)}>
             <Stack gap={rem(1)} align="center">
@@ -53,7 +54,7 @@ const AboutPage = () => {
                   to="https://www.trifogliovaldinon.com/"
                   className={classes.link}
                 >
-                  <span className="highlight">B&B Al Trifoglio</span>
+                  <HighlightedText text="B&B Al Trifoglio" />
                 </NavLink>{" "}
                 - Lover di Campodenno
               </ParagraphText>
@@ -64,7 +65,7 @@ const AboutPage = () => {
                   to="https://www.airbnb.it/rooms/4636190?source_impression_id=p3_1709671572_gB%2BPVW68fdxsCn5k"
                   className={classes.link}
                 >
-                  <span className="highlight">Agrihouse</span>
+                  <HighlightedText text="Agrihouse" />
                 </NavLink>
                 - Dercolo di Campodenno
               </ParagraphText>
@@ -75,7 +76,7 @@ const AboutPage = () => {
                   to="https://www.beblacasadelsoletrentino.com/"
                   className={classes.link}
                 >
-                  <span className="highlight">B&B Casa del sole</span>
+                  <HighlightedText text="B&B Casa del sole" />
                 </NavLink>{" "}
                 - Campodenno
               </ParagraphText>
@@ -86,7 +87,7 @@ const AboutPage = () => {
                   to="http://www.casadellefate.it/"
                   className={classes.link}
                 >
-                  <span className="highlight">B&B Casa delle Fate</span>
+                  <HighlightedText text="B&B Casa delle Fate" />
                 </NavLink>
                 - Termon di Campodenno
               </ParagraphText>
@@ -97,7 +98,7 @@ const AboutPage = () => {
                   to="https://www.goldenpause.it/"
                   className={classes.link}
                 >
-                  <span className="highlight">Agritur Golden Pause</span>
+                  <HighlightedText text="Agritur Golden Pause" />
                 </NavLink>
                 - Toss di Ton
               </ParagraphText>

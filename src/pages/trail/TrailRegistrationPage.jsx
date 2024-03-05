@@ -8,18 +8,19 @@ import PageSection from "../../components/shared/PageSection";
 import PageSectionTitle from "../../components/shared/PageSectionTitle";
 import ParagraphText from "../../components/shared/ParagraphText";
 import BlueTitleMedium from "../../components/shared/BlueTitleMedium";
+import HighlightedText from "../../components/shared/HighlightedText";
 
 const InfoDetails = () => {
   return (
     <>
       <ParagraphText>
-        La gara <span className="highlight">Brenta Wild Race</span> si terrà il
-        giorno Domenica <span className="highlight">07/07/2024</span>.
+        La gara <HighlightedText text="Brenta Wild Race" /> si terrà il giorno
+        Domenica <HighlightedText text="07/07/2024" />.
       </ParagraphText>
       <ParagraphText>
-        Le <span className="highlight">iscrizioni</span> si aprono il giorno{" "}
-        <span className="highlight">15/03/2024</span> e si chiudono il giorno{" "}
-        <span className="highlight">02/07/2024</span>.
+        Le <HighlightedText text="iscrizioni" /> si aprono il giorno{" "}
+        <HighlightedText text="15/03/2024" /> e si chiudono il giorno{" "}
+        <HighlightedText text="02/07/2024" />.
       </ParagraphText>
       <Alert
         variant="outline"
@@ -62,9 +63,8 @@ const RegistrationInstructions = () => {
     <>
       <ParagraphText>
         E’ possibile iscriversi cliccando sul bottone “Iscriviti” qui sotto: si
-        verrà reindirizzati al sito di{" "}
-        <span className="highlight">Wedosport</span>, nostro partner in
-        iscrizioni e cronometraggio.
+        verrà reindirizzati al sito di <HighlightedText text="Wedosport" />,
+        nostro partner in iscrizioni e cronometraggio.
       </ParagraphText>
       <ButtonPrimary text="Iscriviti" style={{ alignSelf: "flex-start" }} />
     </>

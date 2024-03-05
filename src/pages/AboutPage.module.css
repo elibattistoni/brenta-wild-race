@@ -1,0 +1,13 @@
+.link {
+    text-decoration: undeline;
+    text-decoration-color:var(--mantine-color-bluePrimary-0);
+    text-underline-offset: em(4);
+    color: var(--mantine-color-fontWhite-0);
+    font-size: rem(18px);
+    text-decoration-thickness: 0.2px;
+
+  
+    @mixin hover {
+      text-decoration-thickness: 2px
+    }
+  }

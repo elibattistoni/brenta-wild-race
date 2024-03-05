@@ -1,0 +1,7 @@
+.button {
+  background: radial-gradient(at center, var(--mantine-color-orangeBrenta-1), var(--mantine-color-orangeBrenta-0));
+  -webkit-box-shadow: 1px 1px 4px 2px hsla(14, 48%, 32%, 0.7);
+  box-shadow: 1px 1px 4px 2px hsla(14, 48%, 32%, 0.7);
+  border-radius: rem(8px);
+  font-size:var(--mantine-font-size-lg);
+}

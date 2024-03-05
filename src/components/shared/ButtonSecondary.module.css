@@ -1,0 +1,9 @@
+.button {
+  background: transparent;
+  border-radius: rem(8px);
+  border: 1px solid var(--mantine-color-orangeBrenta-2) !important;
+  color: var(--mantine-color-orangeBrenta-2);
+  font-size: var(--mantine-font-size-lg);
+  -webkit-box-shadow: 1px 1px 4px 2px rgba(208, 179, 168, 0.35);
+  box-shadow: 1px 1px 4px 2px rgba(208, 179, 168, 0.35);
+}

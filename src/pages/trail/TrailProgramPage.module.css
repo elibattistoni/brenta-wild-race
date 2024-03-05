@@ -44,16 +44,23 @@
 
   svg {
     width: rem(320px);
+    height: rem(203px);
 
     @media (max-width: $mantine-breakpoint-sm) {
       width: rem(240px);
+      height: rem(152px);
     }
     @media (max-width: $mantine-breakpoint-xs) {
       width: rem(200px);
+      height: rem(127px);
     }
   }
 
   @media (max-width: $mantine-breakpoint-md) {
     margin-top: 0px;
+  }
+
+  @media (max-width: $mantine-breakpoint-md) {
+    margin-top: rem(12px);
   }
 }

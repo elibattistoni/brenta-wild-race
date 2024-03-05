@@ -1,6 +1,6 @@
 import { createTheme, rem } from "@mantine/core";
 
-const fontWeights = {
+export const fontWeights = {
   thin: 100,
   extraLight: 200,
   light: 300,
@@ -10,6 +10,15 @@ const fontWeights = {
   bold: 700,
   extraBold: 800,
   black: 900,
+};
+
+export const fontSizesTitles = {
+  fontSizeh1_128px: rem(128),
+  fontSizeh2_88px: rem(88),
+  fontSizeh3_48px: rem(48),
+  fontSizeh4_40px: rem(40),
+  fontSizeh5_36px: rem(36),
+  fontSizeh6_32px: rem(32),
 };
 
 const mantineUItheme = createTheme({
@@ -24,32 +33,32 @@ const mantineUItheme = createTheme({
   headings: {
     sizes: {
       h1: {
-        fontSize: rem(128),
+        fontSize: fontSizesTitles.fontSizeh1_128px,
         fontWeight: fontWeights.extraBold,
         lineHeight: "90%",
       },
       h2: {
-        fontSize: rem(88),
+        fontSize: fontSizesTitles.fontSizeh2_88px,
         fontWeight: fontWeights.extraBold,
         lineHeight: "90%",
       },
       h3: {
-        fontSize: rem(48),
+        fontSize: fontSizesTitles.fontSizeh3_48px,
         fontWeight: fontWeights.semiBold,
         lineHeight: "90%",
       },
       h4: {
-        fontSize: rem(40),
+        fontSize: fontSizesTitles.fontSizeh4_40px,
         fontWeight: fontWeights.medium,
         lineHeight: "90%",
       },
       h5: {
-        fontSize: rem(36),
+        fontSize: fontSizesTitles.fontSizeh5_36px,
         fontWeight: fontWeights.semiBold,
         lineHeight: "90%",
       },
       h6: {
-        fontSize: rem(32),
+        fontSize: fontSizesTitles.fontSizeh6_32px,
         fontWeight: fontWeights.medium,
         lineHeight: "90%",
       },
@@ -57,6 +66,26 @@ const mantineUItheme = createTheme({
   },
   other: {
     fontWeights,
+  },
+});
+
+export const resolver = (theme) => ({
+  variables: {
+    "--mantine-fw-thin": theme.other.fontWeights.thin,
+    "--mantine-fw-extralight": theme.other.fontWeights.extraLight,
+    "--mantine-fw-light": theme.other.fontWeights.light,
+    "--mantine-fw-normal": theme.other.fontWeights.normal,
+    "--mantine-fw-medium": theme.other.fontWeights.medium,
+    "--mantine-fw-semibold": theme.other.fontWeights.semiBold,
+    "--mantine-fw-bold": theme.other.fontWeights.bold,
+    "--mantine-fw-extrabold": theme.other.fontWeights.extraBold,
+    "--mantine-fw-black": theme.other.fontWeights.black,
+    "--mantine-fst-h1-128px": theme.other.fontSizeh1_128px,
+    "--mantine-fst-h2-88px": theme.other.fontSizeh2_88px,
+    "--mantine-fst-h3-48px": theme.other.fontSizeh3_48px,
+    "--mantine-fst-h4-40px": theme.other.fontSizeh4_40px,
+    "--mantine-fst-h5-36px": theme.other.fontSizeh5_36px,
+    "--mantine-fst-h6-32px": theme.other.fontSizeh6_32px,
   },
 });
 

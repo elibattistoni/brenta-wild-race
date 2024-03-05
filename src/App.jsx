@@ -1,11 +1,15 @@
 import { RouterProvider } from "react-router-dom";
 import routerProvider from "./routerProvider";
 import { MantineProvider } from "@mantine/core";
-import mantineUItheme from "./mantineUItheme";
+import mantineUItheme, { resolver } from "./mantineUITheme";
 
 function App() {
   return (
-    <MantineProvider theme={mantineUItheme} forceColorScheme="dark">
+    <MantineProvider
+      theme={mantineUItheme}
+      forceColorScheme="dark"
+      cssVariablesResolver={resolver}
+    >
       <RouterProvider router={routerProvider} />
     </MantineProvider>
   );

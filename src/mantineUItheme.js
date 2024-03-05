@@ -1,6 +1,6 @@
 import { createTheme, rem } from "@mantine/core";
 
-export const fontWeights = {
+const fontWeights = {
   thin: 100,
   extraLight: 200,
   light: 300,
@@ -12,7 +12,7 @@ export const fontWeights = {
   black: 900,
 };
 
-export const fontSizesTitles = {
+const fontSizesTitles = {
   fontSizeh1_128px: rem(128),
   fontSizeh2_88px: rem(88),
   fontSizeh3_48px: rem(48),
@@ -66,6 +66,7 @@ const mantineUItheme = createTheme({
   },
   other: {
     fontWeights,
+    fontSizesTitles,
   },
 });
 

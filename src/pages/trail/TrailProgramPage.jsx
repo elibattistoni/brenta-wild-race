@@ -1,28 +1,16 @@
-import { Container, Flex, Space, Stack, Text, Title, em } from "@mantine/core";
+import { Container, Flex, Space, Stack, Text, em } from "@mantine/core";
 import MountainDrawing from "../../assets/program-mountain.svg?react";
 import classes from "./TrailProgramPage.module.css";
 import Heading from "../../components/shared/Heading";
-import { fontSizesTitles, fontWeights } from "../../mantineUITheme";
 import { useMediaQuery } from "@mantine/hooks";
 import PageContainer from "../../components/shared/PageContainer";
+import BlueTitle from "../../components/shared/BlueTitle";
 
 const ProgramDayDate = ({ day, date }) => {
   return (
     <Stack align="center" gap={0}>
       <Text>{day}</Text>
-      {/* <Title order={4} c="bluePrimary.0" className={classes.titleDate}> */}
-      <Title
-        order={4}
-        fz={{
-          base: fontSizesTitles.fontSizeh6_32px,
-          sm: fontSizesTitles.fontSizeh5_36px,
-          md: fontSizesTitles.fontSizeh4_40px,
-        }}
-        fw={fontWeights.medium}
-        c="bluePrimary.0"
-      >
-        {date}
-      </Title>
+      <BlueTitle text={date} />
     </Stack>
   );
 };

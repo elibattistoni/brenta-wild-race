@@ -1,6 +1,6 @@
 import { Title, useMantineTheme } from "@mantine/core";
 
-const BlueTitle = ({ text }) => {
+const BlueTitleLarge = ({ text }) => {
   const theme = useMantineTheme();
 
   return (
@@ -18,4 +18,4 @@ const BlueTitle = ({ text }) => {
   );
 };
 
-export default BlueTitle;
+export default BlueTitleLarge;

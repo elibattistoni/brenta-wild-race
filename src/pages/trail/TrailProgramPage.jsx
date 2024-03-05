@@ -4,13 +4,13 @@ import classes from "./TrailProgramPage.module.css";
 import Heading from "../../components/shared/Heading";
 import { useMediaQuery } from "@mantine/hooks";
 import PageContainer from "../../components/shared/PageContainer";
-import BlueTitle from "../../components/shared/BlueTitle";
+import BlueTitleLarge from "../../components/shared/BlueTitleLarge";
 
 const ProgramDayDate = ({ day, date }) => {
   return (
     <Stack align="center" gap={0}>
       <Text>{day}</Text>
-      <BlueTitle text={date} />
+      <BlueTitleLarge text={date} />
     </Stack>
   );
 };

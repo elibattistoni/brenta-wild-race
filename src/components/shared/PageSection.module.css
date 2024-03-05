@@ -1,0 +1,6 @@
+section {
+  margin-bottom: rem(72px);
+  display: flex;
+  flex-direction: column;
+  gap: rem(20px);
+}

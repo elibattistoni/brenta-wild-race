@@ -1,13 +1,14 @@
 import Heading from "../components/shared/Heading";
 import { Container, Text } from "@mantine/core";
+import PageContainer from "../components/shared/PageContainer";
 
 const HomePage = () => {
   return (
     <>
       <Heading title="HOME" subtitle="HOME" />
-      <Container fluid mt="xl">
+      <PageContainer>
         <Text size="xl">Pagina in costruzione. Stay Tuned!</Text>
-      </Container>
+      </PageContainer>
     </>
   );
 };

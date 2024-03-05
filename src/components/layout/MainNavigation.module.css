@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: flex-end;
   padding: 0 rem(12px);
+  margin-top:rem(12px);
   @media (max-width: $mantine-breakpoint-sm) {
     justify-content: space-between;
   }

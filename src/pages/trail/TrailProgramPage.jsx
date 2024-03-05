@@ -1,18 +1,10 @@
-import {
-  Container,
-  Flex,
-  Space,
-  Stack,
-  Text,
-  Title,
-  em,
-  rem,
-} from "@mantine/core";
+import { Container, Flex, Space, Stack, Text, Title, em } from "@mantine/core";
 import MountainDrawing from "../../assets/program-mountain.svg?react";
 import classes from "./TrailProgramPage.module.css";
 import Heading from "../../components/shared/Heading";
 import { fontSizesTitles, fontWeights } from "../../mantineUITheme";
 import { useMediaQuery } from "@mantine/hooks";
+import PageContainer from "../../components/shared/PageContainer";
 
 const ProgramDayDate = ({ day, date }) => {
   return (
@@ -50,12 +42,11 @@ const HourScheduleGroup = ({ hour, text }) => {
 };
 
 const TrailProgramPage = () => {
-  const isXXS = useMediaQuery(`(max-width: ${em(400)})`);
-  console.log("isXXS", isXXS);
+  const isXXS = useMediaQuery(`(max-width: ${em(420)})`);
   return (
     <>
       <Heading subtitle="LA GARA" title="PROGRAMMA" />
-      <Container fluid className={classes.flexContainer}>
+      <PageContainer>
         <Flex className={classes.flex}>
           <Container fluid>
             <Stack className={classes.stack}>
@@ -64,7 +55,7 @@ const TrailProgramPage = () => {
                 hour="16:00 - 18:00"
                 text="Distribuzione pettorali"
               />
-              <Container className={classes.containerMountain}>
+              <Container className={classes.mountain}>
                 <MountainDrawing />
               </Container>
             </Stack>
@@ -99,7 +90,7 @@ const TrailProgramPage = () => {
             </Stack>
           </Container>
         </Flex>
-      </Container>
+      </PageContainer>
     </>
   );
 };

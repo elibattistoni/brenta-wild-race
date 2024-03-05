@@ -1,13 +1,14 @@
 import { Container, Text } from "@mantine/core";
 import Heading from "../../components/shared/Heading";
+import PageContainer from "../../components/shared/PageContainer";
 
 const TrailPrizesPage = () => {
   return (
     <>
       <Heading title="MONTEPREMI" subtitle="LA GARA" />
-      <Container fluid mt="xl">
+      <PageContainer>
         <Text size="xl">Pagina in costruzione. Stay Tuned!</Text>
-      </Container>
+      </PageContainer>
     </>
   );
 };

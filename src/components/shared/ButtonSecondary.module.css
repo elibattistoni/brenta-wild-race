@@ -6,4 +6,11 @@
   font-size: var(--mantine-font-size-lg) !important;
   -webkit-box-shadow: 1px 1px 4px 2px rgba(208, 179, 168, 0.35) !important;
   box-shadow: 1px 1px 4px 2px rgba(208, 179, 168, 0.35) !important;
+  padding: 0.6em 1.6em;
+  cursor: pointer;
+  transition: transform 0.2s ease-out;
+
+  &:hover {
+    transform: scale(102%)
+  }
 }

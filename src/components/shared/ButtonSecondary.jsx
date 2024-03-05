@@ -3,9 +3,9 @@ import classes from "./ButtonSecondary.module.css";
 
 const ButtonSecondary = ({ text, style }) => {
   return (
-    <Button className={classes.button} style={style}>
+    <button className={classes.button} style={style}>
       {text}
-    </Button>
+    </button>
   );
 };
 

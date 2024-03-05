@@ -62,7 +62,7 @@ const RegistrationInstructions = () => {
   return (
     <>
       <ParagraphText>
-        E’ possibile iscriversi cliccando sul bottone “Iscriviti” qui sotto: si
+        E' possibile iscriversi cliccando sul bottone “Iscriviti” qui sotto: si
         verrà reindirizzati al sito di <HighlightedText text="Wedosport" />,
         nostro partner in iscrizioni e cronometraggio.
       </ParagraphText>

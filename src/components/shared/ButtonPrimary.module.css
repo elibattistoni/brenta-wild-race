@@ -1,7 +1,15 @@
 .button {
-  background: radial-gradient(at center, var(--mantine-color-orangeBrenta-1), var(--mantine-color-orangeBrenta-0)) !important;
-  -webkit-box-shadow: 1px 1px 4px 2px hsla(14, 48%, 32%, 0.7) !important;
-  box-shadow: 1px 1px 4px 2px hsla(14, 48%, 32%, 0.7) !important;
-  border-radius: rem(8px) !important;
-  font-size:var(--mantine-font-size-lg) !important;
+  background: radial-gradient(at center, var(--mantine-color-orangeBrenta-1), var(--mantine-color-orangeBrenta-0));
+  -webkit-box-shadow: 1px 1px 4px 2px hsla(14, 48%, 32%, 0.7);
+  box-shadow: 1px 1px 4px 2px hsla(14, 48%, 32%, 0.7);
+  border-radius: rem(8px);
+  font-size:var(--mantine-font-size-lg);
+  padding: 0.6em 1.6em;
+  cursor: pointer;
+  border:none;
+  transition: transform 0.2s ease-out;
+
+  &:hover {
+    transform: scale(102%)
+  }
 }

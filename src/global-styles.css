@@ -33,3 +33,7 @@ svg {
   display: block;
   max-width: 100%;
 }
+
+.highlight {
+  color: var(--mantine-color-bluePrimary-0);
+}

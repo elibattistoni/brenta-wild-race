@@ -13,15 +13,13 @@ const InfoDetails = () => {
   return (
     <>
       <ParagraphText>
-        La gara <span className={classes.highlight}>Brenta Wild Race</span> si
-        terrà il giorno Domenica{" "}
-        <span className={classes.highlight}>07/07/2024</span>.
+        La gara <span className="highlight">Brenta Wild Race</span> si terrà il
+        giorno Domenica <span className="highlight">07/07/2024</span>.
       </ParagraphText>
       <ParagraphText>
-        Le <span className={classes.highlight}>iscrizioni</span> si aprono il
-        giorno <span className={classes.highlight}>15/03/2024</span> e si
-        chiudono il giorno <span className={classes.highlight}>02/07/2024</span>
-        .
+        Le <span className="highlight">iscrizioni</span> si aprono il giorno{" "}
+        <span className="highlight">15/03/2024</span> e si chiudono il giorno{" "}
+        <span className="highlight">02/07/2024</span>.
       </ParagraphText>
       <Alert
         variant="outline"
@@ -65,7 +63,7 @@ const RegistrationInstructions = () => {
       <ParagraphText>
         E’ possibile iscriversi cliccando sul bottone “Iscriviti” qui sotto: si
         verrà reindirizzati al sito di{" "}
-        <span className={classes.highlight}>Wedosport</span>, nostro partner in
+        <span className="highlight">Wedosport</span>, nostro partner in
         iscrizioni e cronometraggio.
       </ParagraphText>
       <ButtonPrimary text="Iscriviti" style={{ alignSelf: "flex-start" }} />

@@ -1,19 +1,26 @@
 .button {
-  background: radial-gradient(at center, var(--mantine-color-orangeBrenta-1), var(--mantine-color-orangeBrenta-0));
+  background: radial-gradient(
+    at center,
+    var(--mantine-color-orangeBrenta-1),
+    var(--mantine-color-orangeBrenta-0)
+  );
   -webkit-box-shadow: 1px 1px 4px 2px hsla(14, 48%, 32%, 0.7);
   box-shadow: 1px 1px 4px 2px hsla(14, 48%, 32%, 0.7);
   border-radius: rem(8px);
-  font-size:var(--mantine-font-size-lg);
   padding: 0.6em 1.6em;
   cursor: pointer;
-  border:none;
+  border: none;
   transition: transform 0.2s ease-out;
 
   &:hover {
-    transform: scale(102%)
-  };
+    transform: scale(102%);
+  }
 
   @media (max-width: $mantine-breakpoint-sm) {
-    font-size: rem(16px);
-  };
+    font-size: var(--mantine-font-size-md);
+  }
+
+  @media (min-width: $mantine-breakpoint-sm) {
+    font-size: var(--mantine-font-size-lg);
+  }
 }

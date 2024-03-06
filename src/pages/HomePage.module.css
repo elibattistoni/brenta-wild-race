@@ -2,12 +2,12 @@
   min-height: 90vh;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr 1fr 0.6fr;
+  grid-template-rows: 1fr 0.8fr 0.6fr;
   padding: 0px !important;
   padding-top: rem(48px) !important;
   padding-left: rem(40px) !important;
 
-  background-image:url("../assets/hero-image-4.png");
+  background-image:url("../assets/hero-image-4-2.png");
   background-size: 80%;
   background-repeat: no-repeat;
   background-position-x: right;

@@ -1,8 +1,17 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import MainNavigation from "./MainNavigation";
 import Footer from "./Footer";
+import { useEffect } from "react";
 
 const RootLayout = () => {
+  //! scroll top top whenever the path changes
+  // Extracts pathname property(key) from an object
+  const { pathname } = useLocation();
+  // Automatically scrolls to top whenever pathname changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
     <>
       <div style={{ width: "95%", maxWidth: "1700px", margin: "0 auto" }}>

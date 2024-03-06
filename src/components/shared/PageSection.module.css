@@ -3,4 +3,9 @@ section {
   display: flex;
   flex-direction: column;
   gap: rem(48px);
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    gap: rem(24px)
+  }
+
 }

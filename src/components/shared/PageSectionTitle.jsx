@@ -10,7 +10,7 @@ const PageSectionTitle = ({ text }) => {
         xs: rem(32),
         sm: rem(40),
       }}
-      lh={rem(32)}
+      lh={rem(40)}
     >
       {text}
     </Title>

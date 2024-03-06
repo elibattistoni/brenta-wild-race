@@ -35,6 +35,9 @@
   border-bottom: 0.5px solid alpha(var(--mantine-color-fontWhite-0), 0.3);
   border-top: 0.5px solid alpha(var(--mantine-color-fontWhite-0), 0.3);
   padding: rem(64px) 0px;
+  flex-direction:row;
+  align-items:center;
+  justify-content: space-between;
 
   @media (max-width: $mantine-breakpoint-md) {
     flex-direction: column;

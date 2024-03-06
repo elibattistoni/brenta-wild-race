@@ -9,8 +9,8 @@ import Trail from "../../assets/trail-1.svg?react";
 import ButtonSecondary from "../../components/shared/ButtonSecondary";
 import classes from "./TrailPathVariantsPage.module.css";
 import { Link } from "react-router-dom";
-import TracciaGPXAgonistica from "../../assets/traccia-gpx-agonistica.gpx";
-import TracciaGPXAmatoriale from "../../assets/traccia-gpx-amatoriale.gpx";
+// import TracciaGPXAgonistica from "../../assets/traccia-gpx-agonistica.gpx";
+// import TracciaGPXAmatoriale from "../../assets/traccia-gpx-amatoriale.gpx";
 
 //!! TODO add descrizione percorso
 
@@ -18,7 +18,11 @@ const DownloadButton = ({ trail }) => {
   //! ELISA TODO CHANGE with correct trail
   return (
     <Link
-      to={trail === "agonistica" ? TracciaGPXAgonistica : TracciaGPXAmatoriale}
+      to={
+        trail === "agonistica"
+          ? "/traccia-gpx-agonistica.gpx"
+          : "/traccia-gpx-amatoriale.gpx"
+      }
       download={`Traccia-GPX-${trail}.gpx`}
       target="_blank"
       rel="noreferrer"

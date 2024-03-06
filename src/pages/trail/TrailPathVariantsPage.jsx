@@ -8,6 +8,25 @@ import ParagraphText from "../../components/shared/ParagraphText";
 import Trail from "../../assets/trail-1.svg?react";
 import ButtonSecondary from "../../components/shared/ButtonSecondary";
 import classes from "./TrailPathVariantsPage.module.css";
+import { Link } from "react-router-dom";
+import TracciaGPXAgonistica from "../../assets/traccia-gpx-agonistica.gpx";
+import TracciaGPXAmatoriale from "../../assets/traccia-gpx-amatoriale.gpx";
+
+//!! TODO add descrizione percorso
+
+const DownloadButton = ({ trail }) => {
+  //! ELISA TODO CHANGE with correct trail
+  return (
+    <Link
+      to={trail === "agonistica" ? TracciaGPXAgonistica : TracciaGPXAmatoriale}
+      download={`Traccia-GPX-${trail}.gpx`}
+      target="_blank"
+      rel="noreferrer"
+    >
+      <ButtonSecondary text="Scarica GPX" style={{ marginTop: rem(24) }} />
+    </Link>
+  );
+};
 
 const TrailPathVariantsPage = () => {
   return (
@@ -25,18 +44,12 @@ const TrailPathVariantsPage = () => {
               <Stack align="center">
                 <BlueTitleMedium text="GARA AGONISTICA" />
                 <ParagraphText>23km 2100D+</ParagraphText>
-                <ButtonSecondary
-                  text="Scarica GPX"
-                  style={{ marginTop: rem(24) }}
-                />
+                <DownloadButton trail="agonistica" />
               </Stack>
               <Stack align="center">
                 <BlueTitleMedium text="GARA AMATORIALE" />
                 <ParagraphText>12km 1000D+</ParagraphText>
-                <ButtonSecondary
-                  text="Scarica GPX"
-                  style={{ marginTop: rem(24) }}
-                />
+                <DownloadButton trail="amatoriale" />
               </Stack>
             </Container>
           </Container>

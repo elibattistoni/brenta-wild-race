@@ -41,7 +41,8 @@ ul {
 }
 
 .tableRow {
-  border-bottom: 0.5px solid var(--mantine-color-fontWhite-0);
+  border-bottom: 0.5px solid alpha(var(--mantine-color-fontWhite-0),0.3);
+  
   padding: rem(24px) 0px !important;
   width: 90%;
   text-align: center;

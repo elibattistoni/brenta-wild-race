@@ -244,7 +244,9 @@ const TrailRulesPage = () => {
               il presente regolamento. Eventuali variazioni verranno
               adeguatamente segnalate sul nostro sito e profilo facebook, non
               che riportate in{" "}
-              <span style={{ color: "red" }}>GRASSETTO MAIUSCOLO ROSSO</span>{" "}
+              <span style={{ color: "hsl(358, 100%, 35%)" }}>
+                GRASSETTO MAIUSCOLO ROSSO
+              </span>{" "}
               all'interno di questo documento.
             </ParagraphText>
           </Stack>

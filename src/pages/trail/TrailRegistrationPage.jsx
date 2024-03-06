@@ -1,5 +1,5 @@
 import Heading from "../../components/shared/Heading";
-import { Alert, Container, Text } from "@mantine/core";
+import { Alert, Container, Stack, Text } from "@mantine/core";
 import classes from "./TrailRegistrationPage.module.css";
 import PageContainer from "../../components/shared/PageContainer";
 import { IconAlertTriangle } from "@tabler/icons-react";
@@ -113,20 +113,26 @@ const TrailRegistrationPage = () => {
       <Heading title="ISCRIZIONE" subtitle="LA GARA" />
       <PageContainer>
         <PageSection>
-          <PageSectionTitle text="INFORMAZIONI" />
-          <InfoDetails />
+          <Stack gap="lg">
+            <PageSectionTitle text="INFORMAZIONI" />
+            <InfoDetails />
+          </Stack>
         </PageSection>
         <PageSection>
           <PageSectionTitle text="QUOTE" />
           <PricesTable />
         </PageSection>
         <PageSection>
-          <PageSectionTitle text="COME ISCRIVERSI" />
-          <RegistrationInstructions />
+          <Stack gap="lg">
+            <PageSectionTitle text="COME ISCRIVERSI" />
+            <RegistrationInstructions />
+          </Stack>
         </PageSection>
         <PageSection>
-          <PageSectionTitle text="Cosa comprende l'iscrizione?" />
-          <RegistrationDetails />
+          <Stack gap="lg">
+            <PageSectionTitle text="Cosa comprende l'iscrizione?" />
+            <RegistrationDetails />
+          </Stack>
         </PageSection>
       </PageContainer>
     </>

@@ -1,5 +1,4 @@
 import HomePage from "./pages/HomePage";
-import TrailHomePage from "./pages/trail/TrailHomePage";
 import EditionsHomePage from "./pages/editions/EditionsHomePage";
 import SponsorsPage from "./pages/SponsorsPage";
 import AboutPage from "./pages/AboutPage";
@@ -24,7 +23,6 @@ const routeDefinitions = [
       {
         path: "/gara",
         children: [
-          { index: true, element: <TrailHomePage /> },
           {
             path: "/gara/percorso-varianti",
             element: <TrailPathVariantsPage />,

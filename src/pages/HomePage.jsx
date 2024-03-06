@@ -18,6 +18,7 @@ import { paths } from "../utils/paths";
 import { Container } from "@mantine/core";
 import BlueTitleMedium from "../components/shared/BlueTitleMedium";
 import ButtonSecondary from "../components/shared/ButtonSecondary";
+import BrentaWRLogo from "../assets/logo-brenta-wild-race.svg?react";
 
 const RowTitle = ({ text }) => {
   const theme = useMantineTheme();
@@ -101,11 +102,14 @@ const HeroSection = () => {
           BRENTA WILD RACE
         </Title>
       </Stack>
-      <Stack gap={rem(24)} className={classes.where} mt={rem(48)} ml={rem(6)}>
-        <Text size={rem(24)} fw="var(--mantine-fw-medium)">
-          Campodenno
-        </Text>
-        <BlueTitleMedium text="07 Luglio 2024" />
+      <Stack className={classes.where} mt={rem(48)}>
+        <Stack ml={rem(6)}>
+          <Text size={rem(24)} fw="var(--mantine-fw-medium)">
+            Campodenno
+          </Text>
+          <BlueTitleMedium text="07 Luglio 2024" />
+        </Stack>
+        {/* <BrentaWRLogo className={classes.logo} /> */}
       </Stack>
       <Flex
         justify="flex-start"
@@ -115,15 +119,19 @@ const HeroSection = () => {
         ml={rem(6)}
         mt={rem(12)}
       >
-        <ButtonSecondary text="La Gara" />
-        <ButtonPrimary text="Iscriviti" />
+        <NavLink to={paths.gara.children.percorsoVarianti.link}>
+          <ButtonSecondary text="La Gara" />
+        </NavLink>
+        <NavLink to={paths.gara.children.iscrizione.link}>
+          <ButtonPrimary text="Iscriviti" />
+        </NavLink>
       </Flex>
       <div className={classes.image}></div>
       <Flex
         className={classes.trailSpecs}
         justify="end"
-        align="end"
-        mb={rem(48)}
+        mt={rem(32)}
+        mr={rem(6)}
       >
         <Text size={rem(20)} fw="var(--mantine-fw-medium)">
           23km 2100D+ / 12km 1000D+
@@ -138,8 +146,9 @@ const HomePage = () => {
     <>
       <HeroSection />
       <PageContainer>
-        <Text size="xl">Pagina in costruzione. Stay Tuned!</Text>
-        <Space h={rem(240)} />
+        <Flex mb={rem(120)} className={classes.middleSection}>
+          <BrentaWRLogo className={classes.logoBig} />
+        </Flex>
         <PageSection>
           <LinksTable />
         </PageSection>

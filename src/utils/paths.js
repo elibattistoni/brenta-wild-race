@@ -1,9 +1,7 @@
-const paths = {
+export const paths = {
   home: { link: "/", title: "Home" },
   gara: {
-    link: "/gara",
     title: "Gara",
-    subtitle: "Panoramica",
     children: {
       percorsoVarianti: {
         link: "/gara/percorso-varianti",
@@ -40,7 +38,6 @@ export const mainNavPaths = [
   {
     label: paths.gara.title,
     links: [
-      { link: paths.gara.link, label: paths.gara.subtitle },
       ...Object.entries(paths.gara.children).map((item) => ({
         label: item[1].title,
         link: item[1].link,
@@ -60,7 +57,6 @@ export const footerPaths = [
   {
     title: paths.gara.title,
     links: [
-      { title: paths.gara.subtitle, link: paths.gara.link },
       ...Object.entries(paths.gara.children).map((item) => ({
         title: item[1].title,
         link: item[1].link,

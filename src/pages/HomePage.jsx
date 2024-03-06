@@ -1,4 +1,3 @@
-import Heading from "../components/shared/Heading";
 import {
   Flex,
   Space,
@@ -16,6 +15,9 @@ import ArrowRight from "../assets/arrow.svg?react";
 import classes from "./HomePage.module.css";
 import { NavLink } from "react-router-dom";
 import { paths } from "../utils/paths";
+import { Container } from "@mantine/core";
+import BlueTitleMedium from "../components/shared/BlueTitleMedium";
+import ButtonSecondary from "../components/shared/ButtonSecondary";
 
 const RowTitle = ({ text }) => {
   const theme = useMantineTheme();
@@ -88,10 +90,53 @@ const LinksTable = () => {
   );
 };
 
+const HeroSection = () => {
+  return (
+    <Container fluid className={classes.hero}>
+      <Stack gap={rem(0)} className={classes.title}>
+        <Text size={rem(20)} fw="var(--mantine-fw-medium)" ml={rem(6)}>
+          Nuova Edizione
+        </Text>
+        <Title order={1} c="orangeBrenta.0" pt={rem(0)} pb={rem(0)}>
+          BRENTA WILD RACE
+        </Title>
+      </Stack>
+      <Stack gap={rem(24)} className={classes.where} mt={rem(48)} ml={rem(6)}>
+        <Text size={rem(24)} fw="var(--mantine-fw-medium)">
+          Campodenno
+        </Text>
+        <BlueTitleMedium text="07 Luglio 2024" />
+      </Stack>
+      <Flex
+        justify="flex-start"
+        align="start"
+        gap={rem(48)}
+        className={classes.cta}
+        ml={rem(6)}
+        mt={rem(12)}
+      >
+        <ButtonSecondary text="La Gara" />
+        <ButtonPrimary text="Iscriviti" />
+      </Flex>
+      <div className={classes.image}></div>
+      <Flex
+        className={classes.trailSpecs}
+        justify="end"
+        align="end"
+        mb={rem(48)}
+      >
+        <Text size={rem(20)} fw="var(--mantine-fw-medium)">
+          23km 2100D+ / 12km 1000D+
+        </Text>
+      </Flex>
+    </Container>
+  );
+};
+
 const HomePage = () => {
   return (
     <>
-      <Heading title="HOME" subtitle="HOME" />
+      <HeroSection />
       <PageContainer>
         <Text size="xl">Pagina in costruzione. Stay Tuned!</Text>
         <Space h={rem(240)} />

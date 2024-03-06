@@ -12,5 +12,9 @@
 
   &:hover {
     transform: scale(102%)
-  }
+  };
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    font-size: rem(16px);
+  };
 }

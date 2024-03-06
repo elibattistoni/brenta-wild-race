@@ -27,9 +27,9 @@ const AboutPage = () => {
             38010 Campodenno (TN)
           </ParagraphText>
           <Stack gap={rem(4)}>
-            <Text>Presidente: Antonio - 338 5205357</Text>
-            <Text>Info percorso: Narciso - 328 2668759</Text>
-            <Text>Info iscrizioni: Danilo - 335 1240212</Text>
+            <ParagraphText>Presidente: Antonio - 338 5205357</ParagraphText>
+            <ParagraphText>Info percorso: Narciso - 328 2668759</ParagraphText>
+            <ParagraphText>Info iscrizioni: Danilo - 335 1240212</ParagraphText>
           </Stack>
           <ParagraphText>
             email: <HighlightedText text="info@brentawildrace.it" />

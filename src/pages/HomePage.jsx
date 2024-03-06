@@ -15,7 +15,7 @@ import ParagraphText from "../components/shared/ParagraphText";
 import ArrowRight from "../assets/arrow.svg?react";
 import classes from "./HomePage.module.css";
 import { NavLink } from "react-router-dom";
-import { mainNavPaths, paths } from "../utils/paths";
+import { paths } from "../utils/paths";
 
 const RowTitle = ({ text }) => {
   const theme = useMantineTheme();
@@ -27,11 +27,21 @@ const RowTitle = ({ text }) => {
         xs: rem(28),
         sm: theme.other.fontSizesTitles.fontSizeh6_32px,
       }}
-      fw="var(--mantine-fw-medium)"
-      ml="xl"
+      className={classes.rowTitle}
     >
       {text}
     </Title>
+  );
+};
+
+const RowContent = ({ text, link }) => {
+  return (
+    <Flex className={classes.rowContent}>
+      <ParagraphText>{text}</ParagraphText>
+      <NavLink to={link}>
+        <ArrowRight className={classes.arrow} />
+      </NavLink>
+    </Flex>
   );
 };
 
@@ -40,43 +50,35 @@ const LinksTable = () => {
     <Stack gap={0}>
       <Flex className={classes.tableRow}>
         <RowTitle text="PERCORSO e VARIANTI" />
-        <Flex gap="xl" mr="xl" align="center">
-          <ParagraphText>Vuoi scaricare le tracce GPX?</ParagraphText>
-          <NavLink to={paths.gara.children.percorsoVarianti.link}>
-            <ArrowRight style={{ cursor: "pointer" }} />
-          </NavLink>
-        </Flex>
+        <RowContent
+          text="Vuoi scaricare le tracce GPX?"
+          link={paths.gara.children.percorsoVarianti.link}
+        />
       </Flex>
       <Flex className={classes.tableRow}>
         <RowTitle text="PROGRAMMA" />
-        <Flex gap="xl" mr="xl" align="center">
-          <ParagraphText>Come è strutturata la gara?</ParagraphText>
-          <NavLink to={paths.gara.children.programma.link}>
-            <ArrowRight style={{ cursor: "pointer" }} />
-          </NavLink>
-        </Flex>
+        <RowContent
+          text="Come è strutturata la gara?"
+          link={paths.gara.children.programma.link}
+        />
       </Flex>
       <Flex className={classes.tableRow}>
         <RowTitle text="REGOLAMENTO" />
-        <Flex gap="xl" mr="xl" align="center">
-          <ParagraphText>Quali regole seguire?</ParagraphText>
-          <NavLink to={paths.gara.children.regolamento.link}>
-            <ArrowRight style={{ cursor: "pointer" }} />
-          </NavLink>
-        </Flex>
+        <RowContent
+          text="Quali regole seguire?"
+          link={paths.gara.children.regolamento.link}
+        />
       </Flex>
       <Flex className={classes.tableRow}>
         <RowTitle text="MONTEPREMI" />
-        <Flex gap="xl" mr="xl" align="center">
-          <ParagraphText>Cosa c'è in palio?</ParagraphText>
-          <NavLink to={paths.gara.children.montepremi.link}>
-            <ArrowRight style={{ cursor: "pointer" }} />
-          </NavLink>
-        </Flex>
+        <RowContent
+          text="Cosa c'è in palio?"
+          link={paths.gara.children.montepremi.link}
+        />
       </Flex>
       <Flex className={classes.tableRow}>
         <RowTitle text="ISCRIZIONE" />
-        <Flex gap="xl" mr="xl" align="center">
+        <Flex className={classes.rowContent}>
           <NavLink to={paths.gara.children.iscrizione.link}>
             <ButtonPrimary text="Iscriviti" />
           </NavLink>

@@ -14,7 +14,7 @@ import { IconChevronDown } from "@tabler/icons-react";
 import classes from "./MainNavigation.module.css";
 import { NavLink } from "react-router-dom";
 import { mainNavPaths } from "../../utils/paths";
-import BrentaWRLogo from "../../assets/brentawildracelogo.svg?react";
+import BrentaWRLogo from "../../assets/logo-brenta-wild-race.svg?react";
 
 const MainNavigation = () => {
   const [portalOpened, { toggle: togglePortal }] = useDisclosure(false);

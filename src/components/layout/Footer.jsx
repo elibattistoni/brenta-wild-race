@@ -1,9 +1,9 @@
-import { Text, Container, ActionIcon, Group, rem } from "@mantine/core";
+import { Text, Container, ActionIcon, Group } from "@mantine/core";
 import { IconBrandInstagram, IconBrandFacebook } from "@tabler/icons-react";
 import classes from "./Footer.module.css";
 import { footerPaths } from "../../utils/paths";
 import { NavLink } from "react-router-dom";
-import BrentaWRLogo from "../../assets/brentawildracelogo.svg?react";
+import BrentaWRLogo from "../../assets/logo-brenta-wild-race.svg?react";
 
 const Footer = () => {
   const footerLinks = footerPaths.map((group) => {

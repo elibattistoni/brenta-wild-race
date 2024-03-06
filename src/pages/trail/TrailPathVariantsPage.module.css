@@ -3,6 +3,10 @@
   display: flex;
   flex-direction: column;
   gap: rem(40px);
+  @media (max-width: $mantine-breakpoint-md) {
+    gap: rem(0px);
+    margin-top: rem(24px) !important;
+  }
 }
 
 .flex {
@@ -11,4 +15,32 @@
   justify-content: space-between;
   width: 80%;
   margin: 0 auto;
+  padding: 0px !important;
+  margin-top: rem(48px) !important;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    width: 100%;
+    flex-direction: column;
+    gap: rem(48px);
+  }
+}
+
+.trail {
+  width: rem(640px);
+  height: rem(640px);
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    width: rem(480px);
+    height: rem(480px);
+  }
+
+  @media (max-width: $mantine-breakpoint-xs) {
+    width: rem(320px);
+    height: rem(320px);
+  }
+
+  @media (max-width: $mantine-breakpoint-xxs) {
+    width: rem(240px);
+    height: rem(240px);
+  }
 }

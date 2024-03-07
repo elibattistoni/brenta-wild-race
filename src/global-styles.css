@@ -28,3 +28,6 @@ svg {
   max-width: 100%;
 }
 
+ul {
+  margin-left: rem(32px) !important;
+}

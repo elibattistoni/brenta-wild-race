@@ -1,13 +1,14 @@
 import { NavLink } from "react-router-dom";
 import Heading from "../../components/shared/Heading";
-import { Container, Stack, Text } from "@mantine/core";
+import { Stack, Text } from "@mantine/core";
 import classes from "./EditionsHomePage.module.css";
+import PageContainer from "../../components/shared/PageContainer";
 
 const EditionsHomePage = () => {
   return (
     <>
       <Heading title="EDIZIONI PASSATE" subtitle="EDIZIONI" />
-      <Container fluid mt="xl">
+      <PageContainer>
         <Text size="xl" mb="xl">
           Pagina in costruzione. Stay Tuned!
         </Text>
@@ -31,7 +32,7 @@ const EditionsHomePage = () => {
             Edizione 2019
           </NavLink>
         </Stack>
-      </Container>
+      </PageContainer>
     </>
   );
 };

@@ -16,7 +16,7 @@ const RootLayout = () => {
     <>
       <div style={{ width: "95%", maxWidth: "1700px", margin: "0 auto" }}>
         <MainNavigation />
-        <main style={{ minHeight: "100vh" }}>
+        <main style={{ minHeight: "100svh" }}>
           <Outlet />
         </main>
       </div>

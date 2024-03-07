@@ -1,7 +1,7 @@
 import { RouterProvider } from "react-router-dom";
 import routerProvider from "./routerProvider";
 import { MantineProvider } from "@mantine/core";
-import mantineUItheme, { resolver } from "./mantineUITheme";
+import mantineUItheme, { resolver } from "./mantineUItheme";
 
 function App() {
   return (

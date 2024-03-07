@@ -13,7 +13,7 @@ import { useDisclosure, useMediaQuery } from "@mantine/hooks";
 import { IconChevronDown } from "@tabler/icons-react";
 import classes from "./MainNavigation.module.css";
 import { NavLink } from "react-router-dom";
-import { mainNavPaths } from "../../utils/paths";
+import { mainNavPaths, paths } from "../../utils/paths";
 import BrentaWRLogo from "../../assets/logo-brenta-wild-race.svg?react";
 
 const MainNavigation = () => {
@@ -84,7 +84,7 @@ const MainNavigation = () => {
 
   return (
     <nav className={classes.nav}>
-      <NavLink to="/" style={{ paddingTop: rem(8) }}>
+      <NavLink to={paths.home.link} style={{ paddingTop: rem(8) }}>
         <BrentaWRLogo className={classes.logo} />
       </NavLink>
       <Group

@@ -3,6 +3,7 @@ import Footer from "../components/layout/Footer";
 import MainNavigation from "../components/layout/MainNavigation";
 import { Container, Text, Title } from "@mantine/core";
 import classes from "./ErrorPage.module.css";
+import { paths } from "../utils/paths";
 
 const ErrorPage = () => {
   const error = useRouteError();
@@ -28,7 +29,7 @@ const ErrorPage = () => {
           <Text size="lg" pt="xs" pb="xl">
             Mi sa che hai sbagliato sentiero. Ti tocca tornare alla partenza! :)
           </Text>
-          <NavLink to="/" className={classes.link}>
+          <NavLink to={paths.home.link} className={classes.link}>
             Home
           </NavLink>
         </Container>

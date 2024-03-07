@@ -2,6 +2,7 @@ export const paths = {
   home: { link: "/brenta-wild-race/", title: "Home" },
   gara: {
     title: "Gara",
+    linkOff: "/brenta-wild-race/gara",
     children: {
       percorsoVarianti: {
         link: "/brenta-wild-race/gara/percorso-varianti",

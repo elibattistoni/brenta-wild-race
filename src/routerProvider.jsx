@@ -12,47 +12,47 @@ import TrailRulesPage from "./pages/trail/TrailRulesPage";
 import EditionsDetailsPage from "./pages/editions/EditionDetailsPage";
 
 import { createBrowserRouter } from "react-router-dom";
+import { paths } from "./utils/paths";
 
 const routeDefinitions = [
   {
-    path: "/",
+    path: paths.home.link,
     element: <RootLayout />,
     errorElement: <ErrorPage />,
     children: [
-      // { index: true, element: <HomePage /> },
-      { path: "/brenta-wild-race/", element: <HomePage /> },
+      { index: true, element: <HomePage /> },
       {
-        path: "/brenta-wild-race/gara",
+        path: paths.gara.linkOff,
         children: [
           {
-            path: "/brenta-wild-race/gara/percorso-varianti",
+            path: paths.gara.children.percorsoVarianti.link,
             element: <TrailPathVariantsPage />,
           },
           {
-            path: "/brenta-wild-race/gara/programma",
+            path: paths.gara.children.programma.link,
             element: <TrailProgramPage />,
           },
           {
-            path: "/brenta-wild-race/gara/regolamento",
+            path: paths.gara.children.regolamento.link,
             element: <TrailRulesPage />,
           },
           {
-            path: "/brenta-wild-race/gara/montepremi",
+            path: paths.gara.children.montepremi.link,
             element: <TrailPrizesPage />,
           },
           {
-            path: "/brenta-wild-race/gara/iscrizione",
+            path: paths.gara.children.iscrizione.link,
             element: <TrailRegistrationPage />,
           },
         ],
       },
-      { path: "/brenta-wild-race/edizioni", element: <EditionsHomePage /> },
+      { path: paths.edizioni.link, element: <EditionsHomePage /> },
       {
-        path: "/brenta-wild-race/edizioni/:year",
+        path: `${paths.edizioni.link}/:year`,
         element: <EditionsDetailsPage />,
       },
-      { path: "/brenta-wild-race/sponsor", element: <SponsorsPage /> },
-      { path: "/brenta-wild-race/contatti", element: <AboutPage /> },
+      { path: paths.sponsor.link, element: <SponsorsPage /> },
+      { path: paths.contatti.link, element: <AboutPage /> },
     ],
   },
 ];

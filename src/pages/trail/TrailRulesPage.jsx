@@ -1,10 +1,9 @@
-import { Container, Flex, Stack, Text, rem } from "@mantine/core";
+import { Stack, rem } from "@mantine/core";
 import Heading from "../../components/shared/Heading";
 import PageContainer from "../../components/shared/PageContainer";
 import PageSection from "../../components/shared/PageSection";
 import ParagraphText from "../../components/shared/ParagraphText";
 import HighlightedText from "../../components/shared/HighlightedText";
-import ButtonSecondary from "../../components/shared/ButtonSecondary";
 
 const TrailRulesPage = () => {
   return (

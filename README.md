@@ -1,5 +1,5 @@
 # brenta-wild-race
-Project (design + code) of the website www.brentawildrace.it - for the association Gruppo Sportivo K40, Campodenno (TN)
+Project (design + code) of the website https://elibattistoni.github.io/brenta-wild-race/
 
 ### Tech Stack
 - React.js (JavaScript)

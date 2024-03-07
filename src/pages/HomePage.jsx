@@ -94,22 +94,42 @@ const LinksTable = () => {
 const HeroSection = () => {
   return (
     <Container fluid className={classes.hero}>
-      <Stack gap={rem(0)} className={classes.title}>
-        <Text size={rem(20)} fw="var(--mantine-fw-medium)" ml={rem(6)}>
+      <Stack gap={rem(0)} className={classes.titleContainer}>
+        <Text
+          fz={{ base: "md", sm: "lg", md: "xl" }}
+          fw="var(--mantine-fw-medium)"
+          ml={rem(6)}
+        >
           Nuova Edizione
         </Text>
-        <Title order={1} c="orangeBrenta.0" pt={rem(0)} pb={rem(0)}>
+        <Title
+          order={1}
+          c="orangeBrenta.0"
+          pt={rem(0)}
+          pb={rem(0)}
+          className={classes.heroTitle}
+        >
           BRENTA WILD RACE
         </Title>
       </Stack>
       <Stack className={classes.where} mt={rem(48)}>
-        <Stack ml={rem(6)}>
-          <Text size={rem(24)} fw="var(--mantine-fw-medium)">
+        <Stack ml={rem(6)} className={classes.whereInner}>
+          <Text
+            fz={{ base: "xl", md: rem(24) }}
+            size={rem(24)}
+            fw="var(--mantine-fw-medium)"
+          >
             Campodenno
           </Text>
-          <BlueTitleMedium text="07 Luglio 2024" />
+          <Text
+            fz={{ base: rem(24), sm: rem(28), md: rem(32) }}
+            size={rem(24)}
+            fw="var(--mantine-fw-medium)"
+            c="bluePrimary.0"
+          >
+            07 Luglio 2024
+          </Text>
         </Stack>
-        {/* <BrentaWRLogo className={classes.logo} /> */}
       </Stack>
       <Flex
         justify="flex-start"
@@ -130,11 +150,20 @@ const HeroSection = () => {
       <Flex
         className={classes.trailSpecs}
         justify="end"
-        mt={rem(32)}
+        mt={rem(20)}
         mr={rem(6)}
       >
-        <Text size={rem(20)} fw="var(--mantine-fw-medium)">
-          23km 2100D+ / 12km 1000D+
+        <Text
+          fz={{ base: "sm", sm: "md", md: "lg" }}
+          fw="var(--mantine-fw-medium)"
+        >
+          23km 2100D+ /
+        </Text>
+        <Text
+          fz={{ base: "sm", sm: "md", md: "lg" }}
+          fw="var(--mantine-fw-medium)"
+        >
+          12km 1000D+
         </Text>
       </Flex>
     </Container>

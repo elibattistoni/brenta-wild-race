@@ -1,4 +1,4 @@
-import { Container, Title, rem } from "@mantine/core";
+import { Container, Title } from "@mantine/core";
 import classes from "./Heading.module.css";
 
 const Heading = ({ subtitle, title }) => {

@@ -16,6 +16,9 @@
   @media (max-width: $mantine-breakpoint-sm) {
     font-size: var(--mantine-font-size-md);
   }
+  @media (max-width: $mantine-breakpoint-xs) {
+    font-size: var(--mantine-font-size-sm);
+  }
 
   @media (min-width: $mantine-breakpoint-sm) {
     font-size: var(--mantine-font-size-lg);

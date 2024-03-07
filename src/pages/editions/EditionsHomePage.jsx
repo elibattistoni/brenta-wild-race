@@ -12,13 +12,22 @@ const EditionsHomePage = () => {
           Pagina in costruzione. Stay Tuned!
         </Text>
         <Stack>
-          <NavLink to="/edizioni/2017" className={classes.link}>
+          <NavLink
+            to="/brenta-wild-race/edizioni/2017"
+            className={classes.link}
+          >
             Edizione 2017
           </NavLink>
-          <NavLink to="/edizioni/2018" className={classes.link}>
+          <NavLink
+            to="/brenta-wild-race/edizioni/2018"
+            className={classes.link}
+          >
             Edizione 2018
           </NavLink>
-          <NavLink to="/edizioni/2019" className={classes.link}>
+          <NavLink
+            to="/brenta-wild-race/edizioni/2019"
+            className={classes.link}
+          >
             Edizione 2019
           </NavLink>
         </Stack>

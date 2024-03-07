@@ -1,34 +1,46 @@
 export const paths = {
-  home: { link: "/", title: "Home" },
+  home: { link: "/brenta-wild-race/", title: "Home" },
   gara: {
     title: "Gara",
     children: {
       percorsoVarianti: {
-        link: "/gara/percorso-varianti",
+        link: "/brenta-wild-race/gara/percorso-varianti",
         title: "Percorso e Varianti",
       },
-      programma: { link: "/gara/programma", title: "Programma" },
-      regolamento: { link: "/gara/regolamento", title: "Regolamento" },
-      montepremi: { link: "/gara/montepremi", title: "Montepremi" },
-      iscrizione: { link: "/gara/iscrizione", title: "Iscrizione" },
+      programma: {
+        link: "/brenta-wild-race/gara/programma",
+        title: "Programma",
+      },
+      regolamento: {
+        link: "/brenta-wild-race/gara/regolamento",
+        title: "Regolamento",
+      },
+      montepremi: {
+        link: "/brenta-wild-race/gara/montepremi",
+        title: "Montepremi",
+      },
+      iscrizione: {
+        link: "/brenta-wild-race/gara/iscrizione",
+        title: "Iscrizione",
+      },
     },
   },
   edizioni: {
-    link: "/edizioni",
+    link: "/brenta-wild-race/edizioni",
     title: "Edizioni",
     children: {
-      2017: { link: "/edizioni/2017", title: "2017" },
-      2018: { link: "/edizioni/2018", title: "2018" },
-      2019: { link: "/edizioni/2019", title: "2019" },
+      2017: { link: "/brenta-wild-race/edizioni/2017", title: "2017" },
+      2018: { link: "/brenta-wild-race/edizioni/2018", title: "2018" },
+      2019: { link: "/brenta-wild-race/edizioni/2019", title: "2019" },
     },
   },
-  sponsor: { link: "/sponsor", title: "Sponsor" },
+  sponsor: { link: "/brenta-wild-race/sponsor", title: "Sponsor" },
   contatti: {
-    link: "/contatti",
+    link: "/brenta-wild-race/contatti",
     title: "Contatti",
     children: {
-      about: { link: "/contatti", title: "Chi Siamo" },
-      rooms: { link: "/contatti", title: "Dove Alloggiare" },
+      about: { link: "/brenta-wild-race/contatti", title: "Chi Siamo" },
+      rooms: { link: "/brenta-wild-race/contatti", title: "Dove Alloggiare" },
     },
   },
 };

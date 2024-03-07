@@ -19,24 +19,40 @@ const routeDefinitions = [
     element: <RootLayout />,
     errorElement: <ErrorPage />,
     children: [
-      { index: true, element: <HomePage /> },
+      // { index: true, element: <HomePage /> },
+      { path: "/brenta-wild-race/", element: <HomePage /> },
       {
-        path: "/gara",
+        path: "/brenta-wild-race/gara",
         children: [
           {
-            path: "/gara/percorso-varianti",
+            path: "/brenta-wild-race/gara/percorso-varianti",
             element: <TrailPathVariantsPage />,
           },
-          { path: "/gara/programma", element: <TrailProgramPage /> },
-          { path: "/gara/regolamento", element: <TrailRulesPage /> },
-          { path: "/gara/montepremi", element: <TrailPrizesPage /> },
-          { path: "/gara/iscrizione", element: <TrailRegistrationPage /> },
+          {
+            path: "/brenta-wild-race/gara/programma",
+            element: <TrailProgramPage />,
+          },
+          {
+            path: "/brenta-wild-race/gara/regolamento",
+            element: <TrailRulesPage />,
+          },
+          {
+            path: "/brenta-wild-race/gara/montepremi",
+            element: <TrailPrizesPage />,
+          },
+          {
+            path: "/brenta-wild-race/gara/iscrizione",
+            element: <TrailRegistrationPage />,
+          },
         ],
       },
-      { path: "/edizioni", element: <EditionsHomePage /> },
-      { path: "/edizioni/:year", element: <EditionsDetailsPage /> },
-      { path: "/sponsor", element: <SponsorsPage /> },
-      { path: "/contatti", element: <AboutPage /> },
+      { path: "/brenta-wild-race/edizioni", element: <EditionsHomePage /> },
+      {
+        path: "/brenta-wild-race/edizioni/:year",
+        element: <EditionsDetailsPage />,
+      },
+      { path: "/brenta-wild-race/sponsor", element: <SponsorsPage /> },
+      { path: "/brenta-wild-race/contatti", element: <AboutPage /> },
     ],
   },
 ];

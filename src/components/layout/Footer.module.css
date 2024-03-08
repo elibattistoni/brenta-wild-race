@@ -85,7 +85,6 @@
   padding-top: var(--mantine-spacing-xl);
   padding-bottom: var(--mantine-spacing-xl);
   border-top: rem(1px) solid var(--mantine-color-orangeBlack-2);
-  border: 1px solid red;
 
   @media (max-width: $mantine-breakpoint-md) {
     align-items: center;
@@ -98,7 +97,6 @@
 
 .social {
   @media (max-width: $mantine-breakpoint-sm) {
-    /* margin-top: var(--mantine-spacing-xs); */
     gap: rem(24px) !important;
   }
 }

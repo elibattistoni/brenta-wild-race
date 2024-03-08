@@ -95,3 +95,8 @@ export const footerPaths = [
     })),
   },
 ];
+
+export const socialLinks = {
+  instagram: "https://www.instagram.com/brentaskyrace/",
+  facebook: "https://www.facebook.com/brentasky",
+};

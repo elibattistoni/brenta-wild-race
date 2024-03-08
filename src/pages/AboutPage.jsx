@@ -1,4 +1,4 @@
-import { Flex, Stack, Text, rem } from "@mantine/core";
+import { ActionIcon, Flex, Stack, Text, rem } from "@mantine/core";
 import Heading from "../components/shared/Heading";
 import PageContainer from "../components/shared/PageContainer";
 import PageSection from "../components/shared/PageSection";
@@ -8,6 +8,7 @@ import PageSectionTitle from "../components/shared/PageSectionTitle";
 import { NavLink } from "react-router-dom";
 import classes from "./AboutPage.module.css";
 import HighlightedText from "../components/shared/HighlightedText";
+import { socialLinks } from "../utils/paths";
 
 const iconStyle = {
   width: rem(64),
@@ -35,14 +36,22 @@ const AboutPage = () => {
             email: <HighlightedText text="info@brentawildrace.it" />
           </ParagraphText>
           <Flex gap={rem(24)}>
-            <Stack gap={rem(1)} align="center">
+            <NavLink
+              to={socialLinks.instagram}
+              target="_blank"
+              className={classes.iconLink}
+            >
               <IconBrandInstagram style={iconStyle} />
               <Text size="xs">Instagram</Text>
-            </Stack>
-            <Stack gap={rem(1)} align="center">
+            </NavLink>
+            <NavLink
+              to={socialLinks.instagram}
+              target="_blank"
+              className={classes.iconLink}
+            >
               <IconBrandFacebook style={iconStyle} />
               <Text size="xs">Facebook</Text>
-            </Stack>
+            </NavLink>
           </Flex>
         </PageSection>
         <PageSection>

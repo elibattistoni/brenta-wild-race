@@ -1,4 +1,4 @@
-import { Container, Flex, Stack, rem } from "@mantine/core";
+import { Container, Flex, Stack, em, rem } from "@mantine/core";
 import Heading from "../../components/shared/Heading";
 import PageContainer from "../../components/shared/PageContainer";
 import PageSection from "../../components/shared/PageSection";
@@ -9,7 +9,13 @@ import Trail from "../../assets/trail-1.svg?react";
 import classes from "./TrailPathVariantsPage.module.css";
 import HighlightedText from "../../components/shared/HighlightedText";
 import DownloadButton from "../../components/shared/DownloadButton";
-import { useHover, useInViewport, useMediaQuery } from "@mantine/hooks";
+import {
+  useHover,
+  useInViewport,
+  useIntersection,
+  useMediaQuery,
+} from "@mantine/hooks";
+import { useRef } from "react";
 
 const AltimetriaSection = () => {
   return (
@@ -212,12 +218,24 @@ const RoutesSection = () => {
   const { hovered: hoveredAgonistica, ref: refAgonistica } = useHover();
   const { hovered: hoveredAmatoriale, ref: refAmatoriale } = useHover();
 
-  // console.log("hoveredAgonistica", hoveredAgonistica);
-  // console.log("hoveredAmatoriale", hoveredAmatoriale);
+  const isMD = useMediaQuery(`(max-width: ${em(992)})`);
 
-  // const isMedia = useMediaQuery("$mantine-breakpoint-md");
-  // const { ref, inViewport } = useInViewport();
-  // console.log("inViewport", inViewport, "isMedia", isMedia);
+  const containerRefAgonistica = useRef(null);
+  const { ref: refSvgAgonistica, entry: entrySvgAgonistica } = useIntersection({
+    root: containerRefAgonistica.current,
+    threshold: 1,
+  });
+
+  const containerRefAmatoriale = useRef(null);
+  const { ref: refSvgAmatoriale, entry: entrySvgAmatoriale } = useIntersection({
+    root: containerRefAmatoriale.current,
+    threshold: 1,
+  });
+
+  const isMDagoGlow =
+    isMD && entrySvgAgonistica && entrySvgAgonistica.isIntersecting;
+  const isMDamaGlow =
+    isMD && entrySvgAmatoriale && entrySvgAmatoriale.isIntersecting;
 
   return (
     <PageSection>
@@ -238,11 +256,11 @@ const RoutesSection = () => {
               button="primary"
               buttonText="Scarica GPX"
             />
-            <Stack align="center">
+            <Stack align="center" ref={refSvgAgonistica}>
               <Trail
                 className={`${classes.trail} ${
                   hoveredAgonistica ? classes.glow : ""
-                }`}
+                } ${isMDagoGlow ? classes.glow : ""}`}
               />
             </Stack>
           </Stack>
@@ -256,11 +274,11 @@ const RoutesSection = () => {
               button="primary"
               buttonText="Scarica GPX"
             />
-            <Stack align="center">
+            <Stack align="center" ref={refSvgAmatoriale}>
               <Trail
                 className={`${classes.trail} ${
                   hoveredAmatoriale ? classes.glow : ""
-                }`}
+                } ${isMDamaGlow ? classes.glow : ""}`}
               />
             </Stack>
           </Stack>

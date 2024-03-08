@@ -48,15 +48,6 @@
     transition: all 0.2s ease-in;
     filter: none;
   }
-
-  
-
-  /* &:hover {
-    path {
-      stroke-width: 4;
-      filter: drop-shadow(1px 1px 6px var(--mantine-color-orangeBrenta-0));
-    }
-  } */
 }
 
 .glow {

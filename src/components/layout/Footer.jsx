@@ -1,7 +1,7 @@
 import { Text, Container, ActionIcon, Group } from "@mantine/core";
 import { IconBrandInstagram, IconBrandFacebook } from "@tabler/icons-react";
 import classes from "./Footer.module.css";
-import { footerPaths } from "../../utils/paths";
+import { footerPaths, socialLinks } from "../../utils/paths";
 import { NavLink } from "react-router-dom";
 import BrentaWRLogo from "../../assets/logo-brenta-wild-race.svg?react";
 
@@ -30,11 +30,6 @@ const Footer = () => {
         {footerLinks}
       </Container>
       <Container className={classes.afterFooter}>
-        <Text c="dimmed" size="xs">
-          © 2024 - www.brentawildrace.it - Associazione Sportiva K40 - 38010 -
-          Campodenno (TN) - Tutti i diritti riservati
-        </Text>
-
         <Group
           gap={0}
           className={classes.social}
@@ -45,6 +40,10 @@ const Footer = () => {
             size="lg"
             color="var(--mantine-color-orangeBrenta-0)"
             variant="subtle"
+            component="a"
+            href={socialLinks.facebook}
+            aria-label="Open Facebook Page"
+            target="_blank"
           >
             <IconBrandFacebook className={classes.icons} stroke={1.5} />
           </ActionIcon>
@@ -52,10 +51,29 @@ const Footer = () => {
             size="lg"
             color="var(--mantine-color-orangeBrenta-0)"
             variant="subtle"
+            component="a"
+            href={socialLinks.instagram}
+            aria-label="Open Instagram Page"
+            target="_blank"
           >
             <IconBrandInstagram className={classes.icons} stroke={1.5} />
           </ActionIcon>
         </Group>
+
+        <Text c="dimmed" size="xs">
+          © 2024 - www.brentawildrace.it - Associazione Sportiva K40 - 38010 -
+          Campodenno (TN) - Tutti i diritti riservati
+        </Text>
+        <Text c="dimmed" size="xs" className={classes.linkCreditsContainer}>
+          Powered by{" "}
+          <NavLink
+            target="_blank"
+            to="https://elibattistoni.github.io/develysverse/"
+            className={classes.linkCredits}
+          >
+            Elisa Battistoni
+          </NavLink>
+        </Text>
       </Container>
     </footer>
   );

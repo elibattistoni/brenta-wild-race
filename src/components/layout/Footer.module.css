@@ -4,7 +4,7 @@
   background-color: var(--mantine-color-orangeBlack-1);
   border-top: rem(1px) solid var(--mantine-color-orangeBlack-2);
   @media (max-width: $mantine-breakpoint-sm) {
-    padding-top:var(--mantine-spacing-xl)
+    padding-top: var(--mantine-spacing-xl);
   }
 }
 
@@ -28,24 +28,41 @@
   }
 }
 
+.linkCredits {
+  text-decoration: undeline;
+  text-decoration-color: alpha(var(--mantine-color-bluePrimary-0), 0.7);
+  text-underline-offset: em(4);
+  color: alpha(var(--mantine-color-bluePrimary-0), 0.7);
+  text-decoration-thickness: 0.2px;
+
+  @mixin hover {
+    text-decoration-thickness: 2px;
+  }
+}
+
+.linkCreditsContainer {
+  @media (max-width: $mantine-breakpoint-md) {
+    margin-top: var(--mantine-spacing-lg) !important;
+  }
+}
+
 .inner {
   display: flex;
   justify-content: space-between;
 
   @media (max-width: $mantine-breakpoint-sm) {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(3,1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     align-items: center;
     justify-items: center;
-    row-gap: var(--mantine-spacing-lg)
-  };
+    row-gap: var(--mantine-spacing-lg);
+  }
   @media (max-width: $mantine-breakpoint-xxs) {
     display: flex;
-    flex-direction:column;
-    gap: var(--mantine-spacing-xl)
+    flex-direction: column;
+    gap: var(--mantine-spacing-xl);
   }
-
 }
 
 .wrapper {
@@ -61,23 +78,28 @@
 }
 
 .afterFooter {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--mantine-spacing-xl);
+  padding-top: var(--mantine-spacing-xl);
+  padding-bottom: var(--mantine-spacing-xl);
+  border-top: rem(1px) solid var(--mantine-color-orangeBlack-2);
+  border: 1px solid red;
+
+  @media (max-width: $mantine-breakpoint-md) {
     align-items: center;
-    margin-top: var(--mantine-spacing-xl);
-    padding-top: var(--mantine-spacing-xl);
-    padding-bottom: var(--mantine-spacing-xl);
-    border-top: rem(1px) solid var(--mantine-color-orangeBlack-2);
-  
-    @media (max-width: $mantine-breakpoint-sm) {
-      flex-direction: column;
-    }
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: rem(8px);
   }
+}
 
 .social {
   @media (max-width: $mantine-breakpoint-sm) {
-    margin-top: var(--mantine-spacing-xs);
-    gap:rem(24px) !important
+    /* margin-top: var(--mantine-spacing-xs); */
+    gap: rem(24px) !important;
   }
 }
 

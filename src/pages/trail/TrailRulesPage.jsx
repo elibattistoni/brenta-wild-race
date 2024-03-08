@@ -14,7 +14,7 @@ const TrailRulesPage = () => {
           <Stack gap="xl">
             <Stack gap={rem(4)}>
               <ParagraphText>
-                <HighlightedText text="ETA' DI PARTECIPAZIONE/DOCUMENTO SANITARIO" />
+                <HighlightedText text="Età di partecipazione / Documento sanitario" />
               </ParagraphText>
               <ParagraphText>
                 Alla Brenta WildRace possono partecipare coloro che hanno
@@ -28,7 +28,7 @@ const TrailRulesPage = () => {
             </Stack>
             <Stack gap={rem(4)}>
               <ParagraphText>
-                <HighlightedText text="TEMPO MASSIMO/CANCELLI" />
+                <HighlightedText text="Tempo massimo / Cancelli" />
               </ParagraphText>
               <ParagraphText>
                 Cancello: al quarto ristoro a Malga Campa, dopo 3 h 15 minuti
@@ -38,7 +38,7 @@ const TrailRulesPage = () => {
 
             <Stack gap={rem(4)}>
               <ParagraphText>
-                <HighlightedText text="DOVERI DEL PARTECIPANTE" />
+                <HighlightedText text="Doveri del partecipante" />
               </ParagraphText>
               <ul>
                 <li>
@@ -90,7 +90,7 @@ const TrailRulesPage = () => {
 
             <Stack gap={rem(4)}>
               <ParagraphText>
-                <HighlightedText text="BASTONCINI" />
+                <HighlightedText text="Bastoncini" />
               </ParagraphText>
               <ParagraphText>
                 E' consentito l'uso dei bastoncini. Gli stessi potranno essere
@@ -101,7 +101,7 @@ const TrailRulesPage = () => {
 
             <Stack gap={rem(4)}>
               <ParagraphText>
-                <HighlightedText text="RISTORI" />
+                <HighlightedText text="Ristori" />
               </ParagraphText>
               <ParagraphText>
                 Sono previsti 6 ristori lungo il persorso, nelle seguenti
@@ -112,7 +112,7 @@ const TrailRulesPage = () => {
 
             <Stack gap={rem(4)}>
               <ParagraphText>
-                <HighlightedText text="RESPONSABILITA'" />
+                <HighlightedText text="Responsabilità" />
               </ParagraphText>
               <ParagraphText>
                 L'atleta, consapevole della responsabilità per dichiarazioni
@@ -148,7 +148,7 @@ const TrailRulesPage = () => {
 
             <Stack gap={rem(4)}>
               <ParagraphText>
-                <HighlightedText text="COMPORTAMENTO" />
+                <HighlightedText text="Comportamento" />
               </ParagraphText>
               <ParagraphText>
                 Agli atleti è consigliato un comportamento ecologico.La gara
@@ -163,7 +163,7 @@ const TrailRulesPage = () => {
 
             <Stack gap={rem(4)}>
               <ParagraphText>
-                <HighlightedText text="PARCHEGGIO" />
+                <HighlightedText text="Parcheggio" />
               </ParagraphText>
               <ParagraphText>
                 Parcheggi sono disponibili presso il campo sportivo di
@@ -173,7 +173,7 @@ const TrailRulesPage = () => {
 
             <Stack gap={rem(4)}>
               <ParagraphText>
-                <HighlightedText text="RECLAMI" />
+                <HighlightedText text="Reclami" />
               </ParagraphText>
               <ParagraphText>
                 Sono accettati fino a mezz'ora dopo l'arrivo dell'ultimo
@@ -184,7 +184,7 @@ const TrailRulesPage = () => {
 
             <Stack gap={rem(4)}>
               <ParagraphText>
-                <HighlightedText text="DICHIARAZIONE PRIVACY" />
+                <HighlightedText text="Dichiarazione privacy" />
               </ParagraphText>
               <ParagraphText>
                 I partecipanti all'evento iscrivendosi alla manifestazione,
@@ -203,7 +203,7 @@ const TrailRulesPage = () => {
 
             <Stack gap={rem(4)}>
               <ParagraphText>
-                <HighlightedText text="DIVIETO ANIMALI" />
+                <HighlightedText text="Divieto animali" />
               </ParagraphText>
               <ParagraphText>
                 Per assicurare le migliori condizioni di sicurezza per tutti i
@@ -214,7 +214,7 @@ const TrailRulesPage = () => {
 
             <Stack gap={rem(4)}>
               <ParagraphText>
-                <HighlightedText text="MODIFICHE AL PERCORSO O CANCELLAZIONE GARA" />
+                <HighlightedText text="Modifiche al percorso o cancellazione gara" />
               </ParagraphText>
               <ParagraphText>
                 L'organizzazione, in caso di condizioni meteorologiche avverse
@@ -231,7 +231,7 @@ const TrailRulesPage = () => {
 
             <Stack gap={rem(4)}>
               <ParagraphText>
-                <HighlightedText text="SERVIZIO DI CRONOMETRAGGIO" />
+                <HighlightedText text="Servizio di cronometraggio" />
               </ParagraphText>
               <ParagraphText>
                 La misurazione dei tempi e l'elaborazione delle classifiche sono

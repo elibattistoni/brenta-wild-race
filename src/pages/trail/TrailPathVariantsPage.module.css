@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   gap: rem(40px);
+  /* border: 1px solid blue; */
   @media (max-width: $mantine-breakpoint-md) {
     gap: rem(0px);
     margin-top: rem(24px) !important;
@@ -13,9 +14,8 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 80%;
-  margin: 0 auto;
   padding: 0px !important;
+  gap: rem(32px);
   margin-top: rem(48px) !important;
 
   @media (max-width: $mantine-breakpoint-md) {
@@ -43,4 +43,25 @@
     width: rem(240px);
     height: rem(240px);
   }
+
+  path {
+    transition: all 0.2s ease-in;
+    filter: none;
+  }
+
+  
+
+  /* &:hover {
+    path {
+      stroke-width: 4;
+      filter: drop-shadow(1px 1px 6px var(--mantine-color-orangeBrenta-0));
+    }
+  } */
 }
+
+.glow {
+    path {
+      stroke-width: 4;
+      filter: drop-shadow(1px 1px 6px var(--mantine-color-orangeBrenta-0));
+    }
+  }

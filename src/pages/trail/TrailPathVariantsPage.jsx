@@ -9,6 +9,7 @@ import Trail from "../../assets/trail-1.svg?react";
 import classes from "./TrailPathVariantsPage.module.css";
 import HighlightedText from "../../components/shared/HighlightedText";
 import DownloadButton from "../../components/shared/DownloadButton";
+import { useHover, useInViewport, useMediaQuery } from "@mantine/hooks";
 
 const AltimetriaSection = () => {
   return (
@@ -208,6 +209,16 @@ const TrailDescriptionSection = () => {
 };
 
 const RoutesSection = () => {
+  const { hovered: hoveredAgonistica, ref: refAgonistica } = useHover();
+  const { hovered: hoveredAmatoriale, ref: refAmatoriale } = useHover();
+
+  // console.log("hoveredAgonistica", hoveredAgonistica);
+  // console.log("hoveredAmatoriale", hoveredAmatoriale);
+
+  // const isMedia = useMediaQuery("$mantine-breakpoint-md");
+  // const { ref, inViewport } = useInViewport();
+  // console.log("inViewport", inViewport, "isMedia", isMedia);
+
   return (
     <PageSection>
       <PageSectionTitle text="PERCORSO e VARIANTI" />
@@ -217,7 +228,8 @@ const RoutesSection = () => {
           <ParagraphText>Eremo di San Pancrazio</ParagraphText>
         </Stack>
         <Container fluid className={classes.flex}>
-          <Stack align="center">
+          {/*  */}
+          <Stack align="center" ref={refAgonistica}>
             <BlueTitleMedium text="GARA AGONISTICA" />
             <ParagraphText>23km 2100D+</ParagraphText>
             <DownloadButton
@@ -226,8 +238,16 @@ const RoutesSection = () => {
               button="primary"
               buttonText="Scarica GPX"
             />
+            <Stack align="center">
+              <Trail
+                className={`${classes.trail} ${
+                  hoveredAgonistica ? classes.glow : ""
+                }`}
+              />
+            </Stack>
           </Stack>
-          <Stack align="center">
+          {/*  */}
+          <Stack align="center" ref={refAmatoriale}>
             <BlueTitleMedium text="GARA AMATORIALE" />
             <ParagraphText>12km 1000D+</ParagraphText>
             <DownloadButton
@@ -236,12 +256,16 @@ const RoutesSection = () => {
               button="primary"
               buttonText="Scarica GPX"
             />
+            <Stack align="center">
+              <Trail
+                className={`${classes.trail} ${
+                  hoveredAmatoriale ? classes.glow : ""
+                }`}
+              />
+            </Stack>
           </Stack>
         </Container>
       </Container>
-      <Stack mt="xl" align="center">
-        <Trail className={classes.trail} />
-      </Stack>
     </PageSection>
   );
 };

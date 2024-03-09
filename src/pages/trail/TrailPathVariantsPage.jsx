@@ -5,16 +5,12 @@ import PageSection from "../../components/shared/PageSection";
 import PageSectionTitle from "../../components/shared/PageSectionTitle";
 import BlueTitleMedium from "../../components/shared/BlueTitleMedium";
 import ParagraphText from "../../components/shared/ParagraphText";
-import Trail from "../../assets/trail-1.svg?react";
+import TrailWildRace from "../../assets/brenta-wildrace-trail-gpx-exp-svg.svg?react";
+import TrailWildRun from "../../assets/brenta-wildrun-trail-gpx-exp-svg.svg?react";
 import classes from "./TrailPathVariantsPage.module.css";
 import HighlightedText from "../../components/shared/HighlightedText";
 import DownloadButton from "../../components/shared/DownloadButton";
-import {
-  useHover,
-  useInViewport,
-  useIntersection,
-  useMediaQuery,
-} from "@mantine/hooks";
+import { useHover, useIntersection, useMediaQuery } from "@mantine/hooks";
 import { useRef } from "react";
 
 const AltimetriaSection = () => {
@@ -246,41 +242,41 @@ const RoutesSection = () => {
           <ParagraphText>Eremo di San Pancrazio</ParagraphText>
         </Stack>
         <Container fluid className={classes.flex}>
-          {/*  */}
           <Stack align="center" ref={refAgonistica}>
-            <BlueTitleMedium text="GARA AGONISTICA" />
-            <ParagraphText>23km 2100D+</ParagraphText>
+            <BlueTitleMedium text="BRENTA WILDRACE" />
+            <ParagraphText>VARIANTE LUNGA</ParagraphText>
+            <ParagraphText>23km 2000m D+</ParagraphText>
             <DownloadButton
-              fileName="traccia-gpx-agonistica.gpx"
-              linkToFile="/brenta-wild-race/traccia-gpx-agonistica.gpx"
+              fileName="traccia-gpx-brenta-wildrace.gpx"
+              linkToFile="/brenta-wild-race/traccia-gpx-brenta-wildrace.gpx"
               button="primary"
               buttonText="Scarica GPX"
             />
-            <Stack align="center" ref={refSvgAgonistica}>
-              <Trail
-                className={`${classes.trail} ${
+            <Flex align="flex-start" ref={refSvgAgonistica} mb={rem(72)}>
+              <TrailWildRace
+                className={`${classes.trailLong} ${
                   hoveredAgonistica ? classes.glow : ""
                 } ${isMDagoGlow ? classes.glow : ""}`}
               />
-            </Stack>
+            </Flex>
           </Stack>
-          {/*  */}
           <Stack align="center" ref={refAmatoriale}>
-            <BlueTitleMedium text="GARA AMATORIALE" />
-            <ParagraphText>12km 1000D+</ParagraphText>
+            <BlueTitleMedium text="BRENTA WILDRUN" />
+            <ParagraphText>VARIANTE CORTA</ParagraphText>
+            <ParagraphText>14km 1200m D+</ParagraphText>
             <DownloadButton
-              fileName="traccia-gpx-amatoriale.gpx"
-              linkToFile="/brenta-wild-race/traccia-gpx-amatoriale.gpx"
+              fileName="traccia-gpx-brenta-wildrun.gpx"
+              linkToFile="/brenta-wild-race/traccia-gpx-brenta-wildrun.gpx"
               button="primary"
               buttonText="Scarica GPX"
             />
-            <Stack align="center" ref={refSvgAmatoriale}>
-              <Trail
-                className={`${classes.trail} ${
+            <Flex align="flex-start" ref={refSvgAmatoriale}>
+              <TrailWildRun
+                className={`${classes.trailShort} ${
                   hoveredAmatoriale ? classes.glow : ""
                 } ${isMDamaGlow ? classes.glow : ""}`}
               />
-            </Stack>
+            </Flex>
           </Stack>
         </Container>
       </Container>

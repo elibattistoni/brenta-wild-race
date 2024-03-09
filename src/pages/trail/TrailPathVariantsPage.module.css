@@ -25,13 +25,50 @@
   }
 }
 
-.trail {
+.trailLong {
   width: rem(640px);
   height: rem(640px);
+  margin-top:rem(72px);
 
-  @media (max-width: $mantine-breakpoint-sm) {
+  @media (max-width: $mantine-breakpoint-xl) {
     width: rem(480px);
     height: rem(480px);
+  }
+  @media (max-width: $mantine-breakpoint-lg) {
+    width: rem(400px);
+    height: rem(400px);
+  }
+
+  @media (max-width: $mantine-breakpoint-xs) {
+    width: rem(320px);
+    height: rem(320px);
+    margin-top: rem(56px);
+  }
+
+  @media (max-width: $mantine-breakpoint-xxs) {
+    width: rem(240px);
+    height: rem(240px);
+    margin-top: rem(48px);
+  }
+
+  path {
+    transition: all 0.2s ease-in;
+    stroke-width: 2.5px !important;
+    filter: none;
+  }
+}
+
+.trailShort {
+  width: rem(480px);
+  height: rem(480px);
+
+  @media (max-width: $mantine-breakpoint-xl) {
+    width: rem(400px);
+    height: rem(400px);
+  }
+  @media (max-width: $mantine-breakpoint-lg) {
+    width: rem(320px);
+    height: rem(320px);
   }
 
   @media (max-width: $mantine-breakpoint-xs) {
@@ -40,19 +77,20 @@
   }
 
   @media (max-width: $mantine-breakpoint-xxs) {
-    width: rem(240px);
-    height: rem(240px);
+    width: rem(200px);
+    height: rem(200px);
   }
 
   path {
     transition: all 0.2s ease-in;
     filter: none;
+    stroke-width: 3px !important;
   }
 }
 
 .glow {
-    path {
-      stroke-width: 4;
-      filter: drop-shadow(1px 1px 6px var(--mantine-color-orangeBrenta-0));
-    }
+  path {
+    stroke-width: 4;
+    filter: drop-shadow(1px 1px 6px var(--mantine-color-orangeBrenta-0));
   }
+}

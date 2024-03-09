@@ -22,10 +22,6 @@
   }
 }
 
-.titleContainer {
-  /* justify-content: space-between !important; */
-}
-
 .heroTitle {
   @media (max-width: $mantine-breakpoint-sm) {
     font-size: rem(88px) !important;
@@ -82,13 +78,15 @@
   grid-row: 3/4;
   grid-column: 2/4;
   gap: rem(6px);
-  @media (max-width: 845px) {
+
+  @media (max-width: 890px) {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start !important;
     margin-top: rem(8px) !important;
     gap: rem(2px);
   }
+
   @media (max-width: $mantine-breakpoint-sm) {
     flex-direction: row;
     gap: rem(6px);

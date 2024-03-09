@@ -1,12 +1,4 @@
-import {
-  Flex,
-  Space,
-  Stack,
-  Text,
-  Title,
-  rem,
-  useMantineTheme,
-} from "@mantine/core";
+import { Flex, Stack, Text, Title, rem, useMantineTheme } from "@mantine/core";
 import PageContainer from "../components/shared/PageContainer";
 import PageSection from "../components/shared/PageSection";
 import ButtonPrimary from "../components/shared/ButtonPrimary";
@@ -16,7 +8,6 @@ import classes from "./HomePage.module.css";
 import { NavLink } from "react-router-dom";
 import { paths } from "../utils/paths";
 import { Container } from "@mantine/core";
-import BlueTitleMedium from "../components/shared/BlueTitleMedium";
 import ButtonSecondary from "../components/shared/ButtonSecondary";
 import BrentaWRLogo from "../assets/logo-brenta-wild-race.svg?react";
 
@@ -94,7 +85,7 @@ const LinksTable = () => {
 const HeroSection = () => {
   return (
     <Container fluid className={classes.hero}>
-      <Stack gap={rem(0)} className={classes.titleContainer}>
+      <Stack gap={rem(0)}>
         <Text
           fz={{ base: "md", sm: "lg", md: "xl" }}
           fw="var(--mantine-fw-medium)"
@@ -157,13 +148,13 @@ const HeroSection = () => {
           fz={{ base: "sm", sm: "md", md: "lg" }}
           fw="var(--mantine-fw-medium)"
         >
-          23km 2100D+ /
+          23km 2000m D+ /
         </Text>
         <Text
           fz={{ base: "sm", sm: "md", md: "lg" }}
           fw="var(--mantine-fw-medium)"
         >
-          12km 1000D+
+          14km 1200m D+
         </Text>
       </Flex>
     </Container>

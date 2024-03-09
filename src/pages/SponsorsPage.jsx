@@ -1,5 +1,5 @@
 import Heading from "../components/shared/Heading";
-import { Container, Text } from "@mantine/core";
+import { Text } from "@mantine/core";
 import PageContainer from "../components/shared/PageContainer";
 
 const SponsorsPage = () => {

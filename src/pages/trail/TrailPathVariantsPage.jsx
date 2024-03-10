@@ -228,10 +228,12 @@ const RoutesSection = () => {
     threshold: 1,
   });
 
-  const isMDagoGlow =
-    isMD && entrySvgAgonistica && entrySvgAgonistica.isIntersecting;
-  const isMDamaGlow =
-    isMD && entrySvgAmatoriale && entrySvgAmatoriale.isIntersecting;
+  const isMDagoGlowOrHover =
+    (isMD && entrySvgAgonistica && entrySvgAgonistica.isIntersecting) ||
+    hoveredAgonistica;
+  const isMDamaGlowOrHover =
+    (isMD && entrySvgAmatoriale && entrySvgAmatoriale.isIntersecting) ||
+    hoveredAmatoriale;
 
   return (
     <PageSection>
@@ -255,8 +257,8 @@ const RoutesSection = () => {
             <Flex align="flex-start" ref={refSvgAgonistica} mb={rem(72)}>
               <TrailWildRace
                 className={`${classes.trailLong} ${
-                  hoveredAgonistica ? classes.glow : ""
-                } ${isMDagoGlow ? classes.glow : ""}`}
+                  isMDagoGlowOrHover ? classes.glow : ""
+                }`}
               />
             </Flex>
           </Stack>
@@ -273,8 +275,8 @@ const RoutesSection = () => {
             <Flex align="flex-start" ref={refSvgAmatoriale}>
               <TrailWildRun
                 className={`${classes.trailShort} ${
-                  hoveredAmatoriale ? classes.glow : ""
-                } ${isMDamaGlow ? classes.glow : ""}`}
+                  isMDamaGlowOrHover ? classes.glow : ""
+                }`}
               />
             </Flex>
           </Stack>
@@ -285,7 +287,6 @@ const RoutesSection = () => {
 };
 
 const TrailPathVariantsPage = () => {
-  //>>> TODO ELISA change correct gpx trail
   return (
     <>
       <Heading title="PERCORSO e VARIANTI" subtitle="LA GARA" />

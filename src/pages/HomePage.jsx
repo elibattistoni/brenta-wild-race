@@ -106,7 +106,7 @@ const HeroSection = () => {
         <div className={classes.imgContainerInner}>
           <img
             src={urlHeroImgSmall}
-            alt="Unsplash Image"
+            alt="Hero Image"
             loading="eager"
             className={classes.imgLoading}
             style={{ opacity: 1 - opacity }}
@@ -114,7 +114,7 @@ const HeroSection = () => {
           <img
             id="imgBig"
             src={urlHeroImgBig}
-            alt="Unsplash Image"
+            alt="Hero Image"
             loading="lazy"
             className={classes.imgLoaded}
             style={{ opacity: opacity }}
@@ -173,25 +173,22 @@ const HeroSection = () => {
           <ButtonPrimary text="Iscriviti" />
         </NavLink>
       </Flex>
-      <Flex
-        className={classes.trailSpecs}
-        justify="end"
-        mt={rem(20)}
-        mr={rem(6)}
-      >
-        <Text
-          fz={{ base: "sm", sm: "md", md: "lg" }}
-          fw="var(--mantine-fw-medium)"
-        >
-          23km 2000m D+ /
-        </Text>
-        <Text
-          fz={{ base: "sm", sm: "md", md: "lg" }}
-          fw="var(--mantine-fw-medium)"
-        >
-          14km 1200m D+
-        </Text>
-      </Flex>
+      <div className={classes.trailSpecs}>
+        <div className={classes.trailSpecsWrapper}>
+          <Text
+            fz={{ base: "sm", sm: "md", md: "lg" }}
+            fw="var(--mantine-fw-medium)"
+          >
+            23km 2000m D+ /
+          </Text>
+          <Text
+            fz={{ base: "sm", sm: "md", md: "lg" }}
+            fw="var(--mantine-fw-medium)"
+          >
+            14km 1200m D+
+          </Text>
+        </div>
+      </div>
     </div>
   );
 };

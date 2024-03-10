@@ -38,24 +38,11 @@
   z-index: -1;
   filter: blur(20px);
   @media (max-width: $mantine-breakpoint-md) {
-    height: 60%;
+    width: 90%;
     top: 15%;
   }
   @media (max-width: $mantine-breakpoint-sm) {
-    height: 45%;
-    top: 15%;
-  }
-  @media (max-width: $mantine-breakpoint-xs) {
-    height: 35%;
-    top: 15%;
-  }
-  @media (max-width: $mantine-breakpoint-xxs) {
-    height: 30%;
-    top: 15%;
-  }
-  @media (max-width: 340px) {
-    height: 25%;
-    top: 25%;
+    width: 100%;
   }
 }
 
@@ -63,30 +50,17 @@
   position: absolute;
   top: 5%;
   right: 0;
-  height: 80%;
+  width: 80%;
   z-index: -1;
+
   @media (max-width: $mantine-breakpoint-md) {
-    height: 60%;
+    width: 90%;
     top: 15%;
   }
   @media (max-width: $mantine-breakpoint-sm) {
-    height: 45%;
-    top: 15%;
-  }
-  @media (max-width: $mantine-breakpoint-xs) {
-    height: 35%;
-    top: 15%;
-  }
-  @media (max-width: $mantine-breakpoint-xxs) {
-    height: 30%;
-    top: 15%;
-  }
-  @media (max-width: 340px) {
-    height: 25%;
-    top: 25%;
+    width: 100%;
   }
 }
-
 
 .heroTitle {
   @media (max-width: $mantine-breakpoint-sm) {
@@ -113,6 +87,7 @@
 .where {
   grid-row: 2/3;
   grid-column: 1/2;
+  align-items: flex-start !important;
   @media (max-width: $mantine-breakpoint-sm) {
     align-items: center !important;
     justify-content: center;
@@ -121,8 +96,19 @@
 
 .whereInner {
   @media (max-width: $mantine-breakpoint-sm) {
+    background-color: alpha(var(--mantine-color-orangeBlack-0),0.3);
+    backdrop-filter: blur(10px);
+    padding: 0.6em;
+    border-radius: rem(8px);
     align-items: center !important;
     justify-content: center;
+  }
+
+  @media (max-width: $mantine-breakpoint-xs) {
+    background-color: transparent;
+    backdrop-filter: none;
+    padding: 0;
+    border-radius: none;
   }
 }
 
@@ -137,23 +123,43 @@
 .trailSpecs {
   grid-row: 3/4;
   grid-column: 2/4;
-  gap: rem(6px);
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+  margin-top: rem(20px);
+  margin-right: rem(6px);
 
-  @media (max-width: 890px) {
+  @media (max-width: $mantine-breakpoint-sm) {
+    grid-row: 4/5;
+    grid-column: 1/2;
+    justify-content: center;
+  }
+}
+
+.trailSpecsWrapper {
+  display: flex;
+  gap: rem(6px);
+  background-color: alpha(var(--mantine-color-orangeBlack-0),0.3);
+  backdrop-filter: blur(10px);
+  padding: 0.2em 0.6em;
+  border-radius: rem(8px);
+
+  @media (max-width: 895px) {
     flex-direction: column;
     align-items: flex-start;
-    justify-content: flex-start !important;
-    margin-top: rem(8px) !important;
+    justify-content: flex-start;
+    margin-top: rem(8px);
     gap: rem(2px);
+    background-color: transparent;
+    backdrop-filter: none;
+    padding: none;
+    border-radius: none;
   }
 
   @media (max-width: $mantine-breakpoint-sm) {
     flex-direction: row;
     gap: rem(6px);
-    margin-top: rem(24px) !important;
-    grid-row: 4/5;
-    grid-column: 1/2;
-    justify-content: center !important;
+    margin-top: rem(24px);
   }
 }
 

@@ -1,5 +1,5 @@
 .button {
-  background: transparent;
+  background: var(--mantine-color-orangeBlack-0);
   border-radius: rem(8px);
   border: 1px solid var(--mantine-color-orangeBrenta-2);
   color: var(--mantine-color-orangeBrenta-2);

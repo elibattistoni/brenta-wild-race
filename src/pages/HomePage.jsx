@@ -10,6 +10,8 @@ import { paths } from "../utils/paths";
 import ButtonSecondary from "../components/shared/ButtonSecondary";
 import BrentaWRLogo from "../assets/logo-brenta-wild-race.svg?react";
 import { useEffect, useState } from "react";
+import urlHeroImgSmall from "../assets/hero-image-xl-small.png";
+import urlHeroImgBig from "../assets/hero-image-xl.png";
 
 const RowTitle = ({ text }) => {
   const theme = useMantineTheme();
@@ -91,7 +93,6 @@ const HeroSection = () => {
     const handleLoaded = () => {
       if (imgRef.complete) {
         setOpacity(1);
-        console.log("COMPLETED");
       }
     };
 
@@ -104,7 +105,7 @@ const HeroSection = () => {
       <div className={classes.imgContainer}>
         <div className={classes.imgContainerInner}>
           <img
-            src="/brenta-wild-race/src/assets/hero-image-xl-small.png"
+            src={urlHeroImgSmall}
             alt="Unsplash Image"
             loading="eager"
             className={classes.imgLoading}
@@ -112,7 +113,7 @@ const HeroSection = () => {
           />
           <img
             id="imgBig"
-            src="/brenta-wild-race/src/assets/hero-image-xl.png"
+            src={urlHeroImgBig}
             alt="Unsplash Image"
             loading="lazy"
             className={classes.imgLoaded}

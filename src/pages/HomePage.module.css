@@ -1,5 +1,5 @@
 .hero {
-  min-height: 90vh;
+  min-height: 100vh;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr 0.8fr 0.6fr;
@@ -10,7 +10,7 @@
 
   @media (max-width: $mantine-breakpoint-sm) {
     grid-template-columns: 1fr;
-    grid-template-rows: 0.5fr 0.2fr 0.1fr 0.1fr;
+    grid-template-rows: 0.8fr 0.1fr 0.1fr 0.1fr;
     padding-left: rem(0px) !important;
   }
 }
@@ -45,8 +45,8 @@
     width: 100%;
   }
   @media (max-width: $mantine-breakpoint-sm) {
-    top:25%
-   }
+    top: 20%;
+  }
 }
 
 .imgLoaded {
@@ -64,7 +64,7 @@
     width: 100%;
   }
   @media (max-width: $mantine-breakpoint-sm) {
-   top:25%
+    top: 20%;
   }
 }
 
@@ -102,7 +102,7 @@
 
 .whereInner {
   @media (max-width: $mantine-breakpoint-sm) {
-    background-color: alpha(var(--mantine-color-orangeBlack-0),0.3);
+    background-color: alpha(var(--mantine-color-orangeBlack-0), 0.3);
     backdrop-filter: blur(10px);
     padding: 0.6em;
     border-radius: rem(8px);
@@ -111,10 +111,10 @@
   }
 
   @media (max-width: $mantine-breakpoint-xs) {
-    background-color: transparent;
+    /* background-color: transparent;
     backdrop-filter: none;
     padding: 0;
-    border-radius: none;
+    border-radius: none; */
   }
 }
 
@@ -145,7 +145,7 @@
 .trailSpecsWrapper {
   display: flex;
   gap: rem(6px);
-  background-color: alpha(var(--mantine-color-orangeBlack-0),0.3);
+  background-color: alpha(var(--mantine-color-orangeBlack-0), 0.3);
   backdrop-filter: blur(10px);
   padding: 0.2em 0.6em;
   border-radius: rem(8px);

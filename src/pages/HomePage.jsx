@@ -104,7 +104,7 @@ const HeroSection = () => {
       <div className={classes.imgContainer}>
         <div className={classes.imgContainerInner}>
           <img
-            src="src/assets/hero-image-xl-small.png"
+            src="/brenta-wild-race/src/assets/hero-image-xl-small.png"
             alt="Unsplash Image"
             loading="eager"
             className={classes.imgLoading}
@@ -112,7 +112,7 @@ const HeroSection = () => {
           />
           <img
             id="imgBig"
-            src="src/assets/hero-image-xl.png"
+            src="/brenta-wild-race/src/assets/hero-image-xl.png"
             alt="Unsplash Image"
             loading="lazy"
             className={classes.imgLoaded}

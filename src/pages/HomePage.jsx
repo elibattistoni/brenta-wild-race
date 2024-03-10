@@ -7,9 +7,9 @@ import ArrowRight from "../assets/arrow.svg?react";
 import classes from "./HomePage.module.css";
 import { NavLink } from "react-router-dom";
 import { paths } from "../utils/paths";
-import { Container } from "@mantine/core";
 import ButtonSecondary from "../components/shared/ButtonSecondary";
 import BrentaWRLogo from "../assets/logo-brenta-wild-race.svg?react";
+import { useEffect, useState } from "react";
 
 const RowTitle = ({ text }) => {
   const theme = useMantineTheme();
@@ -83,8 +83,43 @@ const LinksTable = () => {
 };
 
 const HeroSection = () => {
+  const [opacity, setOpacity] = useState(0);
+
+  useEffect(() => {
+    const imgRef = document.querySelector("#imgBig");
+
+    const handleLoaded = () => {
+      if (imgRef.complete) {
+        setOpacity(1);
+        console.log("COMPLETED");
+      }
+    };
+
+    imgRef.addEventListener("load", handleLoaded);
+    return () => imgRef.removeEventListener("load", handleLoaded);
+  }, []);
+
   return (
-    <Container fluid className={classes.hero}>
+    <div className={classes.hero}>
+      <div className={classes.imgContainer}>
+        <div className={classes.imgContainerInner}>
+          <img
+            src="src/assets/hero-image-xl-small.png"
+            alt="Unsplash Image"
+            loading="eager"
+            className={classes.imgLoading}
+            style={{ opacity: 1 - opacity }}
+          />
+          <img
+            id="imgBig"
+            src="src/assets/hero-image-xl.png"
+            alt="Unsplash Image"
+            loading="lazy"
+            className={classes.imgLoaded}
+            style={{ opacity: opacity }}
+          />
+        </div>
+      </div>
       <Stack gap={rem(0)}>
         <Text
           fz={{ base: "md", sm: "lg", md: "xl" }}
@@ -137,7 +172,6 @@ const HeroSection = () => {
           <ButtonPrimary text="Iscriviti" />
         </NavLink>
       </Flex>
-      <div className={classes.image}></div>
       <Flex
         className={classes.trailSpecs}
         justify="end"
@@ -157,7 +191,7 @@ const HeroSection = () => {
           14km 1200m D+
         </Text>
       </Flex>
-    </Container>
+    </div>
   );
 };
 

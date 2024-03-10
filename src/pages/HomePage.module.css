@@ -44,6 +44,9 @@
   @media (max-width: $mantine-breakpoint-sm) {
     width: 100%;
   }
+  @media (max-width: $mantine-breakpoint-sm) {
+    top:25%
+   }
 }
 
 .imgLoaded {
@@ -59,6 +62,9 @@
   }
   @media (max-width: $mantine-breakpoint-sm) {
     width: 100%;
+  }
+  @media (max-width: $mantine-breakpoint-sm) {
+   top:25%
   }
 }
 

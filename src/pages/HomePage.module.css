@@ -34,19 +34,57 @@
   position: absolute;
   top: 5%;
   right: 0;
-  width: 80%;
   height: 80%;
   z-index: -1;
   filter: blur(20px);
+  @media (max-width: $mantine-breakpoint-md) {
+    height: 60%;
+    top: 15%;
+  }
+  @media (max-width: $mantine-breakpoint-sm) {
+    height: 45%;
+    top: 15%;
+  }
+  @media (max-width: $mantine-breakpoint-xs) {
+    height: 35%;
+    top: 15%;
+  }
+  @media (max-width: $mantine-breakpoint-xxs) {
+    height: 30%;
+    top: 15%;
+  }
+  @media (max-width: 340px) {
+    height: 25%;
+    top: 25%;
+  }
 }
 
 .imgLoaded {
   position: absolute;
   top: 5%;
   right: 0;
-  width: 80%;
   height: 80%;
   z-index: -1;
+  @media (max-width: $mantine-breakpoint-md) {
+    height: 60%;
+    top: 15%;
+  }
+  @media (max-width: $mantine-breakpoint-sm) {
+    height: 45%;
+    top: 15%;
+  }
+  @media (max-width: $mantine-breakpoint-xs) {
+    height: 35%;
+    top: 15%;
+  }
+  @media (max-width: $mantine-breakpoint-xxs) {
+    height: 30%;
+    top: 15%;
+  }
+  @media (max-width: 340px) {
+    height: 25%;
+    top: 25%;
+  }
 }
 
 

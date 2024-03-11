@@ -9,8 +9,6 @@ import { NavLink } from "react-router-dom";
 import { paths } from "../utils/paths";
 import ButtonSecondary from "../components/shared/ButtonSecondary";
 import BrentaWRLogo from "../assets/logo-brenta-wild-race.svg?react";
-import urlHeroImgSmall from "../assets/hero-image-xl-small.png";
-import urlHeroImgBig from "../assets/hero-image-xl.png";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/opacity.css";
 
@@ -101,7 +99,7 @@ const HeroSection = () => {
   //   return () => imgRef.removeEventListener("load", handleLoaded);
   // }, []);
 
-  console.log(urlHeroImgSmall);
+  // console.log(urlHeroImgSmall);
 
   return (
     <div className={classes.hero}>
@@ -125,14 +123,13 @@ const HeroSection = () => {
           <LazyLoadImage
             alt="Hero Image of Runner"
             effect="opacity"
-            // placeholderSrc={urlHeroImgSmall}
-            // src={urlHeroImgBig}
-            placeholderSrc="/brenta-wild-race/src/assets/hero-image-xl.png"
-            src="/brenta-wild-race/src/assets/hero-image-xl.png"
+            placeholderSrc="/brenta-wild-race/hero-image-xl-small.png"
+            src="/brenta-wild-race/hero-image-xl.png"
             className={classes.imgLoaded}
             wrapperProps={{
               style: { transitionDuration: "2s" },
             }}
+            width="100%"
           />
         </div>
       </div>

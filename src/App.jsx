@@ -37,11 +37,7 @@ const App = () => {
       <BrowserRouter>
         <Suspense fallback={<Loading />}>
           <Routes>
-            <Route
-              path={paths.home.link}
-              element={<RootLayout />}
-              errorElement={<ErrorPage />}
-            >
+            <Route path={paths.home.link} element={<RootLayout />}>
               <Route index={true} element={<HomePage />} />
               <Route path={paths.gara.linkOff}>
                 <Route
@@ -75,6 +71,7 @@ const App = () => {
               />
               <Route path={paths.sponsor.link} element={<SponsorsPage />} />
               <Route path={paths.contatti.link} element={<AboutPage />} />
+              <Route path="*" element={<ErrorPage />} />
             </Route>
           </Routes>
         </Suspense>

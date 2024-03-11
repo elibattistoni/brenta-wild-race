@@ -1,7 +1,8 @@
 import { useParams } from "react-router-dom";
 import Heading from "../../components/shared/Heading";
-import { Container, Text } from "@mantine/core";
+import { Text } from "@mantine/core";
 import PageContainer from "../../components/shared/PageContainer";
+import ErrorPage from "../ErrorPage";
 
 const EditionDetailsPage = () => {
   const { year } = useParams();
@@ -16,7 +17,7 @@ const EditionDetailsPage = () => {
       </>
     );
   } else {
-    throw new Response(null, { status: 404, statusText: "Not Found" });
+    return <ErrorPage />;
   }
 };
 

@@ -121,7 +121,7 @@ const HeroSection = () => {
           />
         </div>
       </div>
-      <Stack gap={rem(0)}>
+      <div className={classes.titleContainer}>
         <Text
           fz={{ base: "md", sm: "lg", md: "xl" }}
           fw="var(--mantine-fw-medium)"
@@ -138,9 +138,9 @@ const HeroSection = () => {
         >
           BRENTA WILD RACE
         </Title>
-      </Stack>
-      <Stack className={classes.where} mt={rem(48)}>
-        <Stack ml={rem(6)} className={classes.whereInner}>
+      </div>
+      <div className={classes.where}>
+        <div className={classes.whereInner}>
           <Text
             fz={{ base: "xl", md: rem(24) }}
             size={rem(24)}
@@ -156,23 +156,16 @@ const HeroSection = () => {
           >
             07 Luglio 2024
           </Text>
-        </Stack>
-      </Stack>
-      <Flex
-        justify="flex-start"
-        align="start"
-        gap={rem(48)}
-        className={classes.cta}
-        ml={rem(6)}
-        mt={rem(12)}
-      >
+        </div>
+      </div>
+      <div className={classes.cta}>
         <NavLink to={paths.gara.children.percorsoVarianti.link}>
           <ButtonSecondary text="La Gara" />
         </NavLink>
         <NavLink to={paths.gara.children.iscrizione.link}>
           <ButtonPrimary text="Iscriviti" />
         </NavLink>
-      </Flex>
+      </div>
       <div className={classes.trailSpecs}>
         <div className={classes.trailSpecsWrapper}>
           <Text

@@ -153,13 +153,9 @@
 
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: baseline;
   gap: rem(48px);
   margin-left: rem(6px);
-
-  @media (max-width: $mantine-breakpoint-lg) {
-    align-items: baseline;
-  }
 
   @media (max-width: $mantine-breakpoint-sm) {
     margin-top: rem(24px);
@@ -174,11 +170,12 @@
   grid-column: 2/4;
   display: flex;
   justify-content: flex-end;
-  align-items: center;
+  align-items: baseline;
   margin-right: rem(6px);
+  margin-top: rem(80px);
 
   @media (max-width: $mantine-breakpoint-lg) {
-    align-items: baseline;
+    margin-top: rem(0px);
   }
 
   @media (max-width: $mantine-breakpoint-sm) {

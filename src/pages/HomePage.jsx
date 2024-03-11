@@ -1,4 +1,12 @@
-import { Flex, Stack, Text, Title, rem, useMantineTheme } from "@mantine/core";
+import {
+  Flex,
+  Stack,
+  Text,
+  Title,
+  em,
+  rem,
+  useMantineTheme,
+} from "@mantine/core";
 import PageContainer from "../components/shared/PageContainer";
 import PageSection from "../components/shared/PageSection";
 import ButtonPrimary from "../components/shared/ButtonPrimary";
@@ -11,6 +19,7 @@ import ButtonSecondary from "../components/shared/ButtonSecondary";
 import BrentaWRLogo from "../assets/logo-brenta-wild-race.svg?react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/opacity.css";
+import { useMediaQuery } from "@mantine/hooks";
 
 const RowTitle = ({ text }) => {
   const theme = useMantineTheme();
@@ -84,47 +93,30 @@ const LinksTable = () => {
 };
 
 const HeroSection = () => {
-  // const [opacity, setOpacity] = useState(0);
+  const isSmall = useMediaQuery(
+    `(min-width: ${em(200)}) and (max-width: ${em(576)})`
+  );
+  const isMedium = useMediaQuery(
+    `(min-width: ${em(576)}) and (max-width: ${em(992)})`
+  );
+  // const isLarge = useMediaQuery(`(min-width: ${em(992)})`);
 
-  // useEffect(() => {
-  //   const imgRef = document.querySelector("#imgBig");
-
-  //   const handleLoaded = () => {
-  //     if (imgRef.complete) {
-  //       setOpacity(1);
-  //     }
-  //   };
-
-  //   imgRef.addEventListener("load", handleLoaded);
-  //   return () => imgRef.removeEventListener("load", handleLoaded);
-  // }, []);
-
-  // console.log(urlHeroImgSmall);
+  let imgUrl = "/brenta-wild-race/hero-img-1600px.png";
+  if (isSmall) {
+    imgUrl = "/brenta-wild-race/hero-img-800px.png";
+  } else if (isMedium) {
+    imgUrl = "/brenta-wild-race/hero-img-1200px.png";
+  }
 
   return (
     <div className={classes.hero}>
       <div className={classes.imgContainer}>
         <div className={classes.imgContainerInner}>
-          {/* <img
-            src={urlHeroImgSmall}
-            alt="Hero Image"
-            loading="eager"
-            className={classes.imgLoading}
-            style={{ opacity: 1 - opacity }}
-          />
-          <img
-            id="imgBig"
-            src={urlHeroImgBig}
-            alt="Hero Image"
-            loading="lazy"
-            className={classes.imgLoaded}
-            style={{ opacity: opacity }}
-          /> */}
           <LazyLoadImage
             alt="Hero Image of Runner"
             effect="opacity"
-            placeholderSrc="/brenta-wild-race/hero-image-xl-small.png"
-            src="/brenta-wild-race/hero-image-xl.png"
+            placeholderSrc="/brenta-wild-race/hero-img-30px.png"
+            src={imgUrl}
             className={classes.imgLoaded}
             wrapperProps={{
               style: { transitionDuration: "2s" },
@@ -215,3 +207,35 @@ const HomePage = () => {
 };
 
 export default HomePage;
+
+// const [opacity, setOpacity] = useState(0);
+
+// useEffect(() => {
+//   const imgRef = document.querySelector("#imgBig");
+
+//   const handleLoaded = () => {
+//     if (imgRef.complete) {
+//       setOpacity(1);
+//     }
+//   };
+
+//   imgRef.addEventListener("load", handleLoaded);
+//   return () => imgRef.removeEventListener("load", handleLoaded);
+// }, []);
+
+/* <img
+  src={urlHeroImgSmall}
+  alt="Hero Image"
+  loading="eager"
+  className={classes.imgLoading}
+  style={{ opacity: 1 - opacity }}
+/>
+<img
+  id="imgBig"
+  src={urlHeroImgBig}
+  alt="Hero Image"
+  loading="lazy"
+  className={classes.imgLoaded}
+  style={{ opacity: opacity }}
+/>
+*/

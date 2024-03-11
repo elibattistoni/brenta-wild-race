@@ -9,9 +9,10 @@ import { NavLink } from "react-router-dom";
 import { paths } from "../utils/paths";
 import ButtonSecondary from "../components/shared/ButtonSecondary";
 import BrentaWRLogo from "../assets/logo-brenta-wild-race.svg?react";
-import { useEffect, useState } from "react";
 import urlHeroImgSmall from "../assets/hero-image-xl-small.png";
 import urlHeroImgBig from "../assets/hero-image-xl.png";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/opacity.css";
 
 const RowTitle = ({ text }) => {
   const theme = useMantineTheme();
@@ -85,26 +86,28 @@ const LinksTable = () => {
 };
 
 const HeroSection = () => {
-  const [opacity, setOpacity] = useState(0);
+  // const [opacity, setOpacity] = useState(0);
 
-  useEffect(() => {
-    const imgRef = document.querySelector("#imgBig");
+  // useEffect(() => {
+  //   const imgRef = document.querySelector("#imgBig");
 
-    const handleLoaded = () => {
-      if (imgRef.complete) {
-        setOpacity(1);
-      }
-    };
+  //   const handleLoaded = () => {
+  //     if (imgRef.complete) {
+  //       setOpacity(1);
+  //     }
+  //   };
 
-    imgRef.addEventListener("load", handleLoaded);
-    return () => imgRef.removeEventListener("load", handleLoaded);
-  }, []);
+  //   imgRef.addEventListener("load", handleLoaded);
+  //   return () => imgRef.removeEventListener("load", handleLoaded);
+  // }, []);
+
+  console.log(urlHeroImgSmall);
 
   return (
     <div className={classes.hero}>
       <div className={classes.imgContainer}>
         <div className={classes.imgContainerInner}>
-          <img
+          {/* <img
             src={urlHeroImgSmall}
             alt="Hero Image"
             loading="eager"
@@ -118,6 +121,18 @@ const HeroSection = () => {
             loading="lazy"
             className={classes.imgLoaded}
             style={{ opacity: opacity }}
+          /> */}
+          <LazyLoadImage
+            alt="Hero Image of Runner"
+            effect="opacity"
+            // placeholderSrc={urlHeroImgSmall}
+            // src={urlHeroImgBig}
+            placeholderSrc="/brenta-wild-race/src/assets/hero-image-xl.png"
+            src="/brenta-wild-race/src/assets/hero-image-xl.png"
+            className={classes.imgLoaded}
+            wrapperProps={{
+              style: { transitionDuration: "2s" },
+            }}
           />
         </div>
       </div>

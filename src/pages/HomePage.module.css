@@ -16,10 +16,6 @@
     padding-left: rem(0px);
   }
 
-  /* @media (max-width: $mantine-breakpoint-sm) {
-    grid-template-rows: 0.2fr 0.5fr 0.2fr 0.2fr 0.1fr;
-  } */
-
   @media (max-width: $mantine-breakpoint-xs) {
     grid-template-rows: 0.1fr 0.4fr 0.2fr 0.1fr 0.2fr;
     row-gap: rem(32px);
@@ -160,7 +156,7 @@
   align-items: center;
   gap: rem(48px);
   margin-left: rem(6px);
-  
+
   @media (max-width: $mantine-breakpoint-lg) {
     align-items: baseline;
   }

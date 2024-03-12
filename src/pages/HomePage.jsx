@@ -122,23 +122,25 @@ const HeroSection = () => {
 
   useGSAP(
     () => {
+      gsap.fromTo(imgRef.current, { scale: 0 }, { scale: 1, duration: 2 });
+
       const tl = gsap.timeline({
         defaults: { ease: "power4.out" },
         scrollTrigger: {
           trigger: containerRef.current,
           start: "top top", // when the top of the item hits the top of the viewport
           end: "bottom center", // when the bottom of the item hits the center of the viewport
-          scrub: 1.5,
+          scrub: 1,
           // markers: true,
           // id: "TL",
         },
       });
 
-      tl.fromTo(imgRef.current, { yPercent: 0 }, { yPercent: 5 }, 0)
-        .fromTo(titleRef.current, { yPercent: 0 }, { yPercent: 25 }, 0)
-        .fromTo(whereRef.current, { yPercent: 0 }, { yPercent: 10 }, 0)
-        .fromTo(ctaRef.current, { yPercent: 0 }, { yPercent: -10 }, 0)
-        .fromTo(specsRef.current, { yPercent: 0 }, { yPercent: -10 }, 0);
+      tl.fromTo(imgRef.current, { yPercent: 0 }, { yPercent: 10 }, 0)
+        .fromTo(titleRef.current, { yPercent: 0 }, { yPercent: 35 }, 0)
+        .fromTo(whereRef.current, { yPercent: 0 }, { yPercent: 15 }, 0)
+        .fromTo(ctaRef.current, { yPercent: 0 }, { yPercent: -15 }, 0)
+        .fromTo(specsRef.current, { yPercent: 0 }, { yPercent: -15 }, 0);
     },
     { scope: containerRef }
   );

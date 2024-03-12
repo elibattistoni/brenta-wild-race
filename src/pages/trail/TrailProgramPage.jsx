@@ -38,9 +38,9 @@ const TrailProgramPage = () => {
         <Flex className={classes.flex}>
           <Container fluid>
             <Stack className={classes.stack}>
-              <ProgramDayDate day="sabato" date="11/07/2024" />
+              <ProgramDayDate day="sabato" date="06 Luglio 2024" />
               <HourScheduleGroup
-                hour="16:00 - 18:00"
+                hour="16:00 - 20:00"
                 text="Distribuzione pettorali"
               />
               <Container className={classes.mountain}>
@@ -50,23 +50,24 @@ const TrailProgramPage = () => {
           </Container>
           <Container fluid>
             <Stack className={classes.stack}>
-              <ProgramDayDate day="domenica" date="12/07/2024" />
+              <ProgramDayDate day="domenica" date="07 Luglio 2024" />
               <Container fluid className={classes.grid}>
                 <HourScheduleGroup
                   hour="06:30"
                   text="Distribuzione pettorali"
                 />
                 {!isXXS && <Space />}
-                <HourScheduleGroup hour="08:15" text="Briefing pre-partenza" />
+                <HourScheduleGroup hour="08:45" text="Briefing partenza" />
                 {!isXXS && <Space />}
-                <HourScheduleGroup hour="08:30" text="Partenza" />
+                <HourScheduleGroup hour="09:00" text="Partenza Wildrace" />
                 {!isXXS && <Space />}
-                <HourScheduleGroup hour="10:45" text="Arrivo primi atleti" />
-                <HourScheduleGroup hour="12:30" text="Inizio pranzo" />
+                <HourScheduleGroup hour="09:05" text="Partenza Wildrun" />
+
+                <HourScheduleGroup hour="11:15" text="Arrivo primi atleti" />
+                {!isXXS && <Space />}
+                <HourScheduleGroup hour="13:00" text="Inizio pranzo" />
                 {!isXXS && <Space />}
                 <HourScheduleGroup hour="14:00" text="Premiazioni" />
-                {!isXXS && <Space />}
-                <HourScheduleGroup hour="14:15" text="Ultimi arrivi" />
                 <Text
                   fz={{ base: "md", sm: "lg", md: "xl" }}
                   fw="var(--mantine-fw-semibold)"

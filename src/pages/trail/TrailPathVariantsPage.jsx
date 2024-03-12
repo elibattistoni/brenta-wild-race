@@ -32,15 +32,16 @@ const TrailDescriptionSection = () => {
             <HighlightedText text="Il contesto" />
           </ParagraphText>
           <ParagraphText>
-            Il settore Nord orientale delle Dolomiti di Brenta, detto anche
-            sottogruppo della Campa, è un complesso montuoso dal fascino
+            Il settore Nord orientale delle Dolomiti di Brenta, identificato
+            come sottogruppo della Campa, è un complesso montuoso dal fascino
             particolare. L'ambiente molto selvaggio e incontaminato ne fa
             un'oasi ideale per molte specie di fauna alpina, dall'orso bruno al
             capriolo, dal camoscio alla marmotta, dal gallo cedrone all'aquila
-            reale. In questo splendido teatro domenica 12 luglio 2020, va in
-            scena la quarta edizione della Brenta Wildrace. Gara tosta per
-            skyrunners veri, ma anche un'occasione per attraversare dei luoghi
-            incantati, verdi pascoli, creste vertiginose e panorami sconfinati.
+            reale, e da qualche anno si è insediato anche il lupo. In questo
+            splendido teatro domenica 7 luglio 2024, va in scena la quarta
+            edizione della Brenta Wildrace. Gara tosta per skyrunners veri, ma
+            anche un'occasione per attraversare dei luoghi incantati, verdi
+            pascoli, creste vertiginose e panorami sconfinati.
           </ParagraphText>
         </Stack>
 
@@ -49,7 +50,7 @@ const TrailDescriptionSection = () => {
             <HighlightedText text="La partenza" />
           </ParagraphText>
           <ParagraphText>
-            Ore 8.30, al centro Sportivo di Campodenno si parte.
+            Ore 9:00, dal campo volo di Termon si parte.
           </ParagraphText>
         </Stack>
 
@@ -59,14 +60,17 @@ const TrailDescriptionSection = () => {
           </ParagraphText>
           <ParagraphText>
             Inizia subito la salita, che si rivelerà per ora molto corribile.
-            Abbiamo percorso solo un paio di km, siamo ancora freschi.
-            Imbocchiamo il ripido sentiero delle Scalazze. Un'antica via
-            d'accesso alla montagna che ci permette di prendere quota
-            rapidamente attraverso un profondo canyon scavato nella roccia.
-            Saliamo ancora circa un km e improvvisamente tutto cambia. Usciamo
-            dal bosco e attraversiamo i verdi pascoli di Malga Arza. Una strada
-            perfettamente pianeggiante ci conduce alla Malga nonchè secondo
-            ristoro (3,5 km 1507 m).
+            Abbiamo percorso solo il primo chilometro, siamo ancora freschi.
+            Imbocchiamo la breve ma ripida scalinata delle Scalette, per poi
+            riprendere un secondo tratto corribile fino ad imboccare le
+            scalacce: un'antica via d'accesso alla montagna che ci permette di
+            prendere quota rapidamente attraverso un profondo e suggestivo
+            canyon scavato nella roccia, usciti dal quale troviamo già il primo
+            ristoro (solo idrico). Saliamo ancora circa un chilometro ed
+            improvvisamente tutto cambia, usciamo infatti dal bosco ed
+            attraversiamo i verdi pascoli di Malga Arza (1500m), dove una strada
+            perfettamente pianeggiante ci conduce alla malga nonché al secondo
+            ristoro. (Abbiamo percorso 5km e 800mD+ dalla partenza).
           </ParagraphText>
         </Stack>
 
@@ -79,13 +83,13 @@ const TrailDescriptionSection = () => {
             sterrata, fino a giungere a un bivio. Prendiamo a destra e
             imbocchiamo il sentiero del Parìs. La pendenza non è eccessiva, si
             può correre per buoni tratti salvo qualche strappetto più
-            impegnativo. Il sentiero lungo circa 3,5 km, ci conduce a Malga
-            Termoncello, dove troviamo il terzo ristoro (7 km. 1860 m). Il
-            panorama si fa interessante. A Nord-est iniziamo a vedere l'alta Val
-            di Non e in lontananza scorgiamo le Dolomiti della Val di Fassa con
-            il Latemar e il Catinaccio in prima fila, mentre a ovest spicca la
+            impegnativo. Il sentiero lungo circa 3km ci conduce a Malga
+            Termoncello, dove troviamo il terzo ristoro. Il panorama si fa
+            davvero interessante: a Nord-est iniziamo a vedere l'alta Val di Non
+            ed in lontananza scorgiamo le Dolomiti della Val di Fassa con il
+            Latemar e il Catinaccio in prima fila, mentre ad ovest spicca la
             maestosa catena di vette che dal Passo del Grosté giunge fino al
-            Monte Peller. Il ristoro ci voleva, si riparte.
+            Monte Peller. Il ristoro ci voleva! Ma ora si riparte.
           </ParagraphText>
         </Stack>
 
@@ -94,18 +98,18 @@ const TrailDescriptionSection = () => {
             <HighlightedText text="Da Malga Tremoncello a Malga Campa (quarto ristoro)" />
           </ParagraphText>
           <ParagraphText>
-            Aggiriamo a est il monte Bastiot attraverso i "cianaloni". Il
+            Aggiriamo a est il monte Bastiòt attraverso i "cianaloni". Il
             tracciato alterna delle salite piuttosto ripide a delle brevi
             discese. Man mano che prendiamo quota lo scenario cambia. Il verde
             dei larici lascia spazio al grigio della Dolomia. La gara è dura, ma
             improvvisamente le nostre fatiche vengono ripagate da un magnifico
             panorama sul gruppo delle Madonnine con l'imponente piramide di Cima
             Borcola che domina sopra Malga Campa. Scolliniamo infatti sulla
-            Bocchetta della Campa (2040 m). La prima parte della discesa è molto
-            ripida e tecnica, un cordino metallico ci aiuta nei tratti più
-            impegnativi. Dopo un alternanza di brevi salitelle e tratti
-            pianeggianti, arriviamo a Malga Campa dove è collocato il quarto
-            ristoro (10 km 1978 m).
+            Bocchetta della Campa (2040m). La prima parte della discesa è molto
+            ripida e tecnica, la presenza di un cordino metallico ci aiuta nei
+            tratti più impegnativi. Dopo un'alternanza di brevi salitelle e
+            tratti pianeggianti, arriviamo a Malga Campa dove è collocato il
+            quarto ristoro.
           </ParagraphText>
         </Stack>
 
@@ -114,15 +118,16 @@ const TrailDescriptionSection = () => {
             <HighlightedText text="Da Malga Campa alla Bocchetta di Val Strangola (quinto ristoro)" />
           </ParagraphText>
           <ParagraphText>
-            Ora ci aspetta l'ultima salita della nostra avventura. Puntiamo
-            l'abbeveratoio e proseguiamo dritti per il sentiero 338 in direzione
-            sella del montoz, che però abbandoneremo tra un kilometro. La
-            vegetazione l'abbiamo lasciata alle spalle, salvo qualche isolato
-            larice temerario e alcuni cespugli di pino mugo. In prossimità di
-            una roccia imbocchiamo la deviazione che sale sul ripido pascolo, al
-            culmine del quale, innumerevoli saliscendi metteranno alla prova gli
-            atleti più tenaci. Dopo circa 1,5 km siamo alla Bocchetta di Val
-            Strangola (quinto ristoro (13,5 km 2257 m)).
+            Ci aspetta ora l'ultima salita della nostra avventura. Puntiamo
+            l’abbeveratoio e proseguiamo dritti per il sentiero 338 in direzione
+            della Sella del Montoz, che però abbandoneremo tra circa un
+            chilometro. La vegetazione rimane alle nostre spalle, salvo qualche
+            isolato larice temerario ed alcuni cespugli di pino mugo. In
+            prossimità di una roccia imbocchiamo la deviazione che sale sul
+            ripido pascolo, al culmine del quale, innumerevoli saliscendi
+            metteranno alla prova gli atleti più tenaci. Dopo circa 1,5km siamo
+            alla Bocchetta di Val Strangola dove troviamo il quinto ristoro
+            (solo idrico).
           </ParagraphText>
         </Stack>
 
@@ -131,25 +136,25 @@ const TrailDescriptionSection = () => {
             <HighlightedText text="Dalla Bocchetta di Val Strangola a Cima Lovertina (Bastiot)" />
           </ParagraphText>
           <ParagraphText>
-            Davanti a noi immensi ghiaioni scendono vertiginosi verso la Valle
-            di Tovel. Ora un sentiero in leggera discesa intervallato da un paio
-            di strappetti, ci conduce rapidamente al Passo degli Inferni. Da qui
+            Davanti a noi immensi ghiaioni scendono vertiginosi verso la Val di
+            Tovel. Ora un sentiero in leggera discesa intervallato da un paio di
+            strappetti, ci conduce rapidamente al Passo degli Inferni; da qui
             possiamo già vedere la croce di vetta. Ora inizia il tratto più
             tecnico e spettacolare dell'intero percorso. Attraversiamo a
             sinistra il ripido ghiaione che scende verso la Valle degli Inferni,
             quindi saliamo un paio di ripidi camini, protetti da corde fisse, ed
-            eccoci sulla cresta sommitale del Monte Bastiot. La cresta non è
+            eccoci sulla cresta sommitale del Monte Bastiòt. La cresta non è
             difficile, ma alcuni passaggi necessitano dell'uso delle mani per
             facilitare il superamento di qualche gradone. Davanti a noi una
             croce di ferro ci fa capire che ci siamo, siamo arrivati sulla Cima
-            Lovertina (Bastiot). Vale la pena fermarsi qualche secondo anche se
-            stiamo disputando una competizione. Il panorama è superbo. Sotto di
-            noi la Val di Non, più in là le Dolomiti della Val Gardena e della
-            Val di Fassa, il gruppo delle Pale di S. Martino e il Lagorai. A
-            nord il gruppo delle maddalene con all'orizzonte, il luccicare della
-            cresta di confine. 1100 metri sotto di noi il Lago di Tovel che con
-            le sue limpide acque fa da specchio naturale alla catena
-            settentrionale del Brenta.
+            Loverdina 2237m detta anche Bastiòt. Vale la pena fermarsi qualche
+            secondo anche se stiamo disputando una competizione. Il panorama è
+            superbo. Sotto di noi la Val di Non, più in là le Dolomiti della Val
+            Gardena e della Val di Fassa, il gruppo delle Pale di S. Martino e
+            il Lagorai. A nord il gruppo delle maddalene con all'orizzonte, il
+            luccicare della cresta di confine, ed infine possiamo ammirare il
+            Lago di Tovel posto a 1100m sotto di noi, che con le sue limpide
+            acque fa da specchio naturale alla catena settentrionale del Brenta.
           </ParagraphText>
         </Stack>
 
@@ -158,29 +163,39 @@ const TrailDescriptionSection = () => {
             <HighlightedText text="La discesa e l'arrivo" />
           </ParagraphText>
           <ParagraphText>
-            Ora solo discesa, tanta discesa. Al traguardo mancano ancora 7 km ma
-            soprattutto è posizionato 1500 metri più in basso. Un tratto senza
-            particolari difficoltà, in meno di 10 minuti ci riporta a Malga
-            Termoncello dove troviamo il sesto ristoro (16 km 1860 m). Giriamo a
-            destra. Il sentiero è veloce e scorrevole. Un km esatto e siamo a
-            Malga Loverdina (1771 m). Poi giù ancora verso valle. Qui si perde
-            quota velocemente, per parecchi minuti saremo immersi nella
-            selvaggia foresta di larici. Nessuno interromperà la nostra quiete.
-            Presto però il sentiero ci porterà sulla strada forestale dove
-            troveremo l'ultimo ristoro (18,5 km 1240 m). Si riprende il sentiero
-            abbandonato 20 metri prima, il primo tratto è molto facile, in
-            leggera discesa, si va veloci. Per poco però. Improvvisamente la
-            pendenza aumenta. Una serie di curve molto ripide e molto
-            ravvicinate lo rendono piuttosto impegnativo. Al termine della
-            discesa giriamo a sinistra e una breve mulattiera dismessa ci
-            immette sulla strada del Valon. Ci siamo, manca meno di un km
-            all'arrivo. Si sente già la voce dello speaker che annuncia il
-            nostro arrivo. Attraverso un ultimo piccolo sentierino costeggiamo
-            l'antica chiesetta e l'Eremo di San Pancrazio, ed ecco lo
-            striscione. È finita. 23 km, 2100 m di dislivello. Un mix di forza,
-            resistenza, coraggio e un pizzico di follia che in uno skyrunner non
-            dovrebbe mai mancare. Il tutto inserito in un ambiente selvaggio non
-            ancora contaminato dal grande turismo di massa.
+            Ora solo discesa, tanta discesa. Al traguardo mancano ancora 8km ma
+            soprattutto 1500m di dislivello. Un tratto senza particolari
+            difficoltà, in meno di 10 minuti ci riporta a Malga Termoncello dove
+            possiamo fermarci nuovamente al ristoro dell'andata. Giriamo a
+            destra. Il sentiero è veloce e scorrevole. Un chilometro esatto e
+            siamo a Malga Loverdina (1771m). Poi giù ancora verso valle. Qui si
+            perde quota velocemente, per parecchi minuti saremo immersi nella
+            selvaggia foresta di larici e faggi. Nessuno interromperà la nostra
+            quiete. Presto però il sentiero ci porterà sulla strada forestale,
+            che non percorreremo ma la attraverseremo soltanto. Si riprende
+            infatti subito il sentiero abbandonato 20 metri prima, il primo
+            tratto è molto facile, in leggera discesa, si va veloci. Per poco
+            però. Improvvisamente la pendenza aumenta. Una serie di curve molto
+            ripide e molto ravvicinate lo rendono piuttosto impegnativo. Al
+            termine della discesa giriamo a sinistra e una breve mulattiera
+            dismessa ci immette sulla strada sterrata del Valon, ed in poche
+            centinaia di metri arriviamo alla località San Pancrazio, con il
+            caratteristico eremo, dove troviamo l'ultimo ristoro del percorso
+            (solo idrico). Lasciamo San Pancrazio alle spalle e ci prepariamo
+            all'ultimo, breve tratto in discesa, lungo un sentiero che ci porta
+            sul rinomato sentiero Margherita. Ci siamo, mancano appena km
+            all'arrivo. A questo punto il sentiero Margherita, in realtà largo
+            come una strada forestale, perfettamente pianeggiante ci porta in
+            breve tempo presso la pineta di Termon, passiamo davanti al Baitel,
+            la location che ci ospiterà per il pranzo e la festa per il miglior
+            intrattenimento musicale e folkloristico, a questo punto si sente
+            già la voce dello speaker che annuncia il nostro arrivo. Le
+            ultimissime centinaia di metri ci riportano al campo volo, luogo
+            della partenza, lo percorriamo tutto in discesa ed ecco lo
+            striscione dell'arrivo. È finita. 23km, 2000m di dislivello. Un mix
+            di forza, resistenza, coraggio e un pizzico di follia che in uno
+            skyrunner non dovrebbe mai mancare. Il tutto inserito in un ambiente
+            selvaggio non ancora contaminato dal grande turismo di massa.
           </ParagraphText>
         </Stack>
 
@@ -190,11 +205,12 @@ const TrailDescriptionSection = () => {
           </ParagraphText>
           <ParagraphText>
             Sul medesimo percorso, nella sua parte iniziale, si sviluppa la
-            BrentaRun, gara più corta ma non meno avvincente!! A malgaArza, a
-            quota 1500, anzichè salire ancora verso le cime, inizia la discesa
-            che si aggancia sull'ultima parte della wildrace, quindi la
-            picchiata, che tutta su dorsale panoramica, conduce all' eremo di S.
-            Pancrazio e dopo un ultimo chilometro di discesa, all' arrivo!
+            Brenta Wild Run, gara più corta ma non meno avvincente!! A malga
+            Termoncello, a quota 1800m, anzichè salire ancora verso le cime,
+            inizia la discesa che si aggancia sull'ultima parte della Wildrace,
+            quindi la picchiata, che tutta su dorsale panoramica, conduce
+            all'eremo di San Pancrazio e con lgi ultimissimi chilometri,
+            all'arrivo!
           </ParagraphText>
         </Stack>
       </Stack>

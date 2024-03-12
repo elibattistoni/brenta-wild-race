@@ -98,12 +98,27 @@ const LinksTable = () => {
 };
 
 const HeroSection = () => {
+  //! check media query
+  const isSmall = useMediaQuery(
+    `(min-width: ${em(200)}) and (max-width: ${em(576)})`
+  );
+  const isMedium = useMediaQuery(
+    `(min-width: ${em(576)}) and (max-width: ${em(992)})`
+  );
+
+  // const isLayoutColumn = useMediaQuery(
+  //   `(min-width: ${em(200)}) and (max-width: ${em(764)})`
+  // );
+
+  // const isLarge = useMediaQuery(`(min-width: ${em(992)})`);
+
+  //! refs for gsap
   const containerRef = useRef(null);
   const titleRef = useRef(null);
   const imgRef = useRef(null);
-  // const whereRef = useRef(null);
-  // const ctaRef = useRef(null);
-  // const specsRef = useRef(null);
+  const whereRef = useRef(null);
+  const ctaRef = useRef(null);
+  const specsRef = useRef(null);
 
   useGSAP(
     () => {
@@ -113,30 +128,22 @@ const HeroSection = () => {
           trigger: containerRef.current,
           start: "top top", // when the top of the item hits the top of the viewport
           end: "bottom center", // when the bottom of the item hits the center of the viewport
-          scrub: 2,
+          scrub: 1.5,
           // markers: true,
           // id: "TL",
         },
       });
 
-      tl.fromTo(imgRef.current, { yPercent: 0 }, { yPercent: 10 }, 0).fromTo(
-        titleRef.current,
-        { yPercent: 0 },
-        { yPercent: 30 },
-        0
-      );
+      tl.fromTo(imgRef.current, { yPercent: 0 }, { yPercent: 5 }, 0)
+        .fromTo(titleRef.current, { yPercent: 0 }, { yPercent: 25 }, 0)
+        .fromTo(whereRef.current, { yPercent: 0 }, { yPercent: 10 }, 0)
+        .fromTo(ctaRef.current, { yPercent: 0 }, { yPercent: -10 }, 0)
+        .fromTo(specsRef.current, { yPercent: 0 }, { yPercent: -10 }, 0);
     },
     { scope: containerRef }
   );
 
-  const isSmall = useMediaQuery(
-    `(min-width: ${em(200)}) and (max-width: ${em(576)})`
-  );
-  const isMedium = useMediaQuery(
-    `(min-width: ${em(576)}) and (max-width: ${em(992)})`
-  );
-  // const isLarge = useMediaQuery(`(min-width: ${em(992)})`);
-
+  //! load image based on media query
   let imgUrl = "/brenta-wild-race/hero-img-1600px.png";
   if (isSmall) {
     imgUrl = "/brenta-wild-race/hero-img-800px.png";
@@ -180,7 +187,7 @@ const HeroSection = () => {
         </Title>
       </div>
       <div className={classes.where}>
-        <div className={classes.whereInner}>
+        <div className={classes.whereInner} ref={whereRef}>
           <Text
             fz={{ base: "xl", md: rem(24) }}
             size={rem(24)}
@@ -198,7 +205,7 @@ const HeroSection = () => {
           </Text>
         </div>
       </div>
-      <div className={classes.cta}>
+      <div className={classes.cta} ref={ctaRef}>
         <NavLink to={paths.gara.children.percorsoVarianti.link}>
           <ButtonSecondary text="La Gara" />
         </NavLink>
@@ -207,7 +214,7 @@ const HeroSection = () => {
         </NavLink>
       </div>
       <div className={classes.trailSpecs}>
-        <div className={classes.trailSpecsWrapper}>
+        <div className={classes.trailSpecsWrapper} ref={specsRef}>
           <Text
             fz={{ base: "sm", sm: "md", md: "lg" }}
             fw="var(--mantine-fw-medium)"

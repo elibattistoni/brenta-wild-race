@@ -90,7 +90,7 @@
 
 .glow {
   path {
-    stroke-width: 4;
-    filter: drop-shadow(1px 1px 6px var(--mantine-color-orangeBrenta-0));
+    stroke-width: 5px !important;
+    filter: drop-shadow(2px 2px 8px var(--mantine-color-orangeBrenta-0));
   }
 }

@@ -114,8 +114,8 @@ const HeroSection = () => {
           start: "top top", // when the top of the item hits the top of the viewport
           end: "bottom center", // when the bottom of the item hits the center of the viewport
           scrub: 2,
-          markers: true,
-          id: "TL",
+          // markers: true,
+          // id: "TL",
         },
       });
 

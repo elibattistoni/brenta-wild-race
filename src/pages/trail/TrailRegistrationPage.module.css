@@ -1,19 +1,7 @@
-.label {
-  font-size: var(--mantine-font-size-lg) !important;
-  font-weight: var(--mantine-fw-normal) !important;
-  color: var(--mantine-color-fontWhite-0);
-  @media (max-width: $mantine-breakpoint-xs) {
-    font-size: var(--mantine-font-size-md) !important;
-  }
-}
-
-.icon {
-  width: rem(48px) !important;
-  margin-right: 0px !important;
-}
-
-.wrapper {
-  align-items: center;
+.alert {
+    display: flex;
+    align-items: center;
+    gap: rem(8px)
 }
 
 .table {
@@ -37,8 +25,8 @@
 }
 
 .tableRow {
-  border-bottom: 0.5px solid alpha(var(--mantine-color-fontWhite-0),0.3);
-  
+  border-bottom: 0.5px solid alpha(var(--mantine-color-fontWhite-0), 0.3);
+
   padding: rem(24px) 0px !important;
   width: 90%;
   text-align: center;

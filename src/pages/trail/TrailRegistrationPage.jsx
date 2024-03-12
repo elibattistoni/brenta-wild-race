@@ -1,5 +1,5 @@
 import Heading from "../../components/shared/Heading";
-import { Alert, Container, Stack, Text } from "@mantine/core";
+import { Container, Stack, Text } from "@mantine/core";
 import classes from "./TrailRegistrationPage.module.css";
 import PageContainer from "../../components/shared/PageContainer";
 import { IconAlertTriangle } from "@tabler/icons-react";
@@ -15,24 +15,17 @@ const InfoDetails = () => {
     <>
       <ParagraphText>
         La gara <HighlightedText text="Brenta Wild Race" /> si terrà il giorno
-        Domenica <HighlightedText text="07/07/2024" />.
+        Domenica <HighlightedText text="07 Luglio 2024" />.
       </ParagraphText>
       <ParagraphText>
         Le <HighlightedText text="iscrizioni" /> si aprono il giorno{" "}
-        <HighlightedText text="15/03/2024" /> e si chiudono il giorno{" "}
-        <HighlightedText text="02/07/2024" />.
+        <HighlightedText text="15 Marzo 2024" /> e si chiudono il giorno{" "}
+        <HighlightedText text="02 Luglio 2024" />.
       </ParagraphText>
-      <Alert
-        variant="outline"
-        color="orangeBrenta.0"
-        title="Limite di iscritti: 200 per ciascuna variante di percorso."
-        icon={<IconAlertTriangle />}
-        classNames={{
-          label: classes.label,
-          icon: classes.icon,
-          wrapper: classes.wrapper,
-        }}
-      ></Alert>
+      <div className={classes.alert}>
+        <IconAlertTriangle color="var(--mantine-color-orangeBrenta-0)" />
+        <ParagraphText>Limite di iscritti: 200.</ParagraphText>
+      </div>
     </>
   );
 };
@@ -41,18 +34,18 @@ const PricesTable = () => {
   return (
     <Container fluid className={classes.table}>
       <Container fluid className={classes.tableColumn}>
-        <BlueTitleMedium text="GARA AGONISTICA" />
-        <Text className={classes.tableSubtitle}>23km 2100D+</Text>
-        <Text className={classes.tableRow}>€23 fino a 31/03/2024</Text>
-        <Text className={classes.tableRow}>€28 fino a 15/06/2024</Text>
-        <Text className={classes.tableLastRow}>€33 fino a 09/07/2024</Text>
+        <BlueTitleMedium text="BRENTA WILDRACE" />
+        <Text className={classes.tableSubtitle}>23km 2000m D+</Text>
+        <Text className={classes.tableRow}>€39 fino a 30 Aprile 2024</Text>
+        <Text className={classes.tableRow}>€44 fino a 31 Maggio 2024</Text>
+        <Text className={classes.tableLastRow}>€49 fino a 02 Luglio 2024</Text>
       </Container>
       <Container fluid className={classes.tableColumn}>
-        <BlueTitleMedium text="GARA AMATORIALE" />
-        <Text className={classes.tableSubtitle}>12km 1000D+</Text>
-        <Text className={classes.tableRow}>€18 fino a 31/03/2024</Text>
-        <Text className={classes.tableRow}>€23 fino a 15/06/2024</Text>
-        <Text className={classes.tableLastRow}>€28 fino a 09/07/2024</Text>
+        <BlueTitleMedium text="BRENTA WILDRUN" />
+        <Text className={classes.tableSubtitle}>14km 1200m D+</Text>
+        <Text className={classes.tableRow}>€34 fino a 30 Aprile 2024</Text>
+        <Text className={classes.tableRow}>€39 fino a 31 Maggio 2024</Text>
+        <Text className={classes.tableLastRow}>€44 fino a 02 Luglio 2024</Text>
       </Container>
     </Container>
   );
@@ -75,33 +68,45 @@ const RegistrationDetails = () => {
   return (
     <ul>
       <li>
+        <ParagraphText>Pettorale con chip, cronometraggio</ParagraphText>
+      </li>
+      <li>
         <ParagraphText>
-          Pettorale gara con chip, cronometraggio, servizi igienici alla
-          partenza
+          Pacco gara (ATTENZIONE: non abbiamo ancora stabilito il pacco gara)
         </ParagraphText>
       </li>
       <li>
-        <ParagraphText>Pacco gara</ParagraphText>
+        <ParagraphText>Servizi igienici alla partenza</ParagraphText>
       </li>
       <li>
         <ParagraphText>Parcheggio gratuito alla partenza</ParagraphText>
       </li>
       <li>
-        <ParagraphText>Ristori lungo il percorso e all’arrivo</ParagraphText>
-      </li>
-      <li>
         <ParagraphText>
-          Servizio recupero bastoncini a malga Termoncello I° e II° passaggio
+          Ben 8 ristori lungo il percorso di cui 5 completi e 3 solo idrici
         </ParagraphText>
       </li>
       <li>
-        <ParagraphText>Servizio docce presso la partenza/arrivo</ParagraphText>
+        <ParagraphText>
+          Servizio recupero bastoncini presso Malga Termoncello per poter
+          affrontare la discesa più comodamente
+        </ParagraphText>
       </li>
       <li>
-        <ParagraphText>Buono pasto</ParagraphText>
+        <ParagraphText>
+          Servizio docce dopo la gara presso il campo sportivo di Denno
+        </ParagraphText>
       </li>
       <li>
-        <ParagraphText>Classifiche finali e foto</ParagraphText>
+        <ParagraphText>
+          Bus navetta per raggiungere le docce e per il rientro in zona pranzo /
+          premiazioni
+        </ParagraphText>
+      </li>
+      <li>
+        <ParagraphText>
+          Buono pasto, classifiche finali, foto scaricabili dal nostro sito
+        </ParagraphText>
       </li>
     </ul>
   );

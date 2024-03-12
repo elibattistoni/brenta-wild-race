@@ -20,6 +20,11 @@ import BrentaWRLogo from "../assets/logo-brenta-wild-race.svg?react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/opacity.css";
 import { useMediaQuery } from "@mantine/hooks";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useRef } from "react";
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const RowTitle = ({ text }) => {
   const theme = useMantineTheme();
@@ -93,6 +98,37 @@ const LinksTable = () => {
 };
 
 const HeroSection = () => {
+  const containerRef = useRef(null);
+  const titleRef = useRef(null);
+  const imgRef = useRef(null);
+  // const whereRef = useRef(null);
+  // const ctaRef = useRef(null);
+  // const specsRef = useRef(null);
+
+  useGSAP(
+    () => {
+      const tl = gsap.timeline({
+        defaults: { ease: "power4.out" },
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top top", // when the top of the item hits the top of the viewport
+          end: "bottom center", // when the bottom of the item hits the center of the viewport
+          scrub: 2,
+          markers: true,
+          id: "TL",
+        },
+      });
+
+      tl.fromTo(imgRef.current, { yPercent: 0 }, { yPercent: 10 }, 0).fromTo(
+        titleRef.current,
+        { yPercent: 0 },
+        { yPercent: 30 },
+        0
+      );
+    },
+    { scope: containerRef }
+  );
+
   const isSmall = useMediaQuery(
     `(min-width: ${em(200)}) and (max-width: ${em(576)})`
   );
@@ -109,15 +145,15 @@ const HeroSection = () => {
   }
 
   return (
-    <div className={classes.hero}>
-      <div className={classes.imgContainer}>
+    <div className={classes.hero} ref={containerRef}>
+      <div className={classes.imgContainer} ref={imgRef}>
         <div className={classes.imgContainerInner}>
           <LazyLoadImage
             alt="Hero Image of Runner"
             effect="opacity"
             placeholderSrc="/brenta-wild-race/hero-img-30px.png"
             src={imgUrl}
-            className={classes.imgLoaded}
+            className={`${classes.imgLoaded} hero-img`}
             wrapperProps={{
               style: { transitionDuration: "2s" },
             }}
@@ -125,7 +161,7 @@ const HeroSection = () => {
           />
         </div>
       </div>
-      <div className={classes.titleContainer}>
+      <div className={classes.titleContainer} ref={titleRef}>
         <Text
           fz={{ base: "md", sm: "lg", md: "xl" }}
           fw="var(--mantine-fw-medium)"

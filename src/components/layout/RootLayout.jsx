@@ -2,6 +2,7 @@ import { Outlet, useLocation } from "react-router-dom";
 import MainNavigation from "./MainNavigation";
 import Footer from "./Footer";
 import { useEffect } from "react";
+import SmoothScrolling from "../shared/SmoothScrolling";
 
 const RootLayout = () => {
   //! scroll top top whenever the path changes
@@ -13,7 +14,7 @@ const RootLayout = () => {
   }, [pathname]);
 
   return (
-    <>
+    <SmoothScrolling>
       <div style={{ width: "95%", maxWidth: "121ch", margin: "0 auto" }}>
         <MainNavigation />
         <main style={{ minHeight: "100svh" }}>
@@ -21,7 +22,7 @@ const RootLayout = () => {
         </main>
       </div>
       <Footer />
-    </>
+    </SmoothScrolling>
   );
 };
 

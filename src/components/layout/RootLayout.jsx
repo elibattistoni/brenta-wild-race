@@ -14,7 +14,7 @@ const RootLayout = () => {
   }, [pathname]);
 
   return (
-    <>
+    <SmoothScrolling>
       <div style={{ width: "95%", maxWidth: "121ch", margin: "0 auto" }}>
         <MainNavigation />
         <main style={{ minHeight: "100svh" }}>
@@ -22,7 +22,7 @@ const RootLayout = () => {
         </main>
       </div>
       <Footer />
-    </>
+    </SmoothScrolling>
   );
 };
 

@@ -1,0 +1,45 @@
+.tableRow {
+  border-bottom: 0.5px solid alpha(var(--mantine-color-fontWhite-0), 0.3);
+  border-top: 0.5px solid alpha(var(--mantine-color-fontWhite-0), 0.3);
+  padding: rem(64px) 0px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--mantine-spacing-lg);
+  }
+}
+
+.rowTitle {
+  font-weight: var(--mantine-fw-medium);
+  margin-left: var(--mantine-spacing-xl) !important;
+  @media (max-width: $mantine-breakpoint-md) {
+    margin-left: 0px !important;
+  }
+}
+
+.rowContent {
+  margin-right: var(--mantine-spacing-xl) !important;
+  gap: var(--mantine-spacing-xl);
+  align-items: center;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    margin-right: 0px !important;
+    gap: var(--mantine-spacing-sm);
+  }
+
+  @media (max-width: $mantine-breakpoint-xxs) {
+    flex-direction: column;
+  }
+}
+
+.arrow {
+  cursor: pointer;
+  @media (max-width: $mantine-breakpoint-md) {
+    width: rem(32px);
+  }
+}

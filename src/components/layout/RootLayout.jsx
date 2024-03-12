@@ -2,7 +2,7 @@ import { Outlet, useLocation } from "react-router-dom";
 import MainNavigation from "./MainNavigation";
 import Footer from "./Footer";
 import { useEffect } from "react";
-import SmoothScrolling from "../shared/SmoothScrolling";
+import Lenis from "@studio-freight/lenis";
 
 const RootLayout = () => {
   //! scroll top top whenever the path changes
@@ -13,8 +13,18 @@ const RootLayout = () => {
     window.scrollTo(0, 0);
   }, [pathname]);
 
+  //! lenis for smooth scroll
+  useEffect(() => {
+    const lenis = new Lenis();
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+  }, []);
+
   return (
-    <SmoothScrolling>
+    <>
       <div style={{ width: "95%", maxWidth: "121ch", margin: "0 auto" }}>
         <MainNavigation />
         <main style={{ minHeight: "100svh" }}>
@@ -22,7 +32,7 @@ const RootLayout = () => {
         </main>
       </div>
       <Footer />
-    </SmoothScrolling>
+    </>
   );
 };
 

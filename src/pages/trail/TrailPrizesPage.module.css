@@ -1,0 +1,27 @@
+.table {
+  display: flex;
+  /* top | left and right | bottom */
+  margin: 0px !important;
+  @media (max-width: $mantine-breakpoint-sm) {
+    flex-direction: column;
+    gap: rem(56px);
+  }
+}
+
+.tableColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tableRow {
+  border-bottom: 0.5px solid alpha(var(--mantine-color-fontWhite-0), 0.3);
+  padding: rem(24px) 0px !important;
+  text-align: center;
+  font-size: var(--mantine-font-size-lg) !important;
+}
+
+.tableLastRow {
+  padding: rem(24px) 0px !important;
+  font-size: var(--mantine-font-size-lg) !important;
+}

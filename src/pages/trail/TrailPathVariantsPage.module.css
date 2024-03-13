@@ -2,11 +2,11 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: rem(40px);
+  gap: rem(32px);
   /* border: 1px solid blue; */
   @media (max-width: $mantine-breakpoint-md) {
-    gap: rem(0px);
-    margin-top: rem(24px) !important;
+    gap: rem(32px);
+    margin-top: rem(16px) !important;
   }
 }
 
@@ -16,19 +16,19 @@
   justify-content: space-between;
   padding: 0px !important;
   gap: rem(32px);
-  margin-top: rem(48px) !important;
+  margin-top: rem(16px) !important;
 
   @media (max-width: $mantine-breakpoint-md) {
     width: 100%;
     flex-direction: column;
-    gap: rem(48px);
+    gap: rem(0px);
   }
 }
 
 .trailLong {
   width: rem(640px);
   height: rem(640px);
-  margin-top:rem(72px);
+  margin-top: rem(72px);
 
   @media (max-width: $mantine-breakpoint-xl) {
     width: rem(480px);
@@ -39,16 +39,18 @@
     height: rem(400px);
   }
 
+  @media (max-width: $mantine-breakpoint-md) {
+    margin-top: rem(32px);
+  }
+
   @media (max-width: $mantine-breakpoint-xs) {
     width: rem(320px);
     height: rem(320px);
-    margin-top: rem(56px);
   }
 
   @media (max-width: $mantine-breakpoint-xxs) {
     width: rem(240px);
     height: rem(240px);
-    margin-top: rem(48px);
   }
 
   path {
@@ -69,6 +71,9 @@
   @media (max-width: $mantine-breakpoint-lg) {
     width: rem(320px);
     height: rem(320px);
+  }
+  @media (max-width: $mantine-breakpoint-md) {
+    margin-top: rem(-40px);
   }
 
   @media (max-width: $mantine-breakpoint-xs) {

@@ -56,8 +56,8 @@ const AboutPage = () => {
           </Flex>
         </PageSection>
         <PageSection>
+          <PageSectionTitle text="DOVE ALLOGGIARE" />
           <Stack gap="lg">
-            <PageSectionTitle text="DOVE ALLOGGIARE" />
             <ul style={{ margin: "0px" }}>
               <li>
                 <ParagraphText>

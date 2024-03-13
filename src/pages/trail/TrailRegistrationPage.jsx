@@ -1,5 +1,5 @@
 import Heading from "../../components/shared/Heading";
-import { Container, Stack, Text } from "@mantine/core";
+import { Container, Stack, Text, rem } from "@mantine/core";
 import classes from "./TrailRegistrationPage.module.css";
 import PageContainer from "../../components/shared/PageContainer";
 import { IconAlertTriangle } from "@tabler/icons-react";
@@ -12,7 +12,7 @@ import HighlightedText from "../../components/shared/HighlightedText";
 
 const InfoDetails = () => {
   return (
-    <>
+    <Stack gap={rem(8)}>
       <ParagraphText>
         La gara <HighlightedText text="Brenta Wild Race" /> si terrà il giorno
         Domenica <HighlightedText text="07 Luglio 2024" />.
@@ -26,7 +26,7 @@ const InfoDetails = () => {
         <IconAlertTriangle color="var(--mantine-color-orangeBrenta-0)" />
         <ParagraphText>Limite di iscritti: 200.</ParagraphText>
       </div>
-    </>
+    </Stack>
   );
 };
 
@@ -118,26 +118,20 @@ const TrailRegistrationPage = () => {
       <Heading title="ISCRIZIONE" subtitle="LA GARA" />
       <PageContainer>
         <PageSection>
-          <Stack gap="lg">
-            <PageSectionTitle text="INFORMAZIONI" />
-            <InfoDetails />
-          </Stack>
+          <PageSectionTitle text="INFORMAZIONI" />
+          <InfoDetails />
         </PageSection>
         <PageSection>
           <PageSectionTitle text="QUOTE" />
           <PricesTable />
         </PageSection>
         <PageSection>
-          <Stack gap="lg">
-            <PageSectionTitle text="COME ISCRIVERSI" />
-            <RegistrationInstructions />
-          </Stack>
+          <PageSectionTitle text="COME ISCRIVERSI" />
+          <RegistrationInstructions />
         </PageSection>
         <PageSection>
-          <Stack gap="lg">
-            <PageSectionTitle text="Cosa comprende l'iscrizione?" />
-            <RegistrationDetails />
-          </Stack>
+          <PageSectionTitle text="Cosa comprende l'iscrizione?" />
+          <RegistrationDetails />
         </PageSection>
       </PageContainer>
     </>

@@ -1,16 +1,9 @@
 .container {
-  /* top | right | bottom | left */
-  /* margin: rem(72px) auto rem(160px) auto; */
   max-width: 120ch !important;
   margin-top: rem(72px);
   margin-bottom: rem(160px);
   margin-left: auto !important;
   margin-right: auto !important;
-  /* margin-left: auto;
-  margin-right: auto;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  width: 100%; */
 
   @media (max-width: $mantine-breakpoint-md) {
     margin: rem(80px) 0px;

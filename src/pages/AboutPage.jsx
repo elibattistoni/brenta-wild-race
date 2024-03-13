@@ -28,9 +28,10 @@ const AboutPage = () => {
             38010 Campodenno (TN)
           </ParagraphText>
           <Stack gap={rem(4)}>
-            <ParagraphText>Presidente: Antonio - 338 5205357</ParagraphText>
+            <ParagraphText>Presidente: Maurizio - 348 4967404</ParagraphText>
+            <ParagraphText>Tesoriere: Antonio - 338 5205357</ParagraphText>
+            <ParagraphText>Segretaria: Claudia - 348 2606635</ParagraphText>
             <ParagraphText>Info percorso: Narciso - 328 2668759</ParagraphText>
-            <ParagraphText>Info iscrizioni: Danilo - 335 1240212</ParagraphText>
           </Stack>
           <ParagraphText>
             email: <HighlightedText text="info@brentawildrace.it" />
@@ -76,7 +77,7 @@ const AboutPage = () => {
                     className={classes.link}
                   >
                     <HighlightedText text="Agrihouse" />
-                  </NavLink>
+                  </NavLink>{" "}
                   - Dercolo di Campodenno
                 </ParagraphText>
               </li>
@@ -98,7 +99,7 @@ const AboutPage = () => {
                     className={classes.link}
                   >
                     <HighlightedText text="B&B Casa delle Fate" />
-                  </NavLink>
+                  </NavLink>{" "}
                   - Termon di Campodenno
                 </ParagraphText>
               </li>
@@ -109,7 +110,7 @@ const AboutPage = () => {
                     className={classes.link}
                   >
                     <HighlightedText text="Agritur Golden Pause" />
-                  </NavLink>
+                  </NavLink>{" "}
                   - Toss di Ton
                 </ParagraphText>
               </li>

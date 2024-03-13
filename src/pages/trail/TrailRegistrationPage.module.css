@@ -1,7 +1,7 @@
 .alert {
-    display: flex;
-    align-items: center;
-    gap: rem(8px)
+  display: flex;
+  align-items: center;
+  gap: rem(8px);
 }
 
 .table {

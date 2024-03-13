@@ -6,12 +6,14 @@ import { paths } from "../../utils/paths";
 import ButtonPrimary from "../shared/ButtonPrimary";
 import ButtonSecondary from "../shared/ButtonSecondary";
 import { Text, Title, em, rem } from "@mantine/core";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useRef } from "react";
 import classes from "./HeroSection.module.css";
-gsap.registerPlugin(useGSAP, ScrollTrigger);
+
+// const getParallaxPosition = (yScroll) => {
+//   return {
+//     transform: `translateY(${yScroll * 100})`,
+//     animation: `transform 0.5s ease-in-out`,
+//   };
+// };
 
 const HeroSection = () => {
   //! check media query
@@ -22,60 +24,14 @@ const HeroSection = () => {
     `(min-width: ${em(576)}) and (max-width: ${em(992)})`
   );
 
+  // const [scroll, scrollTo] = useWindowScroll();
+  // console.log("Scroll Position y ", scroll.y);
+  // const parallaxStyle = getParallaxPosition(scroll.y);
+
+  //! TODO ELISA scroll based animation parallax effect with css
   // const isLayoutColumn = useMediaQuery(
   //   `(min-width: ${em(200)}) and (max-width: ${em(764)})`
   // );
-
-  // const isLarge = useMediaQuery(`(min-width: ${em(992)})`);
-
-  //! refs for gsap
-  const containerRef = useRef(null);
-  const titleContainerRef = useRef(null);
-  const titleRef = useRef(null);
-  const imgRef = useRef(null);
-  const whereRef = useRef(null);
-  const ctaRef = useRef(null);
-  const specsRef = useRef(null);
-
-  useGSAP(
-    () => {
-      gsap.fromTo(
-        imgRef.current,
-        { scale: 0, opacity: 0 },
-        { scale: 1, opacity: 1, duration: 2, ease: "power1.out" }
-      );
-
-      gsap.from(titleRef.current, {
-        x: -1000,
-        duration: 2,
-        ease: "power1.out",
-      });
-
-      const tl = gsap.timeline({
-        defaults: { ease: "power4.out" },
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top top", // when the top of the item hits the top of the viewport
-          end: "bottom center", // when the bottom of the item hits the center of the viewport
-          scrub: 0.5,
-          // markers: true,
-          // id: "TL",
-        },
-      });
-
-      tl.fromTo(imgRef.current, { yPercent: 0 }, { yPercent: 10 }, 0)
-        .fromTo(
-          titleContainerRef.current,
-          { yPercent: 0 },
-          { yPercent: -10 },
-          0
-        )
-        .fromTo(whereRef.current, { yPercent: 0 }, { yPercent: -10 }, 0)
-        .fromTo(ctaRef.current, { yPercent: 0 }, { yPercent: -10 }, 0)
-        .fromTo(specsRef.current, { yPercent: 0 }, { yPercent: -10 }, 0);
-    },
-    { scope: containerRef }
-  );
 
   //! load image based on media query
   let imgUrl = "/brenta-wild-race/hero-img-1600px.png";
@@ -86,8 +42,8 @@ const HeroSection = () => {
   }
 
   return (
-    <div className={classes.hero} ref={containerRef}>
-      <div className={classes.imgContainer} ref={imgRef}>
+    <div className={classes.hero}>
+      <div className={classes.imgContainer}>
         <div className={classes.imgContainerInner}>
           <LazyLoadImage
             alt="Hero Image of Runner"
@@ -102,7 +58,7 @@ const HeroSection = () => {
           />
         </div>
       </div>
-      <div className={classes.titleContainer} ref={titleContainerRef}>
+      <div className={classes.titleContainer}>
         <Text
           fz={{ base: "md", sm: "lg", md: "xl" }}
           fw="var(--mantine-fw-medium)"
@@ -116,13 +72,12 @@ const HeroSection = () => {
           pt={rem(0)}
           pb={rem(0)}
           className={classes.heroTitle}
-          ref={titleRef}
         >
           BRENTA WILD RACE
         </Title>
       </div>
       <div className={classes.where}>
-        <div className={classes.whereInner} ref={whereRef}>
+        <div className={classes.whereInner}>
           <Text
             fz={{ base: "xl", md: rem(24) }}
             size={rem(24)}
@@ -140,7 +95,7 @@ const HeroSection = () => {
           </Text>
         </div>
       </div>
-      <div className={classes.cta} ref={ctaRef}>
+      <div className={classes.cta}>
         <NavLink to={paths.gara.children.percorsoVarianti.link}>
           <ButtonSecondary text="La Gara" />
         </NavLink>
@@ -149,7 +104,7 @@ const HeroSection = () => {
         </NavLink>
       </div>
       <div className={classes.trailSpecs}>
-        <div className={classes.trailSpecsWrapper} ref={specsRef}>
+        <div className={classes.trailSpecsWrapper}>
           <Text
             fz={{ base: "sm", sm: "md", md: "lg" }}
             fw="var(--mantine-fw-medium)"
@@ -200,4 +155,56 @@ export default HeroSection;
   className={classes.imgLoaded}
   style={{ opacity: opacity }}
 />
+*/
+
+/*
+
+//! refs for gsap
+  const containerRef = useRef(null);
+  const titleContainerRef = useRef(null);
+  const titleRef = useRef(null);
+  const imgRef = useRef(null);
+  const whereRef = useRef(null);
+  const ctaRef = useRef(null);
+  const specsRef = useRef(null);
+
+useGSAP(
+    () => {
+      gsap.fromTo(
+        imgRef.current,
+        { scale: 0, opacity: 0 },
+        { scale: 1, opacity: 1, duration: 2, ease: "power1.out" }
+      );
+
+      gsap.from(titleRef.current, {
+        x: -1000,
+        duration: 2,
+        ease: "power1.out",
+      });
+
+      const tl = gsap.timeline({
+        defaults: { ease: "power4.out" },
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top top", // when the top of the item hits the top of the viewport
+          end: "bottom center", // when the bottom of the item hits the center of the viewport
+          scrub: 0.5,
+          // markers: true,
+          // id: "TL",
+        },
+      });
+
+      tl.fromTo(imgRef.current, { yPercent: 0 }, { yPercent: 10 }, 0)
+        .fromTo(
+          titleContainerRef.current,
+          { yPercent: 0 },
+          { yPercent: -10 },
+          0
+        )
+        .fromTo(whereRef.current, { yPercent: 0 }, { yPercent: -10 }, 0)
+        .fromTo(ctaRef.current, { yPercent: 0 }, { yPercent: -10 }, 0)
+        .fromTo(specsRef.current, { yPercent: 0 }, { yPercent: -10 }, 0);
+    },
+    { scope: containerRef }
+  );
 */

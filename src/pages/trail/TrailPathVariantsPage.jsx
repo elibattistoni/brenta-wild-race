@@ -212,8 +212,8 @@ const TrailDescriptionSection = () => {
       </Stack>
       <Flex justify="end">
         <DownloadButton
-          fileName="descrizione-percorso-brenta-wild-race.pdf"
-          linkToFile="/brenta-wild-race/descrizione-percorso-brenta-wild-race.pdf"
+          fileName="descrizione-percorso-brenta-wildrace.pdf"
+          linkToFile="/brenta-wild-race/descrizione-percorso-brenta-wildrace.pdf"
           button="secondary"
           buttonText="Scarica PDF"
         />

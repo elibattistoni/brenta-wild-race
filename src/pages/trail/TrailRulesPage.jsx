@@ -1,9 +1,10 @@
-import { Stack, rem } from "@mantine/core";
+import { Flex, Stack, rem } from "@mantine/core";
 import Heading from "../../components/shared/Heading";
 import PageContainer from "../../components/shared/PageContainer";
 import PageSection from "../../components/shared/PageSection";
 import ParagraphText from "../../components/shared/ParagraphText";
 import HighlightedText from "../../components/shared/HighlightedText";
+import DownloadButton from "../../components/shared/DownloadButton";
 
 const TrailRulesPage = () => {
   return (
@@ -13,15 +14,18 @@ const TrailRulesPage = () => {
         <PageSection>
           <Stack gap={rem(8)}>
             <ParagraphText>
-              <HighlightedText text="Età di partecipazione / Documento sanitario" />
+              <HighlightedText text="Età di partecipazione / Visita medica" />
             </ParagraphText>
             <ParagraphText>
-              Alla Brenta WildRace possono partecipare coloro che hanno compiuto
-              i 18 anni di età. Tutti gli atleti devono essere in possesso di un
-              certificato medico per la pratica dello sport a livello agonistico
-              in corso di validità ai sensi di legge. Questo certificato deve
-              essere valido alla data della gara e deve essere presentato al
-              momento dell'assegnazione del numero di pettorale.
+              Alle gare Brenta Wildrace e Brenta Wildrun possono partecipare
+              coloro che hanno compiuto i 18 anni di età. Per partecipare alla
+              Wildrace gli atleti devono essere in possesso di un certificato
+              medico per la pratica dello sport a livello agonistico in corso di
+              validità ai sensi di legge. Questo certificato deve essere valido
+              alla data della gara e deve essere presentato al momento del
+              ritiro del pettorale, se non precedentemente caricato in fase di
+              iscrizione online. Il certificato medico non viene richiesto a chi
+              partecipa alla Wildrun.
             </ParagraphText>
           </Stack>
           <Stack gap={rem(8)}>
@@ -29,8 +33,10 @@ const TrailRulesPage = () => {
               <HighlightedText text="Tempo massimo / Cancelli" />
             </ParagraphText>
             <ParagraphText>
-              Cancello: al quarto ristoro a Malga Campa, dopo 3 h 15 minuti
-              dalla partenza. Il tempo massimo è previsto in 5 ore 45 minuti.
+              Brenta Wildrace: Cancello presso Malga Campa (quarto ristoro),
+              dopo 2h:45m dalla partenza. Il tempo massimo è previsto per
+              terminare la gara in 5h:30m. Brenta Wildrun: Non sono previsti
+              cancelli.
             </ParagraphText>
           </Stack>
           <Stack gap={rem(8)}>
@@ -40,13 +46,13 @@ const TrailRulesPage = () => {
             <ul>
               <li>
                 <ParagraphText>
-                  Indossare in modo visibile durante tutta la gara il numero di
+                  Indossare in modo visibile durante tutta la gara il proprio
                   pettorale
                 </ParagraphText>
               </li>
               <li>
                 <ParagraphText>
-                  Obbligo che ciascun concorrente sia dotato, alla partenza, di
+                  Obbligo che ciascun concorrente sia dotato durante la gara di
                   una GIACCA ANTIVENTO. La dotazione verrà controllata a fine
                   corsa. L'atleta che venga trovato senza questo indumento verrà
                   sanzionato con una penalità di 3 minuti
@@ -89,7 +95,7 @@ const TrailRulesPage = () => {
             </ParagraphText>
             <ParagraphText>
               E' consentito l'uso dei bastoncini. Gli stessi potranno essere
-              lasciati alla malga Termoncello (III ristoro) e verranno
+              lasciati alla malga Termoncello (terzo ristoro) e verranno
               riconsegnati all'arrivo.
             </ParagraphText>
           </Stack>
@@ -99,12 +105,20 @@ const TrailRulesPage = () => {
               <HighlightedText text="Ristori" />
             </ParagraphText>
             <ParagraphText>
-              Sono previsti 6 ristori lungo il persorso, nelle seguenti
-              località: Malga Arza, Malga Termoncello, Malga Campa, Bocchetta
-              Val Strangola, Malga Loverdina, Doss del Ciaval.
+              Sono previsti ben 8 ristori lungo il percorso, nelle seguenti
+              località:
             </ParagraphText>
+            <ol>
+              <li>Scalacce - Ristoro idrico</li>
+              <li>Malga Arza - Ristoro completo</li>
+              <li>Malga Termoncello - Ristoro completo</li>
+              <li>Malga Campa - Ristoro completo</li>
+              <li>Loc.tà acqua di Santa Maria - Ristoro idrico</li>
+              <li>Malga Loverdina - Ristoro completo</li>
+              <li>Loc.tà San Pancrazio - Ristoro idrico</li>
+              <li>Arrivo - Ristoro completo</li>
+            </ol>
           </Stack>
-
           <Stack gap={rem(8)}>
             <ParagraphText>
               <HighlightedText text="Responsabilità" />
@@ -146,13 +160,13 @@ const TrailRulesPage = () => {
               <HighlightedText text="Comportamento" />
             </ParagraphText>
             <ParagraphText>
-              Agli atleti è consigliato un comportamento ecologico.La gara
-              aderisce al progetto "IO NON GETTO I MIEI RIFIUTI". Si chiede
+              Agli atleti è consigliato un comportamento ecologico. La gara
+              aderisce al progetto "IO NON GETTO I MIEI RIFIUTI", si chiede
               pertanto di gettare la spazzatura (es: bottiglie, bicchieri, gel)
-              nei cassonetti allestiti lungo il percorso. I concorrenti che
-              verranno segnalati per cattiva condotta e comportamento ambientale
-              non prudente dovranno affrontare sanzioni fino alla squalifica,
-              determinate da una giuria costituita ad hoc.
+              nei cassonetti allestiti nei vari punti di ristoro. I concorrenti
+              che verranno segnalati per cattiva condotta e comportamento
+              ambientale non prudente dovranno affrontare sanzioni fino alla
+              squalifica, determinate da una giuria costituita ad hoc.
             </ParagraphText>
           </Stack>
 
@@ -161,9 +175,14 @@ const TrailRulesPage = () => {
               <HighlightedText text="Parcheggio" />
             </ParagraphText>
             <ParagraphText>
-              Parcheggi sono disponibili presso il campo sportivo di Campodennno
-              - Loc. Salvez e presso piazzale Caserma VVF.
+              I parcheggi per le vostre auto, tutti gratuiti, sono disponibili
+              presso:
             </ParagraphText>
+            <ul>
+              <li>Pineta di Termon</li>
+              <li>Campo volo di Termon</li>
+              <li>Campo sportivo di Denno</li>
+            </ul>
           </Stack>
 
           <Stack gap={rem(8)}>
@@ -172,8 +191,8 @@ const TrailRulesPage = () => {
             </ParagraphText>
             <ParagraphText>
               Sono accettati fino a mezz'ora dopo l'arrivo dell'ultimo
-              concorrente. Verrà chiesto il pagamento di una tassa di € 50,00
-              che sarà rimborsata in caso di accettazione del reclamo.
+              concorrente. Verrà chiesto il pagamento di una tassa di 50,00€ che
+              sarà rimborsata in caso di accettazione del reclamo.
             </ParagraphText>
           </Stack>
 
@@ -236,12 +255,21 @@ const TrailRulesPage = () => {
           <ParagraphText>
             L'organizzazione si riserva il diritto di modificare e/o integrare
             il presente regolamento. Eventuali variazioni verranno adeguatamente
-            segnalate sul nostro sito e profilo facebook, non che riportate in{" "}
+            segnalate sul nostro sito internet e sui profili social facebook e
+            instagram, nonché riportate in{" "}
             <span style={{ color: "hsl(358, 100%, 35%)" }}>
               GRASSETTO MAIUSCOLO ROSSO
             </span>{" "}
             all'interno di questo documento.
           </ParagraphText>
+          <Flex justify="end">
+            <DownloadButton
+              fileName="regolamento-brenta-wildrace.pdf"
+              linkToFile="/brenta-wild-race/regolamento-brenta-wildrace.pdf"
+              button="secondary"
+              buttonText="Scarica PDF"
+            />
+          </Flex>
         </PageSection>
       </PageContainer>
     </>

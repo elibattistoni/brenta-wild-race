@@ -265,7 +265,7 @@ const TrailRulesPage = () => {
           <Flex justify="end">
             <DownloadButton
               fileName="regolamento-brenta-wildrace.pdf"
-              linkToFile="/brenta-wild-race/regolamento-brenta-wildrace.pdf"
+              linkToFile="/regolamento-brenta-wildrace.pdf"
               button="secondary"
               buttonText="Scarica PDF"
             />

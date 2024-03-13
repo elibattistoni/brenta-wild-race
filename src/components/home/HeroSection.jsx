@@ -34,11 +34,11 @@ const HeroSection = () => {
   // );
 
   //! load image based on media query
-  let imgUrl = "/brenta-wild-race/hero-img-1600px.png";
+  let imgUrl = "/hero-img-1600px.png";
   if (isSmall) {
-    imgUrl = "/brenta-wild-race/hero-img-800px.png";
+    imgUrl = "/hero-img-800px.png";
   } else if (isMedium) {
-    imgUrl = "/brenta-wild-race/hero-img-1200px.png";
+    imgUrl = "/hero-img-1200px.png";
   }
 
   return (
@@ -48,7 +48,7 @@ const HeroSection = () => {
           <LazyLoadImage
             alt="Hero Image of Runner"
             effect="opacity"
-            placeholderSrc="/brenta-wild-race/hero-img-30px.png"
+            placeholderSrc="/hero-img-30px.png"
             src={imgUrl}
             className={`${classes.imgLoaded} hero-img`}
             wrapperProps={{

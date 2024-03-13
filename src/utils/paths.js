@@ -1,47 +1,47 @@
 export const paths = {
-  home: { link: "/brenta-wild-race/", title: "Home" },
+  home: { link: "/", title: "Home" },
   gara: {
     title: "Gara",
-    linkOff: "/brenta-wild-race/gara",
+    linkOff: "/gara",
     children: {
       percorsoVarianti: {
-        link: "/brenta-wild-race/gara/percorso-varianti",
+        link: "/gara/percorso-varianti",
         title: "Percorso e Varianti",
       },
       programma: {
-        link: "/brenta-wild-race/gara/programma",
+        link: "/gara/programma",
         title: "Programma",
       },
       regolamento: {
-        link: "/brenta-wild-race/gara/regolamento",
+        link: "/gara/regolamento",
         title: "Regolamento",
       },
       montepremi: {
-        link: "/brenta-wild-race/gara/montepremi",
+        link: "/gara/montepremi",
         title: "Montepremi",
       },
       iscrizione: {
-        link: "/brenta-wild-race/gara/iscrizione",
+        link: "/gara/iscrizione",
         title: "Iscrizione",
       },
     },
   },
   edizioni: {
-    link: "/brenta-wild-race/edizioni",
+    link: "/edizioni",
     title: "Edizioni",
     children: {
-      2017: { link: "/brenta-wild-race/edizioni/2017", title: "2017" },
-      2018: { link: "/brenta-wild-race/edizioni/2018", title: "2018" },
-      2019: { link: "/brenta-wild-race/edizioni/2019", title: "2019" },
+      2017: { link: "/edizioni/2017", title: "2017" },
+      2018: { link: "/edizioni/2018", title: "2018" },
+      2019: { link: "/edizioni/2019", title: "2019" },
     },
   },
-  sponsor: { link: "/brenta-wild-race/sponsor", title: "Sponsor" },
+  sponsor: { link: "/sponsor", title: "Sponsor" },
   contatti: {
-    link: "/brenta-wild-race/contatti",
+    link: "/contatti",
     title: "Contatti",
     children: {
-      about: { link: "/brenta-wild-race/contatti", title: "Chi Siamo" },
-      rooms: { link: "/brenta-wild-race/contatti", title: "Dove Alloggiare" },
+      about: { link: "/contatti", title: "Chi Siamo" },
+      rooms: { link: "/contatti", title: "Dove Alloggiare" },
     },
   },
 };

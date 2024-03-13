@@ -13,5 +13,5 @@ export default defineConfig({
     }),
   ],
   assetsInclude: ["**/*.gpx"],
-  base: "/brenta-wild-race/",
+  base: "/",
 });

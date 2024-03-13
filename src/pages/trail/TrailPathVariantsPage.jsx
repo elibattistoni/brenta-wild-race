@@ -213,7 +213,7 @@ const TrailDescriptionSection = () => {
       <Flex justify="end">
         <DownloadButton
           fileName="descrizione-percorso-brenta-wildrace.pdf"
-          linkToFile="/brenta-wild-race/descrizione-percorso-brenta-wildrace.pdf"
+          linkToFile="/descrizione-percorso-brenta-wildrace.pdf"
           button="secondary"
           buttonText="Scarica PDF"
         />
@@ -261,7 +261,7 @@ const RoutesSection = () => {
             <ParagraphText>23km 2000m D+</ParagraphText>
             <DownloadButton
               fileName="traccia-gpx-brenta-wildrace.gpx"
-              linkToFile="/brenta-wild-race/traccia-gpx-brenta-wildrace.gpx"
+              linkToFile="/traccia-gpx-brenta-wildrace.gpx"
               button="primary"
               buttonText="Scarica GPX"
             />
@@ -278,7 +278,7 @@ const RoutesSection = () => {
             <ParagraphText>14km 1200m D+</ParagraphText>
             <DownloadButton
               fileName="traccia-gpx-brenta-wildrun.gpx"
-              linkToFile="/brenta-wild-race/traccia-gpx-brenta-wildrun.gpx"
+              linkToFile="/traccia-gpx-brenta-wildrun.gpx"
               button="primary"
               buttonText="Scarica GPX"
             />

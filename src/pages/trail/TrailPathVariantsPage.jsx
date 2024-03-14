@@ -253,7 +253,7 @@ const RoutesSection = () => {
       <Container fluid className={classes.sectionContent}>
         <Stack align="center">
           <BlueTitleSmall text="PARTENZA / ARRIVO" />
-          <ParagraphText>Eremo di San Pancrazio</ParagraphText>
+          <ParagraphText>Campo volo di Termon</ParagraphText>
         </Stack>
         <Container fluid className={classes.flex}>
           <Stack align="center" justify="center" ref={refAgonistica}>

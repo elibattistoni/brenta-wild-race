@@ -44,6 +44,10 @@ export const paths = {
       rooms: { link: "/contatti", title: "Dove Alloggiare" },
     },
   },
+  privacy: {
+    link: "/privacy-policy",
+    title: "Privacy Policy",
+  },
 };
 
 export const mainNavPaths = [
@@ -89,10 +93,13 @@ export const footerPaths = [
   },
   {
     title: paths.contatti.title,
-    links: Object.entries(paths.contatti.children).map((item) => ({
-      title: item[1].title,
-      link: item[1].link,
-    })),
+    links: [
+      ...Object.entries(paths.contatti.children).map((item) => ({
+        title: item[1].title,
+        link: item[1].link,
+      })),
+      { title: paths.privacy.title, link: paths.privacy.link },
+    ],
   },
 ];
 

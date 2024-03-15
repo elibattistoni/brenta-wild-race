@@ -1,6 +1,6 @@
 .footer {
   padding-top: calc(var(--mantine-spacing-xl) * 2);
-  padding-bottom: var(--mantine-spacing-md);
+  padding-bottom: calc(var(--mantine-spacing-lg) * 2);
   background-color: var(--mantine-color-orangeBlack-1);
   border-top: rem(1px) solid var(--mantine-color-orangeBlack-2);
   @media (max-width: $mantine-breakpoint-sm) {

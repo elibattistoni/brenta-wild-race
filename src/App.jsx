@@ -1,12 +1,12 @@
 import { MantineProvider } from "@mantine/core";
 import mantineUItheme, { resolver } from "./mantineUItheme";
-
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Suspense, lazy } from "react";
 import RootLayout from "./components/layout/RootLayout";
 import ErrorPage from "./pages/ErrorPage";
 import { paths } from "./utils/paths";
 import Loading from "./components/shared/Loading";
+import PrivacyBanner from "./components/layout/PrivacyBanner";
 
 const HomePage = lazy(() => import("./pages/HomePage"));
 const TrailPathVariantsPage = lazy(() =>
@@ -26,6 +26,7 @@ const EditionDetailsPage = lazy(() =>
 const EditionsHomePage = lazy(() =>
   import("./pages/editions/EditionsHomePage")
 );
+const PrivacyPolicyPage = lazy(() => import("./pages/PrivacyPolicyPage"));
 
 const App = () => {
   return (
@@ -71,25 +72,18 @@ const App = () => {
               />
               <Route path={paths.sponsor.link} element={<SponsorsPage />} />
               <Route path={paths.contatti.link} element={<AboutPage />} />
+              <Route
+                path={paths.privacy.link}
+                element={<PrivacyPolicyPage />}
+              />
               <Route path="*" element={<ErrorPage />} />
             </Route>
           </Routes>
         </Suspense>
+        <PrivacyBanner />
       </BrowserRouter>
     </MantineProvider>
   );
 };
-
-// function App() {
-//   return (
-//     <MantineProvider
-//       theme={mantineUItheme}
-//       forceColorScheme="dark"
-//       cssVariablesResolver={resolver}
-//     >
-//       <RouterProvider router={routerProvider} />
-//     </MantineProvider>
-//   );
-// }
 
 export default App;

@@ -99,3 +99,13 @@
     filter: drop-shadow(2px 2px 8px var(--mantine-color-orangeBrenta-0));
   }
 }
+
+.imgContainer {
+  width: 70%;
+  @media (max-width: $mantine-breakpoint-sm) {
+    width: 90%;
+  }
+  @media (max-width: $mantine-breakpoint-xs) {
+    width: 100%;
+  }
+}

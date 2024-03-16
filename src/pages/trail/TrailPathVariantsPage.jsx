@@ -3,7 +3,6 @@ import Heading from "../../components/shared/Heading";
 import PageContainer from "../../components/shared/PageContainer";
 import PageSection from "../../components/shared/PageSection";
 import PageSectionTitle from "../../components/shared/PageSectionTitle";
-import BlueTitleMedium from "../../components/shared/BlueTitleMedium";
 import ParagraphText from "../../components/shared/ParagraphText";
 import TrailWildRace from "../../assets/brenta-wildrace-trail-gpx-exp-svg.svg?react";
 import TrailWildRun from "../../assets/brenta-wildrun-trail-gpx-exp-svg.svg?react";
@@ -13,12 +12,90 @@ import DownloadButton from "../../components/shared/DownloadButton";
 import { useHover, useIntersection, useMediaQuery } from "@mantine/hooks";
 import { useRef } from "react";
 import BlueTitleSmall from "../../components/shared/BlueTitleSmall";
+import BlueTitleMedium from "../../components/shared/BlueTitleMedium";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const AltimetriaSection = () => {
+  const isSmall = useMediaQuery(
+    `(min-width: ${em(200)}) and (max-width: ${em(576)})`
+  );
+
+  let img3Durl = "/mappa-3D-1254px.png";
+  let imgWildrace = "/altimetria-wildrace-1200px.png";
+  let imgWildrun = "/altimetria-wildrun-1200px.png";
+
+  if (isSmall) {
+    img3Durl = "/mappa-3D-800px.png";
+    imgWildrace = "/altimetria-wildrace-800px.png";
+    imgWildrun = "/altimetria-wildrun-800px.png";
+  }
+
   return (
     <PageSection>
-      <PageSectionTitle text="ALTIMETRIA - MAPPA e CARTINA del PERCORSO" />
-      <ParagraphText>Stay Tuned!</ParagraphText>
+      <PageSectionTitle text="MAPPA 3D e ALTIMETRIE del PERCORSO" />
+      <Stack align="center" mt="xl" gap="lg">
+        <BlueTitleSmall text="Mappa 3D" />
+        <div className={classes.imgContainer}>
+          <LazyLoadImage
+            alt="Mappa 3D"
+            effect="opacity"
+            placeholderSrc="/mappa-3D-50px.png"
+            src={img3Durl}
+            wrapperProps={{
+              style: { transitionDuration: "2s" },
+            }}
+            width="100%"
+          />
+        </div>
+        <DownloadButton
+          fileName="mappa-3D.png"
+          linkToFile={img3Durl}
+          button="secondary"
+          buttonText="Scarica Mappa"
+        />
+      </Stack>
+      <Stack align="center" mt="xl" gap="lg">
+        <BlueTitleSmall text="Profilo Altimetrico Wildrace" />
+        <div className={classes.imgContainer}>
+          <LazyLoadImage
+            alt="Profilo Altimetrico Wildrace"
+            effect="opacity"
+            placeholderSrc="/altimetria-wildrace-50px.png"
+            src="/altimetria-wildrace-1790px.png"
+            wrapperProps={{
+              style: { transitionDuration: "2s" },
+            }}
+            width="100%"
+          />
+        </div>
+        <DownloadButton
+          fileName="altimetria-wildrace.png"
+          linkToFile={imgWildrace}
+          button="secondary"
+          buttonText="Scarica Altimetria"
+        />
+      </Stack>
+      <Stack align="center" mt="xl" gap="lg">
+        <BlueTitleSmall text="Profilo Altimetrico Wildrun" />
+        <div className={classes.imgContainer}>
+          <LazyLoadImage
+            alt="Profilo Altimetrico Wildrun"
+            effect="opacity"
+            placeholderSrc="/altimetria-wildrun-50px.png"
+            src="/altimetria-wildrun-1793px.png"
+            wrapperProps={{
+              style: { transitionDuration: "2s" },
+            }}
+            width="100%"
+          />
+        </div>
+        <DownloadButton
+          fileName="altimetria-wildrun.png"
+          linkToFile={imgWildrace}
+          button="secondary"
+          buttonText="Scarica Altimetria"
+        />
+      </Stack>
     </PageSection>
   );
 };

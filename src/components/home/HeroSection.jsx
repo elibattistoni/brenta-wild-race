@@ -50,7 +50,7 @@ const HeroSection = () => {
             effect="opacity"
             placeholderSrc="/hero-img-30px.png"
             src={imgUrl}
-            className={`${classes.imgLoaded} hero-img`}
+            className={`${classes.imgLoaded}`}
             wrapperProps={{
               style: { transitionDuration: "2s" },
             }}

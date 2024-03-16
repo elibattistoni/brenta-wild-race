@@ -20,6 +20,10 @@ const AltimetriaSection = () => {
     `(min-width: ${em(200)}) and (max-width: ${em(576)})`
   );
 
+  const img3DMaxRes = "/mappa-3D-1254px.png";
+  const imgWildraceMaxRes = "/altimetria-wildrace-1790px.png";
+  const imgWildrunMaxRes = "/altimetria-wildrun-1793px.png";
+
   let img3Durl = "/mappa-3D-1254px.png";
   let imgWildrace = "/altimetria-wildrace-1200px.png";
   let imgWildrun = "/altimetria-wildrun-1200px.png";
@@ -49,7 +53,7 @@ const AltimetriaSection = () => {
         </div>
         <DownloadButton
           fileName="mappa-3D.png"
-          linkToFile={img3Durl}
+          linkToFile={img3DMaxRes}
           button="secondary"
           buttonText="Scarica Mappa"
         />
@@ -61,7 +65,7 @@ const AltimetriaSection = () => {
             alt="Profilo Altimetrico Wildrace"
             effect="opacity"
             placeholderSrc="/altimetria-wildrace-50px.png"
-            src="/altimetria-wildrace-1790px.png"
+            src={imgWildrace}
             wrapperProps={{
               style: { transitionDuration: "2s" },
             }}
@@ -70,7 +74,7 @@ const AltimetriaSection = () => {
         </div>
         <DownloadButton
           fileName="altimetria-wildrace.png"
-          linkToFile={imgWildrace}
+          linkToFile={imgWildraceMaxRes}
           button="secondary"
           buttonText="Scarica Altimetria"
         />
@@ -82,7 +86,7 @@ const AltimetriaSection = () => {
             alt="Profilo Altimetrico Wildrun"
             effect="opacity"
             placeholderSrc="/altimetria-wildrun-50px.png"
-            src="/altimetria-wildrun-1793px.png"
+            src={imgWildrun}
             wrapperProps={{
               style: { transitionDuration: "2s" },
             }}
@@ -91,7 +95,7 @@ const AltimetriaSection = () => {
         </div>
         <DownloadButton
           fileName="altimetria-wildrun.png"
-          linkToFile={imgWildrace}
+          linkToFile={imgWildrunMaxRes}
           button="secondary"
           buttonText="Scarica Altimetria"
         />

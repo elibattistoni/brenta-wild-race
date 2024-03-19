@@ -63,9 +63,7 @@ const RegistrationInstructions = () => {
       </ParagraphText>
       <Container fluid className={classes.registrTable}>
         <Flex className={classes.registrRow}>
-          <ParagraphText>
-            Se vuoi iscrivere te stesso, clicca qui:
-          </ParagraphText>
+          <ParagraphText>Se vuoi iscriverti, clicca qui:</ParagraphText>
           <NavLink
             to="https://iscrizioni.wedosport.net/iscrizione.cfm?gara=56297"
             target="_blank"

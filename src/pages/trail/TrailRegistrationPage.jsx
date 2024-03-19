@@ -1,5 +1,5 @@
 import Heading from "../../components/shared/Heading";
-import { Container, Stack, Text, rem } from "@mantine/core";
+import { Container, Flex, Stack, Text, rem } from "@mantine/core";
 import classes from "./TrailRegistrationPage.module.css";
 import PageContainer from "../../components/shared/PageContainer";
 import { IconAlertTriangle } from "@tabler/icons-react";
@@ -9,6 +9,8 @@ import PageSectionTitle from "../../components/shared/PageSectionTitle";
 import ParagraphText from "../../components/shared/ParagraphText";
 import BlueTitleMedium from "../../components/shared/BlueTitleMedium";
 import HighlightedText from "../../components/shared/HighlightedText";
+import ButtonSecondary from "../../components/shared/ButtonSecondary";
+import { NavLink } from "react-router-dom";
 
 const InfoDetails = () => {
   return (
@@ -19,8 +21,8 @@ const InfoDetails = () => {
       </ParagraphText>
       <ParagraphText>
         Le <HighlightedText text="iscrizioni" /> si aprono il giorno{" "}
-        <HighlightedText text="15 Marzo 2024" /> e si chiudono il giorno{" "}
-        <HighlightedText text="02 Luglio 2024" />.
+        <HighlightedText text="19 Marzo 2024" /> e si chiudono il giorno{" "}
+        <HighlightedText text="05 Luglio 2024" />.
       </ParagraphText>
       <div className={classes.alert}>
         <IconAlertTriangle color="var(--mantine-color-orangeBrenta-0)" />
@@ -38,14 +40,14 @@ const PricesTable = () => {
         <Text className={classes.tableSubtitle}>23km 2000m D+</Text>
         <Text className={classes.tableRow}>€39 fino a 30 Aprile 2024</Text>
         <Text className={classes.tableRow}>€44 fino a 31 Maggio 2024</Text>
-        <Text className={classes.tableLastRow}>€49 fino a 02 Luglio 2024</Text>
+        <Text className={classes.tableLastRow}>€49 fino a 05 Luglio 2024</Text>
       </Container>
       <Container fluid className={classes.tableColumn}>
         <BlueTitleMedium text="BRENTA WILDRUN" />
         <Text className={classes.tableSubtitle}>14km 1200m D+</Text>
         <Text className={classes.tableRow}>€34 fino a 30 Aprile 2024</Text>
         <Text className={classes.tableRow}>€39 fino a 31 Maggio 2024</Text>
-        <Text className={classes.tableLastRow}>€44 fino a 02 Luglio 2024</Text>
+        <Text className={classes.tableLastRow}>€44 fino a 05 Luglio 2024</Text>
       </Container>
     </Container>
   );
@@ -59,7 +61,51 @@ const RegistrationInstructions = () => {
         verrà reindirizzati al sito di <HighlightedText text="Wedosport" />,
         nostro partner in iscrizioni e cronometraggio.
       </ParagraphText>
-      <ButtonPrimary text="Iscriviti" style={{ alignSelf: "flex-start" }} />
+      <Container fluid className={classes.registrTable}>
+        <Flex className={classes.registrRow}>
+          <ParagraphText>
+            Se vuoi iscrivere te stesso, clicca qui:
+          </ParagraphText>
+          <NavLink
+            to="https://iscrizioni.wedosport.net/iscrizione.cfm?gara=56297"
+            target="_blank"
+          >
+            <ButtonPrimary
+              text="Iscriviti"
+              style={{ alignSelf: "flex-start" }}
+            />
+          </NavLink>
+        </Flex>
+        <Flex className={classes.registrRow}>
+          <ParagraphText>
+            Se vuoi regalare l'iscrizione ad un/a amico/a, clicca qui:
+          </ParagraphText>
+          <NavLink
+            to="https://iscrizioni.wedosport.net/iscrizione.cfm?gara=56297&r=s"
+            target="_blank"
+          >
+            <ButtonSecondary
+              text="Iscrivi"
+              style={{ alignSelf: "flex-start" }}
+            />
+          </NavLink>
+        </Flex>
+        <Flex className={classes.registrLastRow}>
+          <ParagraphText>
+            If you want to complete the registration module in English, click
+            here:
+          </ParagraphText>
+          <NavLink
+            to="https://iscrizioni.wedosport.net/iscrizione.cfm?gara=56297&lang=EN"
+            target="_blank"
+          >
+            <ButtonSecondary
+              text="Enroll"
+              style={{ alignSelf: "flex-start" }}
+            />
+          </NavLink>
+        </Flex>
+      </Container>
     </>
   );
 };

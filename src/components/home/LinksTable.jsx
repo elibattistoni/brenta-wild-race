@@ -69,7 +69,7 @@ const LinksTable = () => {
         <RowTitle text="ISCRIZIONE" />
         <Flex className={classes.rowContent}>
           <NavLink to={paths.gara.children.iscrizione.link}>
-            <ButtonPrimary text="Iscriviti" />
+            <ButtonPrimary text="Iscrizione" />
           </NavLink>
         </Flex>
       </Flex>

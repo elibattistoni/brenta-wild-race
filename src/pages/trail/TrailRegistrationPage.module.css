@@ -35,3 +35,36 @@
   padding: rem(24px) 0px !important;
   font-size: var(--mantine-font-size-lg) !important;
 }
+
+.registrTable {
+  width: 100% !important;
+  margin: 0 auto !important;
+  display: flex;
+  flex-direction: column;
+  padding: 0px !important;
+}
+
+.registrRow {
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 0.5px solid alpha(var(--mantine-color-fontWhite-0), 0.3);
+  padding: rem(24px) 0px !important;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    flex-direction: column;
+    text-align: center;
+    gap: rem(24px);
+  }
+}
+
+.registrLastRow {
+  align-items: center;
+  justify-content: space-between;
+  padding: rem(24px) 0px !important;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    flex-direction: column;
+    text-align: center;
+    gap: rem(24px);
+  }
+}

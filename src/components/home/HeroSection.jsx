@@ -100,7 +100,7 @@ const HeroSection = () => {
           <ButtonSecondary text="La Gara" />
         </NavLink>
         <NavLink to={paths.gara.children.iscrizione.link}>
-          <ButtonPrimary text="Iscriviti" />
+          <ButtonPrimary text="Iscrizione" />
         </NavLink>
       </div>
       <div className={classes.trailSpecs}>

@@ -12,10 +12,12 @@ import DownloadButton from "../../components/shared/DownloadButton";
 import { useHover, useIntersection, useMediaQuery } from "@mantine/hooks";
 import { useRef } from "react";
 import BlueTitleSmall from "../../components/shared/BlueTitleSmall";
-import BlueTitleMedium from "../../components/shared/BlueTitleMedium";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import { useLocation } from "react-router-dom";
 
 const AltimetriaSection = () => {
+  const location = useLocation();
+
   const isSmall = useMediaQuery(
     `(min-width: ${em(200)}) and (max-width: ${em(576)})`
   );
@@ -23,6 +25,9 @@ const AltimetriaSection = () => {
   const img3DMaxRes = "/mappa-3D-1254px.png";
   const imgWildraceMaxRes = "/altimetria-wildrace-1790px.png";
   const imgWildrunMaxRes = "/altimetria-wildrun-1793px.png";
+
+  console.log(location);
+  console.log(img3DMaxRes, imgWildraceMaxRes, imgWildrunMaxRes);
 
   let img3Durl = "/mappa-3D-1254px.png";
   let imgWildrace = "/altimetria-wildrace-1200px.png";

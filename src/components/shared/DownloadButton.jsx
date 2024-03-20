@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import ButtonPrimary from "./ButtonPrimary";
 import ButtonSecondary from "./ButtonSecondary";
-import { rem } from "@mantine/core";
 
 const DownloadButton = ({
   button,
@@ -10,8 +9,19 @@ const DownloadButton = ({
   linkToFile,
   style,
 }) => {
+  const isDev = import.meta.env.DEV;
+
+  const urlPrefix = isDev
+    ? "http://localhost:5173/"
+    : "https://brentawildrace.it/";
+
   return (
-    <Link to={linkToFile} download={fileName} target="_blank" rel="noreferrer">
+    <Link
+      to={`${urlPrefix}${linkToFile}`}
+      download={fileName}
+      target="_blank"
+      rel="noreferrer"
+    >
       {button === "primary" ? (
         <ButtonPrimary text={buttonText} style={style} />
       ) : (

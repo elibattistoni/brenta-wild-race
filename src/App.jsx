@@ -1,6 +1,6 @@
 import { MantineProvider } from "@mantine/core";
 import mantineUItheme, { resolver } from "./mantineUItheme";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route, HashRouter } from "react-router-dom";
 import { Suspense, lazy } from "react";
 import RootLayout from "./components/layout/RootLayout";
 import ErrorPage from "./pages/ErrorPage";
@@ -35,7 +35,7 @@ const App = () => {
       forceColorScheme="dark"
       cssVariablesResolver={resolver}
     >
-      <BrowserRouter>
+      <HashRouter>
         <Suspense fallback={<Loading />}>
           <Routes>
             <Route path={paths.home.link} element={<RootLayout />}>
@@ -81,7 +81,7 @@ const App = () => {
           </Routes>
         </Suspense>
         <PrivacyBanner />
-      </BrowserRouter>
+      </HashRouter>
     </MantineProvider>
   );
 };

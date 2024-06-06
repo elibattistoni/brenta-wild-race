@@ -65,7 +65,7 @@ const TrailProgramPage = () => {
 
                 <HourScheduleGroup hour="11:15" text="Arrivo primi atleti" />
                 {!isXXS && <Space />}
-                <HourScheduleGroup hour="13:00" text="Inizio pranzo" />
+                <HourScheduleGroup hour="12:00" text="Inizio pranzo" />
                 {!isXXS && <Space />}
                 <HourScheduleGroup hour="14:00" text="Premiazioni" />
                 <Text

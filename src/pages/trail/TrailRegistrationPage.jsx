@@ -115,9 +115,7 @@ const RegistrationDetails = () => {
         <ParagraphText>Pettorale con chip, cronometraggio</ParagraphText>
       </li>
       <li>
-        <ParagraphText>
-          Pacco gara (ATTENZIONE: non abbiamo ancora stabilito il pacco gara)
-        </ParagraphText>
+        <ParagraphText>Pacco gara</ParagraphText>
       </li>
       <li>
         <ParagraphText>Servizi igienici alla partenza</ParagraphText>

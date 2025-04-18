@@ -1,8 +1,8 @@
+import { Stack, Text } from "@mantine/core";
 import { NavLink } from "react-router-dom";
 import Heading from "../../components/shared/Heading";
-import { Stack, Text } from "@mantine/core";
-import classes from "./EditionsHomePage.module.css";
 import PageContainer from "../../components/shared/PageContainer";
+import classes from "./EditionsHomePage.module.css";
 
 const EditionsHomePage = () => {
   return (
@@ -21,6 +21,9 @@ const EditionsHomePage = () => {
           </NavLink>
           <NavLink to="/edizioni/2019" className={classes.link}>
             Edizione 2019
+          </NavLink>
+          <NavLink to="/edizioni/2024" className={classes.link}>
+            Edizione 2024
           </NavLink>
         </Stack>
       </PageContainer>

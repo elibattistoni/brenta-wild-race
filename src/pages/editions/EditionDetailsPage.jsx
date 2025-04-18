@@ -1,16 +1,20 @@
 import { NavLink, useParams } from "react-router-dom";
 import Heading from "../../components/shared/Heading";
 import PageContainer from "../../components/shared/PageContainer";
-import ErrorPage from "../ErrorPage";
-import ParagraphText from "../../components/shared/ParagraphText";
 import PageSection from "../../components/shared/PageSection";
+import ParagraphText from "../../components/shared/ParagraphText";
+import ErrorPage from "../ErrorPage";
 import classes from "./EditionsHomePage.module.css";
-import { Stack } from "@mantine/core";
 
 const EditionDetailsPage = () => {
   const { year } = useParams();
 
-  if (year === "2017" || year === "2018" || year === "2019") {
+  if (
+    year === "2017" ||
+    year === "2018" ||
+    year === "2019" ||
+    year === "2024"
+  ) {
     let content;
 
     if (year === "2017") {
@@ -138,6 +142,8 @@ const EditionDetailsPage = () => {
           </li>
         </ul>
       );
+    } else if (year === "2024") {
+      content = <ParagraphText>(in costruzione)</ParagraphText>;
     }
 
     return (

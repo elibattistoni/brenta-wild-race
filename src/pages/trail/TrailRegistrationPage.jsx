@@ -1,28 +1,28 @@
-import Heading from "../../components/shared/Heading";
 import { Container, Flex, Stack, Text, rem } from "@mantine/core";
-import classes from "./TrailRegistrationPage.module.css";
-import PageContainer from "../../components/shared/PageContainer";
 import { IconAlertTriangle } from "@tabler/icons-react";
+import { NavLink } from "react-router-dom";
+import BlueTitleMedium from "../../components/shared/BlueTitleMedium";
 import ButtonPrimary from "../../components/shared/ButtonPrimary";
+import ButtonSecondary from "../../components/shared/ButtonSecondary";
+import Heading from "../../components/shared/Heading";
+import HighlightedText from "../../components/shared/HighlightedText";
+import PageContainer from "../../components/shared/PageContainer";
 import PageSection from "../../components/shared/PageSection";
 import PageSectionTitle from "../../components/shared/PageSectionTitle";
 import ParagraphText from "../../components/shared/ParagraphText";
-import BlueTitleMedium from "../../components/shared/BlueTitleMedium";
-import HighlightedText from "../../components/shared/HighlightedText";
-import ButtonSecondary from "../../components/shared/ButtonSecondary";
-import { NavLink } from "react-router-dom";
+import classes from "./TrailRegistrationPage.module.css";
 
 const InfoDetails = () => {
   return (
     <Stack gap={rem(8)}>
       <ParagraphText>
         La gara <HighlightedText text="Brenta Wild Race" /> si terrà il giorno
-        Domenica <HighlightedText text="07 Luglio 2024" />.
+        Domenica <HighlightedText text="06 Luglio 2025" />.
       </ParagraphText>
       <ParagraphText>
         Le <HighlightedText text="iscrizioni" /> si aprono il giorno{" "}
-        <HighlightedText text="19 Marzo 2024" /> e si chiudono il giorno{" "}
-        <HighlightedText text="05 Luglio 2024" />.
+        <HighlightedText text="01 Aprile 2025" /> e si chiudono il giorno{" "}
+        <HighlightedText text="04 Luglio 2025" />.
       </ParagraphText>
       <div className={classes.alert}>
         <IconAlertTriangle color="var(--mantine-color-orangeBrenta-0)" />
@@ -38,16 +38,18 @@ const PricesTable = () => {
       <Container fluid className={classes.tableColumn}>
         <BlueTitleMedium text="BRENTA WILDRACE" />
         <Text className={classes.tableSubtitle}>23km 2000m D+</Text>
-        <Text className={classes.tableRow}>€39 fino a 30 Aprile 2024</Text>
-        <Text className={classes.tableRow}>€44 fino a 31 Maggio 2024</Text>
-        <Text className={classes.tableLastRow}>€49 fino a 05 Luglio 2024</Text>
+        <Text className={classes.tableRow}>€35 fino a 30 Aprile 2025</Text>
+        <Text className={classes.tableRow}>€40 fino a 31 Maggio 2025</Text>
+        <Text className={classes.tableRow}>€45 fino a 30 Giugno 2025</Text>
+        <Text className={classes.tableLastRow}>€50 fino a 04 Luglio 2025</Text>
       </Container>
       <Container fluid className={classes.tableColumn}>
         <BlueTitleMedium text="BRENTA WILDRUN" />
-        <Text className={classes.tableSubtitle}>14km 1200m D+</Text>
-        <Text className={classes.tableRow}>€34 fino a 30 Aprile 2024</Text>
-        <Text className={classes.tableRow}>€39 fino a 31 Maggio 2024</Text>
-        <Text className={classes.tableLastRow}>€44 fino a 05 Luglio 2024</Text>
+        <Text className={classes.tableSubtitle}>10km 900m D+</Text>
+        <Text className={classes.tableRow}>€30 fino a 30 Aprile 2025</Text>
+        <Text className={classes.tableRow}>€35 fino a 31 Maggio 2025</Text>
+        <Text className={classes.tableRow}>€40 fino a 30 Giugno 2025</Text>
+        <Text className={classes.tableLastRow}>€45 fino a 04 Luglio 2025</Text>
       </Container>
     </Container>
   );

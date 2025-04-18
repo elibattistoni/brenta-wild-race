@@ -1,10 +1,10 @@
 import { Container, Flex, Space, Stack, Text, em } from "@mantine/core";
-import MountainDrawing from "../../assets/program-mountain.svg?react";
-import classes from "./TrailProgramPage.module.css";
-import Heading from "../../components/shared/Heading";
 import { useMediaQuery } from "@mantine/hooks";
-import PageContainer from "../../components/shared/PageContainer";
+import MountainDrawing from "../../assets/program-mountain.svg?react";
 import BlueTitleLarge from "../../components/shared/BlueTitleLarge";
+import Heading from "../../components/shared/Heading";
+import PageContainer from "../../components/shared/PageContainer";
+import classes from "./TrailProgramPage.module.css";
 
 const ProgramDayDate = ({ day, date }) => {
   return (
@@ -38,7 +38,7 @@ const TrailProgramPage = () => {
         <Flex className={classes.flex}>
           <Container fluid>
             <Stack className={classes.stack}>
-              <ProgramDayDate day="sabato" date="06 Luglio 2024" />
+              <ProgramDayDate day="sabato" date="05 Luglio 2025" />
               <HourScheduleGroup
                 hour="16:00 - 20:00"
                 text="Distribuzione pettorali"
@@ -50,7 +50,7 @@ const TrailProgramPage = () => {
           </Container>
           <Container fluid>
             <Stack className={classes.stack}>
-              <ProgramDayDate day="domenica" date="07 Luglio 2024" />
+              <ProgramDayDate day="domenica" date="06 Luglio 2025" />
               <Container fluid className={classes.grid}>
                 <HourScheduleGroup
                   hour="06:30"

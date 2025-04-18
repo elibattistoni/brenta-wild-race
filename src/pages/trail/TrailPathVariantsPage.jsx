@@ -1,18 +1,18 @@
 import { Container, Flex, Stack, em, rem } from "@mantine/core";
+import { useHover, useIntersection, useMediaQuery } from "@mantine/hooks";
+import { useRef } from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import TrailWildRace from "../../assets/brenta-wildrace-trail-gpx-exp-svg.svg?react";
+import TrailWildRun from "../../assets/brenta-wildrun-trail-gpx-exp-svg.svg?react";
+import BlueTitleSmall from "../../components/shared/BlueTitleSmall";
+import DownloadButton from "../../components/shared/DownloadButton";
 import Heading from "../../components/shared/Heading";
+import HighlightedText from "../../components/shared/HighlightedText";
 import PageContainer from "../../components/shared/PageContainer";
 import PageSection from "../../components/shared/PageSection";
 import PageSectionTitle from "../../components/shared/PageSectionTitle";
 import ParagraphText from "../../components/shared/ParagraphText";
-import TrailWildRace from "../../assets/brenta-wildrace-trail-gpx-exp-svg.svg?react";
-import TrailWildRun from "../../assets/brenta-wildrun-trail-gpx-exp-svg.svg?react";
 import classes from "./TrailPathVariantsPage.module.css";
-import HighlightedText from "../../components/shared/HighlightedText";
-import DownloadButton from "../../components/shared/DownloadButton";
-import { useHover, useIntersection, useMediaQuery } from "@mantine/hooks";
-import { useRef } from "react";
-import BlueTitleSmall from "../../components/shared/BlueTitleSmall";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const AltimetriaSection = () => {
   const isSmall = useMediaQuery(
@@ -118,7 +118,7 @@ const TrailDescriptionSection = () => {
           ideale per molte specie di fauna alpina, dall'orso bruno al capriolo,
           dal camoscio alla marmotta, dal gallo cedrone all'aquila reale, e da
           qualche anno si è insediato anche il lupo. In questo splendido teatro
-          domenica 7 luglio 2024, va in scena la quarta edizione della Brenta
+          domenica 6 luglio 2025, va in scena la quarta edizione della Brenta
           Wildrace. Gara tosta per skyrunners veri, ma anche un'occasione per
           attraversare dei luoghi incantati, verdi pascoli, creste vertiginose e
           panorami sconfinati.
@@ -354,7 +354,7 @@ const RoutesSection = () => {
             </Flex>
           </Stack>
           <Stack align="center" ref={refAmatoriale}>
-            <BlueTitleSmall text="BRENTA WILDRUN" />
+            <BlueTitleSmall text="BRENTA WILDRUN 2024" />
             <ParagraphText>14km 1200m D+</ParagraphText>
             <DownloadButton
               fileName="traccia-gpx-brenta-wildrun.gpx"

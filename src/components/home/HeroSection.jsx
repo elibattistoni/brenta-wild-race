@@ -1,11 +1,11 @@
+import { Text, Title, em, rem } from "@mantine/core";
+import { useMediaQuery } from "@mantine/hooks";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/opacity.css";
-import { useMediaQuery } from "@mantine/hooks";
 import { NavLink } from "react-router-dom";
 import { paths } from "../../utils/paths";
 import ButtonPrimary from "../shared/ButtonPrimary";
 import ButtonSecondary from "../shared/ButtonSecondary";
-import { Text, Title, em, rem } from "@mantine/core";
 import classes from "./HeroSection.module.css";
 
 // const getParallaxPosition = (yScroll) => {
@@ -91,7 +91,7 @@ const HeroSection = () => {
             fw="var(--mantine-fw-medium)"
             c="bluePrimary.0"
           >
-            07 Luglio 2024
+            06 Luglio 2025
           </Text>
         </div>
       </div>
@@ -115,7 +115,7 @@ const HeroSection = () => {
             fz={{ base: "sm", sm: "md", md: "lg" }}
             fw="var(--mantine-fw-medium)"
           >
-            14km 1200m D+
+            10km 900m D+
           </Text>
         </div>
       </div>

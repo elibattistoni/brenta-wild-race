@@ -1,14 +1,14 @@
-import { ActionIcon, Flex, Stack, Text, rem } from "@mantine/core";
+import { Flex, Stack, Text, rem } from "@mantine/core";
+import { IconBrandFacebook, IconBrandInstagram } from "@tabler/icons-react";
+import { NavLink } from "react-router-dom";
 import Heading from "../components/shared/Heading";
+import HighlightedText from "../components/shared/HighlightedText";
 import PageContainer from "../components/shared/PageContainer";
 import PageSection from "../components/shared/PageSection";
-import ParagraphText from "../components/shared/ParagraphText";
-import { IconBrandInstagram, IconBrandFacebook } from "@tabler/icons-react";
 import PageSectionTitle from "../components/shared/PageSectionTitle";
-import { NavLink } from "react-router-dom";
-import classes from "./AboutPage.module.css";
-import HighlightedText from "../components/shared/HighlightedText";
+import ParagraphText from "../components/shared/ParagraphText";
 import { socialLinks } from "../utils/paths";
+import classes from "./AboutPage.module.css";
 
 const iconStyle = {
   width: rem(64),

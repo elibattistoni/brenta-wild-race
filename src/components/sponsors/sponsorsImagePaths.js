@@ -78,6 +78,7 @@ export const sponsorsBig = [
 ];
 
 export const sponsorsSmall = [
+  { src: "./sponsors/small/miriana.webp", width: 200 },
   { src: "./sponsors/small/kerschbaumer.webp", width: 200 },
   { src: "./sponsors/small/edilzeta.webp", width: 200 },
   { src: "./sponsors/small/paoli.webp", width: 200 },
@@ -111,5 +112,4 @@ export const sponsorsSmall = [
   { src: "./sponsors/small/pezzi.webp", width: 200 },
   { src: "./sponsors/small/rothoblaas.webp", width: 200 },
   { src: "./sponsors/small/harleydavidson.webp", width: 200 },
-  { src: "./sponsors/small/miriana.webp", width: 200 },
 ];

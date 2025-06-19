@@ -1,5 +1,5 @@
 # brenta-wild-race
-Project (design + code) of the website https://elibattistoni.github.io/brenta-wild-race/
+Project (design + code) of the website https://brentawildrace.it/
 
 ### Tech Stack
 - React.js (JavaScript)

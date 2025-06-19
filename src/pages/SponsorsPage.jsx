@@ -1,13 +1,13 @@
 import Heading from "../components/shared/Heading";
-import { Text } from "@mantine/core";
 import PageContainer from "../components/shared/PageContainer";
+import Sponsors from "../components/sponsors/Sponsors";
 
 const SponsorsPage = () => {
   return (
     <>
       <Heading title="2024" subtitle="SPONSOR" />
       <PageContainer>
-        <Text size="xl">Pagina in costruzione. Stay Tuned!</Text>
+        <Sponsors />
       </PageContainer>
     </>
   );

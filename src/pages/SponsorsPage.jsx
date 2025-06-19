@@ -1,13 +1,13 @@
 import Heading from "../components/shared/Heading";
 import PageContainer from "../components/shared/PageContainer";
-import Sponsors from "../components/sponsors/Sponsors";
+import SponsorsList from "../components/sponsors/SponsorsList";
 
 const SponsorsPage = () => {
   return (
     <>
       <Heading title="2024" subtitle="SPONSOR" />
       <PageContainer>
-        <Sponsors />
+        <SponsorsList />
       </PageContainer>
     </>
   );

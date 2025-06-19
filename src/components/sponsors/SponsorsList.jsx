@@ -1,6 +1,10 @@
-// find ./public/sponsors/big -type f \( -iname '*.png' -o -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.webp' \)
 import { Image, Paper, SimpleGrid } from "@mantine/core";
-import { sponsorsBig } from "./sponsorsImagePaths";
+import { sponsorsBig, sponsorsSmall } from "./sponsorsImagePaths";
+
+function getFilenameWithoutExtension(path) {
+  const filename = path.split("/").pop();
+  return filename.replace(/\.[^/.]+$/, "");
+}
 
 const SponsorItemContainer = ({ children, ...props }) => {
   return (
@@ -26,10 +30,10 @@ const SponsorItemContainer = ({ children, ...props }) => {
 function SponsorsList() {
   return (
     <>
-      <SponsorItemContainer mb="xl" p="xl">
+      <SponsorItemContainer mb="xl" p="xl" h="300px">
         <Image
           src={sponsorsBig[0].src}
-          alt={sponsorsBig[0].alt}
+          alt={getFilenameWithoutExtension(sponsorsBig[0].src)}
           w={sponsorsBig[0].width}
           h="auto"
           loading="eager"
@@ -37,22 +41,35 @@ function SponsorsList() {
           p="0px"
         />
       </SponsorItemContainer>
-      <SimpleGrid cols={2}>
-        {sponsorsBig
-          .slice(1)
-          .map(({ src, alt, width, backgroundColor }, idx) => (
-            <SponsorItemContainer key={idx} p="md">
-              <Image
-                src={src}
-                alt={alt}
-                w={width}
-                h="auto"
-                loading="lazy"
-                m="0px"
-                p="0px"
-              />
-            </SponsorItemContainer>
-          ))}
+      <SimpleGrid cols={{ base: 1, sm: 2 }} mt="xl">
+        {sponsorsBig.slice(1).map(({ src, width }, idx) => (
+          <SponsorItemContainer key={idx} p="md">
+            <Image
+              src={src}
+              alt={getFilenameWithoutExtension(src)}
+              w={width}
+              h="auto"
+              loading="lazy"
+              m="0px"
+              p="0px"
+            />
+          </SponsorItemContainer>
+        ))}
+      </SimpleGrid>
+      <SimpleGrid cols={{ base: 2, sm: 4 }} mt="md">
+        {sponsorsSmall.map(({ src, width }, idx) => (
+          <SponsorItemContainer key={idx} p="md">
+            <Image
+              src={src}
+              alt={getFilenameWithoutExtension(src)}
+              w={width}
+              h="auto"
+              loading="lazy"
+              m="0px"
+              p="0px"
+            />
+          </SponsorItemContainer>
+        ))}
       </SimpleGrid>
     </>
   );

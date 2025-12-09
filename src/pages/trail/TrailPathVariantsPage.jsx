@@ -2,6 +2,7 @@ import { Container, Flex, Stack, em, rem } from "@mantine/core";
 import { useHover, useIntersection, useMediaQuery } from "@mantine/hooks";
 import { useRef } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/opacity.css";
 import TrailWildRace from "../../assets/brenta-wildrace-trail-gpx-exp-svg.svg?react";
 import TrailWildRun from "../../assets/brenta-wildrun-trail-gpx-exp-svg.svg?react";
 import BlueTitleSmall from "../../components/shared/BlueTitleSmall";

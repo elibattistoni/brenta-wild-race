@@ -15,6 +15,8 @@ import classes from "./MainNavigation.module.css";
 import { NavLink } from "react-router-dom";
 import { mainNavPaths, paths } from "../../utils/paths";
 import BrentaWRLogo from "../../assets/logo-brenta-wild-race.svg?react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/opacity.css";
 
 const MainNavigation = () => {
   const [portalOpened, { toggle: togglePortal }] = useDisclosure(false);
@@ -84,8 +86,29 @@ const MainNavigation = () => {
 
   return (
     <nav className={classes.nav}>
-      <NavLink to={paths.home.link} style={{ paddingTop: rem(8) }}>
+      <NavLink
+        to={paths.home.link}
+        style={{
+          paddingTop: rem(8),
+          display: "flex",
+          alignItems: "center",
+          gap: rem(16),
+          paddingLeft: rem(40),
+        }}
+      >
         <BrentaWRLogo className={classes.logo} />
+        <div style={{ width: "50px" }}>
+          <LazyLoadImage
+            alt="Mappa 3D"
+            effect="opacity"
+            placeholderSrc="/logo-val-di-non.png"
+            src="/logo-val-di-non.png"
+            wrapperProps={{
+              style: { transitionDuration: "2s" },
+            }}
+            width="100%"
+          />
+        </div>
       </NavLink>
       <Group
         gap={5}

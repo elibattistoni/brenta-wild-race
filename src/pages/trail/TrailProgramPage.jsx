@@ -38,7 +38,7 @@ const TrailProgramPage = () => {
         <Flex className={classes.flex}>
           <Container fluid>
             <Stack className={classes.stack}>
-              <ProgramDayDate day="sabato" date="05 Luglio 2025" />
+              <ProgramDayDate day="sabato" date="04 Luglio 2026" />
               <HourScheduleGroup
                 hour="16:00 - 20:00"
                 text="Distribuzione pettorali"
@@ -50,7 +50,7 @@ const TrailProgramPage = () => {
           </Container>
           <Container fluid>
             <Stack className={classes.stack}>
-              <ProgramDayDate day="domenica" date="06 Luglio 2025" />
+              <ProgramDayDate day="domenica" date="05 luglio 2026" />
               <Container fluid className={classes.grid}>
                 <HourScheduleGroup
                   hour="06:30"

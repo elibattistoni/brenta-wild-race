@@ -25,6 +25,12 @@ const EditionsHomePage = () => {
           <NavLink to="/edizioni/2024" className={classes.link}>
             Edizione 2024
           </NavLink>
+          <NavLink to="/edizioni/2025" className={classes.link}>
+            Edizione 2025
+          </NavLink>
+          <NavLink to="/edizioni/2026" className={classes.link}>
+            Edizione 2026
+          </NavLink>
         </Stack>
       </PageContainer>
     </>

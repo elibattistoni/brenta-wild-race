@@ -17,12 +17,12 @@ const InfoDetails = () => {
     <Stack gap={rem(8)}>
       <ParagraphText>
         La gara <HighlightedText text="Brenta Wild Race" /> si terrà il giorno
-        Domenica <HighlightedText text="06 Luglio 2025" />.
+        Domenica <HighlightedText text="05 luglio 2026" />.
       </ParagraphText>
       <ParagraphText>
         Le <HighlightedText text="iscrizioni" /> si aprono il giorno{" "}
-        <HighlightedText text="01 Aprile 2025" /> e si chiudono il giorno{" "}
-        <HighlightedText text="04 Luglio 2025" />.
+        <HighlightedText text="26 Febbraio 2026" /> e si chiudono il giorno{" "}
+        <HighlightedText text="03 Luglio 2026" />.
       </ParagraphText>
       <div className={classes.alert}>
         <IconAlertTriangle color="var(--mantine-color-orangeBrenta-0)" />
@@ -38,18 +38,18 @@ const PricesTable = () => {
       <Container fluid className={classes.tableColumn}>
         <BlueTitleMedium text="BRENTA WILDRACE" />
         <Text className={classes.tableSubtitle}>23km 2000m D+</Text>
-        <Text className={classes.tableRow}>€35 fino a 30 Aprile 2025</Text>
-        <Text className={classes.tableRow}>€40 fino a 31 Maggio 2025</Text>
-        <Text className={classes.tableRow}>€45 fino a 30 Giugno 2025</Text>
-        <Text className={classes.tableLastRow}>€50 fino a 04 Luglio 2025</Text>
+        <Text className={classes.tableRow}>€35 fino a 30 Aprile 2026</Text>
+        <Text className={classes.tableRow}>€40 fino a 31 Maggio 2026</Text>
+        <Text className={classes.tableRow}>€45 fino a 30 Giugno 2026</Text>
+        <Text className={classes.tableLastRow}>€50 fino a 03 Luglio 2026</Text>
       </Container>
       <Container fluid className={classes.tableColumn}>
         <BlueTitleMedium text="BRENTA WILDRUN" />
         <Text className={classes.tableSubtitle}>10km 900m D+</Text>
-        <Text className={classes.tableRow}>€30 fino a 30 Aprile 2025</Text>
-        <Text className={classes.tableRow}>€35 fino a 31 Maggio 2025</Text>
-        <Text className={classes.tableRow}>€40 fino a 30 Giugno 2025</Text>
-        <Text className={classes.tableLastRow}>€45 fino a 04 Luglio 2025</Text>
+        <Text className={classes.tableRow}>€30 fino a 30 Aprile 2026</Text>
+        <Text className={classes.tableRow}>€35 fino a 31 Maggio 2026</Text>
+        <Text className={classes.tableRow}>€40 fino a 30 Giugno 2026</Text>
+        <Text className={classes.tableLastRow}>€45 fino a 03 Luglio 2026</Text>
       </Container>
     </Container>
   );
@@ -67,25 +67,11 @@ const RegistrationInstructions = () => {
         <Flex className={classes.registrRow}>
           <ParagraphText>Se vuoi iscriverti, clicca qui:</ParagraphText>
           <NavLink
-            to="https://iscrizioni.wedosport.net/iscrizione.cfm?gara=56297"
+            to="https://www.wedosport.net/brenta-wild-race-2026?lang=IT"
             target="_blank"
           >
             <ButtonPrimary
               text="Iscriviti"
-              style={{ alignSelf: "flex-start" }}
-            />
-          </NavLink>
-        </Flex>
-        <Flex className={classes.registrRow}>
-          <ParagraphText>
-            Se vuoi regalare l'iscrizione ad un/a amico/a, clicca qui:
-          </ParagraphText>
-          <NavLink
-            to="https://iscrizioni.wedosport.net/iscrizione.cfm?gara=56297&r=s"
-            target="_blank"
-          >
-            <ButtonSecondary
-              text="Iscrivi"
               style={{ alignSelf: "flex-start" }}
             />
           </NavLink>
@@ -96,7 +82,7 @@ const RegistrationInstructions = () => {
             here:
           </ParagraphText>
           <NavLink
-            to="https://iscrizioni.wedosport.net/iscrizione.cfm?gara=56297&lang=EN"
+            to="https://www.wedosport.net/brenta-wild-race-2026?lang=EN"
             target="_blank"
           >
             <ButtonSecondary

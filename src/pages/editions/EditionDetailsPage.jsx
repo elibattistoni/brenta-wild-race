@@ -13,7 +13,9 @@ const EditionDetailsPage = () => {
     year === "2017" ||
     year === "2018" ||
     year === "2019" ||
-    year === "2024"
+    year === "2024" ||
+    year === "2025" ||
+    year === "2026"
   ) {
     let content;
 
@@ -142,7 +144,7 @@ const EditionDetailsPage = () => {
           </li>
         </ul>
       );
-    } else if (year === "2024") {
+    } else {
       content = <ParagraphText>(in costruzione)</ParagraphText>;
     }
 

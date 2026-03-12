@@ -18,10 +18,10 @@ import classes from "./HeroSection.module.css";
 const HeroSection = () => {
   //! check media query
   const isSmall = useMediaQuery(
-    `(min-width: ${em(200)}) and (max-width: ${em(576)})`
+    `(min-width: ${em(200)}) and (max-width: ${em(576)})`,
   );
   const isMedium = useMediaQuery(
-    `(min-width: ${em(576)}) and (max-width: ${em(992)})`
+    `(min-width: ${em(576)}) and (max-width: ${em(992)})`,
   );
 
   // const [scroll, scrollTo] = useWindowScroll();
@@ -91,7 +91,7 @@ const HeroSection = () => {
             fw="var(--mantine-fw-medium)"
             c="bluePrimary.0"
           >
-            06 Luglio 2025
+            05 luglio 2026
           </Text>
         </div>
       </div>

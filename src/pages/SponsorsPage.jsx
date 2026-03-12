@@ -7,7 +7,7 @@ import SponsorsList from "../components/sponsors/SponsorsList";
 const SponsorsPage = () => {
   return (
     <>
-      <Heading title="2024" subtitle="SPONSOR" />
+      <Heading title="2026" subtitle="SPONSOR" />
       <PageContainer>
         <ParagraphText mb="sm">
           Il <HighlightedText text="Gruppo Sportivo K40" /> ringrazia di cuore

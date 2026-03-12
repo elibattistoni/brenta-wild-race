@@ -17,7 +17,7 @@ import classes from "./TrailPathVariantsPage.module.css";
 
 const AltimetriaSection = () => {
   const isSmall = useMediaQuery(
-    `(min-width: ${em(200)}) and (max-width: ${em(576)})`
+    `(min-width: ${em(200)}) and (max-width: ${em(576)})`,
   );
 
   const img3DMaxRes = "/mappa-3D-1254px.png";
@@ -119,7 +119,7 @@ const TrailDescriptionSection = () => {
           ideale per molte specie di fauna alpina, dall'orso bruno al capriolo,
           dal camoscio alla marmotta, dal gallo cedrone all'aquila reale, e da
           qualche anno si è insediato anche il lupo. In questo splendido teatro
-          domenica 6 luglio 2025, va in scena la quarta edizione della Brenta
+          domenica 5 luglio 2026, va in scena la quarta edizione della Brenta
           Wildrace. Gara tosta per skyrunners veri, ma anche un'occasione per
           attraversare dei luoghi incantati, verdi pascoli, creste vertiginose e
           panorami sconfinati.

@@ -33,6 +33,8 @@ export const paths = {
       2017: { link: "/edizioni/2017", title: "2017" },
       2018: { link: "/edizioni/2018", title: "2018" },
       2019: { link: "/edizioni/2019", title: "2019" },
+      2024: { link: "/edizioni/2024", title: "2024" },
+      2025: { link: "/edizioni/2025", title: "2025" },
     },
   },
   sponsor: { link: "/sponsor", title: "Sponsor" },

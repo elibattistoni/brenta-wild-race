@@ -1,4 +1,4 @@
-import { Stack, Text } from "@mantine/core";
+import { Stack } from "@mantine/core";
 import { NavLink } from "react-router-dom";
 import Heading from "../../components/shared/Heading";
 import PageContainer from "../../components/shared/PageContainer";
@@ -9,9 +9,6 @@ const EditionsHomePage = () => {
     <>
       <Heading title="EDIZIONI PASSATE" subtitle="EDIZIONI" />
       <PageContainer>
-        <Text size="xl" mb="xl">
-          Pagina in costruzione. Stay Tuned!
-        </Text>
         <Stack>
           <NavLink to="/edizioni/2017" className={classes.link}>
             Edizione 2017

@@ -145,7 +145,17 @@ const EditionDetailsPage = () => {
         </ul>
       );
     } else {
-      content = <ParagraphText>(in costruzione)</ParagraphText>;
+      content = (
+        <ParagraphText>
+          <NavLink
+            to="https://www.facebook.com/brentasky/photos_albums"
+            className={classes.link}
+            target="_blank"
+          >
+            Vai alla pagina Facebook con le foto della gara
+          </NavLink>
+        </ParagraphText>
+      );
     }
 
     return (
@@ -153,12 +163,8 @@ const EditionDetailsPage = () => {
         <Heading title={year} subtitle="EDIZIONI" />
         <PageContainer>
           <PageSection>
-            <ParagraphText>Pagina in costruzione. Stay Tuned!</ParagraphText>
-          </PageSection>
-          <PageSection>
             <ParagraphText>
-              Nel frattempo puoi visualizzare le foto delle edizioni passate a
-              questi link:
+              Puoi visualizzare le foto delle edizioni passate a questi link:
             </ParagraphText>
             {content}
           </PageSection>

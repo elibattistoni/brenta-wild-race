@@ -16,9 +16,9 @@
     "@mantine/hooks": "^7.17.8",
     "@studio-freight/react-lenis": "^0.0.45",
     "@tabler/icons-react": "^2.47.0",
-    "react": "^18.2.0",
+    "react": "^18.3.1",
     "react-cookie": "^7.1.0",
-    "react-dom": "^18.2.0",
+    "react-dom": "^18.3.1",
     "react-lazy-load-image-component": "^1.6.0",
     "react-router-dom": "^6.30.6",
     "vite-plugin-svgr": "^4.5.0"
@@ -26,8 +26,8 @@
   "devDependencies": {
     "@fontsource/inter": "^5.2.8",
     "@resvg/resvg-js": "^2.6.2",
-    "@types/react": "^18.2.56",
-    "@types/react-dom": "^18.2.19",
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.7",
     "@vitejs/plugin-react": "^4.7.0",
     "eslint": "^8.56.0",
     "eslint-plugin-react": "^7.33.2",

@@ -1,9 +1,5 @@
-# Checks on every pull request: the site builds, and lint results.
-#
-# "Build" is meant to be a required status check on main.
-# "Lint" currently fails on 126 pre-existing errors (mostly unescaped
-# quotes/apostrophes in the Italian copy). Keep it visible but not required
-# until those are fixed, then add it to the required checks.
+# Checks on every pull request: the site builds and lint passes.
+# Both "Build" and "Lint" are meant to be required status checks on main.
 name: CI
 
 on:

@@ -1,0 +1,21 @@
+# Accepted exceptions for OSV-Scanner. Every entry needs a reason and an
+# expiry date, so it gets looked at again instead of being ignored forever.
+
+[[IgnoredVulns]]
+id = "GHSA-wrjc-x8rr-h8h6"
+effectiveUntil = 2027-02-28
+reason = """
+react-router 6.x: open redirect via backslash in <Link>/useNavigate. No fix in
+v6 (fixed in 7.18). Only exploitable when untrusted input is passed as a path;
+every route target in this app is a hard-coded string. Remove when moving to
+react-router v7.
+"""
+
+[[IgnoredVulns]]
+id = "GHSA-337j-9hxr-rhxg"
+effectiveUntil = 2027-02-28
+reason = """
+react-router 6.x: constructor injection in deserializeErrors() during SSR
+hydration. Not applicable: client-only HashRouter, no server-side rendering.
+Remove when moving to react-router v7.
+"""

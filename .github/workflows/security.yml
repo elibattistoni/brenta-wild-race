@@ -107,4 +107,6 @@ jobs:
       - name: Run zizmor
         uses: zizmorcore/zizmor-action@bd12b495c90993a4301c73398142281a61499af3 # v0.9.0
         with:
-          version: 1.33.1
+          # Must be a version this action release has a hash-locked
+          # requirements file for (support/locks/ in the action repo).
+          version: 1.33.0

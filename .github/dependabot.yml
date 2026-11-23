@@ -1,0 +1,33 @@
+# Weekly dependency update PRs.
+# - Minor/patch updates are grouped into one PR per ecosystem.
+# - Major updates get their own PRs (they may need code changes).
+# - cooldown: wait 7 days after a release before proposing it, so a
+#   compromised release has time to be caught and pulled from the registry.
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: "/"
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 5
+    cooldown:
+      default-days: 7
+    groups:
+      npm-minor-and-patch:
+        update-types: ["minor", "patch"]
+    commit-message:
+      prefix: "chore(deps)"
+
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly
+      day: monday
+    cooldown:
+      default-days: 7
+    groups:
+      github-actions:
+        patterns: ["*"]
+    commit-message:
+      prefix: "ci(deps)"

@@ -47,7 +47,7 @@ const AboutPage = () => {
               <Text size="xs">Instagram</Text>
             </NavLink>
             <NavLink
-              to={socialLinks.instagram}
+              to={socialLinks.facebook}
               target="_blank"
               rel="noopener noreferrer"
               className={classes.iconLink}

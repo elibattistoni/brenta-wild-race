@@ -1,0 +1,112 @@
+# Security checks: on every pull request, on pushes to main, and weekly
+# (new vulnerabilities get published for packages that didn't change).
+#
+# - gitleaks:    leaked secrets in the git history / PR commits
+# - osv-scanner: known vulnerabilities in package-lock.json
+#                (accepted exceptions live in osv-scanner.toml, with reasons)
+# - semgrep:     static analysis of the code and workflows
+# - zizmor:      security audit of the GitHub Actions workflows
+#
+# Results that support it are uploaded to the repo's Security tab (SARIF).
+name: Security
+
+on:
+  pull_request:
+  push:
+    branches: ["main"]
+  schedule:
+    - cron: "17 6 * * 1" # Mondays 06:17 UTC
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: security-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  gitleaks:
+    name: Secrets (gitleaks)
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: read
+    steps:
+      - name: Checkout (full history)
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Run gitleaks
+        uses: gitleaks/gitleaks-action@e0c47f4f8be36e29cdc102c57e68cb5cbf0e8d1e # v3.0.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITLEAKS_ENABLE_COMMENTS: false
+
+  osv-scan-pr:
+    name: Dependencies (OSV-Scanner, PR)
+    if: github.event_name == 'pull_request'
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+    uses: google/osv-scanner-action/.github/workflows/osv-scanner-reusable-pr.yml@32d3cd482bdadfb38b186c0ad1b031902d55d932 # v2.7.1
+
+  osv-scan:
+    name: Dependencies (OSV-Scanner)
+    if: github.event_name != 'pull_request'
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+    uses: google/osv-scanner-action/.github/workflows/osv-scanner-reusable.yml@32d3cd482bdadfb38b186c0ad1b031902d55d932 # v2.7.1
+
+  semgrep:
+    name: Static analysis (Semgrep)
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Install Semgrep (pinned version)
+        run: pipx install semgrep==1.186.0
+
+      # --metrics=off and explicit rule packs: no project metadata is sent to
+      # Semgrep (unlike --config auto). --error fails the job on findings.
+      - name: Run Semgrep
+        run: >-
+          semgrep scan --metrics=off --error
+          --config p/javascript --config p/react --config p/github-actions
+          --sarif-output semgrep.sarif
+
+      - name: Upload results to the Security tab
+        if: ${{ !cancelled() && hashFiles('semgrep.sarif') != '' }}
+        uses: github/codeql-action/upload-sarif@1bd86f2fdb4b86187fa4059f16f31a3202acc9ea # v4.39.4
+        with:
+          sarif_file: semgrep.sarif
+          category: semgrep
+
+  zizmor:
+    name: Workflow audit (zizmor)
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Run zizmor
+        uses: zizmorcore/zizmor-action@bd12b495c90993a4301c73398142281a61499af3 # v0.9.0
+        with:
+          # Must be a version this action release has a hash-locked
+          # requirements file for (support/locks/ in the action repo).
+          version: 1.33.0

@@ -1,4 +1,3 @@
-import { Button } from "@mantine/core";
 import classes from "./ButtonSecondary.module.css";
 
 const ButtonSecondary = ({ text, style }) => {

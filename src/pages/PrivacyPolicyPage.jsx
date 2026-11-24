@@ -1,7 +1,6 @@
-import { Stack, Text, rem } from "@mantine/core";
+import { Stack, rem } from "@mantine/core";
 import Heading from "../components/shared/Heading";
 import PageContainer from "../components/shared/PageContainer";
-import classes from "./PrivacyPolicyPage.module.css";
 import ParagraphText from "../components/shared/ParagraphText";
 import PageSection from "../components/shared/PageSection";
 import HighlightedText from "../components/shared/HighlightedText";

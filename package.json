@@ -4,6 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "homepage": "https://brentawildrace.it",
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -12,31 +15,31 @@
     "og": "node scripts/generate-og-image.mjs"
   },
   "dependencies": {
-    "@mantine/core": "^7.6.1",
-    "@mantine/hooks": "^7.6.1",
+    "@fontsource/inter": "^5.3.0",
+    "@mantine/core": "^7.17.8",
+    "@mantine/hooks": "^7.17.8",
     "@studio-freight/react-lenis": "^0.0.45",
     "@tabler/icons-react": "^2.47.0",
-    "react": "^18.2.0",
-    "react-cookie": "^7.1.0",
-    "react-dom": "^18.2.0",
-    "react-lazy-load-image-component": "^1.6.0",
-    "react-router-dom": "^6.22.2",
-    "vite-plugin-svgr": "^4.2.0"
+    "react": "^18.3.1",
+    "react-cookie": "^7.2.2",
+    "react-dom": "^18.3.1",
+    "react-lazy-load-image-component": "^1.6.3",
+    "react-router-dom": "^6.30.6",
+    "vite-plugin-svgr": "^4.5.0"
   },
   "devDependencies": {
-    "@fontsource/inter": "^5.2.8",
     "@resvg/resvg-js": "^2.6.2",
-    "@types/react": "^18.2.56",
-    "@types/react-dom": "^18.2.19",
-    "@vitejs/plugin-react": "^4.2.1",
-    "eslint": "^8.56.0",
-    "eslint-plugin-react": "^7.33.2",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.5",
-    "postcss": "^8.4.35",
-    "postcss-preset-mantine": "^1.13.0",
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.7",
+    "@vitejs/plugin-react": "^4.7.0",
+    "eslint": "^8.57.1",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.26",
+    "postcss": "^8.5.33",
+    "postcss-preset-mantine": "^1.18.0",
     "postcss-simple-vars": "^7.0.1",
-    "vite": "^5.1.4",
+    "vite": "^6.4.6",
     "wawoff2": "^2.0.1"
   }
 }

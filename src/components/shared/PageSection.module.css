@@ -1,4 +1,4 @@
-section {
+.section {
   margin-bottom: rem(72px);
   display: flex;
   flex-direction: column;

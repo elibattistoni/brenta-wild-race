@@ -1,0 +1,14 @@
+#!/bin/sh
+# Blocks a commit that contains a secret (password, API key, token).
+# Turn it on once per clone:  git config core.hooksPath .githooks
+# Skip it once (only if you are sure it is a false alarm):  git commit --no-verify
+# GitHub push protection and the "Secrets (gitleaks)" PR check still run anyway.
+
+if ! command -v gitleaks >/dev/null 2>&1; then
+  echo "pre-commit: gitleaks is not installed, so secrets were NOT checked." >&2
+  echo "            Install it (brew install gitleaks) to turn the check on." >&2
+  exit 0
+fi
+
+# --redact: never print the secret itself, only where it is.
+exec gitleaks git --pre-commit --staged --redact --no-banner

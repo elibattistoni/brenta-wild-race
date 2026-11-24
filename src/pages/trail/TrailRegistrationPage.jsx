@@ -69,6 +69,7 @@ const RegistrationInstructions = () => {
           <NavLink
             to="https://www.wedosport.net/brenta-wild-race-2026?lang=IT"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <ButtonPrimary
               text="Iscriviti"
@@ -84,6 +85,7 @@ const RegistrationInstructions = () => {
           <NavLink
             to="https://www.wedosport.net/brenta-wild-race-2026?lang=EN"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <ButtonSecondary
               text="Enroll"

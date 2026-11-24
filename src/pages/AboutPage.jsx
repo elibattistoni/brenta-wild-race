@@ -40,14 +40,16 @@ const AboutPage = () => {
             <NavLink
               to={socialLinks.instagram}
               target="_blank"
+              rel="noopener noreferrer"
               className={classes.iconLink}
             >
               <IconBrandInstagram style={iconStyle} />
               <Text size="xs">Instagram</Text>
             </NavLink>
             <NavLink
-              to={socialLinks.instagram}
+              to={socialLinks.facebook}
               target="_blank"
+              rel="noopener noreferrer"
               className={classes.iconLink}
             >
               <IconBrandFacebook style={iconStyle} />

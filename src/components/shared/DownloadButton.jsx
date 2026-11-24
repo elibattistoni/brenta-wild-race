@@ -1,7 +1,8 @@
-import { Link } from "react-router-dom";
 import ButtonPrimary from "./ButtonPrimary";
 import ButtonSecondary from "./ButtonSecondary";
 
+// Files in public/ are served from the same site (dev, preview and live),
+// so a same-origin link is enough, and the browser honours `download`.
 const DownloadButton = ({
   button,
   buttonText,
@@ -9,25 +10,16 @@ const DownloadButton = ({
   linkToFile,
   style,
 }) => {
-  const isDev = import.meta.env.DEV;
-
-  const urlPrefix = isDev
-    ? "http://localhost:5173/"
-    : "https://brentawildrace.it/";
+  const href = `${import.meta.env.BASE_URL}${linkToFile.replace(/^\//, "")}`;
 
   return (
-    <Link
-      to={`${urlPrefix}${linkToFile}`}
-      download={fileName}
-      target="_blank"
-      rel="noreferrer"
-    >
+    <a href={href} download={fileName}>
       {button === "primary" ? (
         <ButtonPrimary text={buttonText} style={style} />
       ) : (
         <ButtonSecondary text={buttonText} style={style} />
       )}
-    </Link>
+    </a>
   );
 };
 

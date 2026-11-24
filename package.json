@@ -25,7 +25,7 @@
     "react-dom": "^18.3.1",
     "react-lazy-load-image-component": "^1.6.3",
     "react-router-dom": "^6.30.6",
-    "vite-plugin-svgr": "^4.5.0"
+    "vite-plugin-svgr": "^5.2.0"
   },
   "devDependencies": {
     "@resvg/resvg-js": "^2.6.2",

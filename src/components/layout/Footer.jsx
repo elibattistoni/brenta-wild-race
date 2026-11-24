@@ -68,14 +68,14 @@ const Footer = () => {
         </Text>
         <Text c="dimmed" size="xs" className={classes.linkCreditsContainer}>
           Powered by{" "}
-          <NavLink
+          <a
             target="_blank"
             rel="noopener noreferrer"
-            to="https://elibattistoni.github.io/develysverse/"
+            href="https://elibattistoni.github.io/develysverse/"
             className={classes.linkCredits}
           >
             Elisa Battistoni
-          </NavLink>
+          </a>
         </Text>
       </Container>
     </footer>

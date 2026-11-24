@@ -1,27 +1,42 @@
 import { Outlet, useLocation } from "react-router-dom";
 import MainNavigation from "./MainNavigation";
 import Footer from "./Footer";
-import { useEffect } from "react";
-import Lenis from "@studio-freight/lenis";
+import { useEffect, useRef } from "react";
+import Lenis from "lenis";
+import "lenis/dist/lenis.css";
 
 const RootLayout = () => {
-  //! scroll top top whenever the path changes
-  // Extracts pathname property(key) from an object
   const { pathname } = useLocation();
-  // Automatically scrolls to top whenever pathname changes
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+  const lenisRef = useRef(null);
 
-  //! lenis for smooth scroll
+  //! lenis for smooth scroll: one instance, one animation loop, and both
+  //! are stopped on unmount (StrictMode mounts effects twice in dev)
   useEffect(() => {
     const lenis = new Lenis();
-    function raf(time) {
+    lenisRef.current = lenis;
+    let frameId;
+    const raf = (time) => {
       lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
+      frameId = requestAnimationFrame(raf);
+    };
+    frameId = requestAnimationFrame(raf);
+
+    return () => {
+      cancelAnimationFrame(frameId);
+      lenis.destroy();
+      lenisRef.current = null;
+    };
   }, []);
+
+  //! scroll to top whenever the path changes, through Lenis so its own
+  //! scroll position stays in sync (window.scrollTo would bypass it)
+  useEffect(() => {
+    if (lenisRef.current) {
+      lenisRef.current.scrollTo(0, { immediate: true });
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [pathname]);
 
   return (
     <>

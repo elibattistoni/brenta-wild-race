@@ -106,6 +106,6 @@ export const footerPaths = [
 ];
 
 export const socialLinks = {
-  instagram: "https://www.instagram.com/brentaskyrace/",
+  instagram: "https://www.instagram.com/brenta_wildrace/",
   facebook: "https://www.facebook.com/brentasky",
 };

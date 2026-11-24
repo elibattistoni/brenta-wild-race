@@ -1,6 +1,5 @@
 import { Flex, Stack, Text, rem } from "@mantine/core";
 import { IconBrandFacebook, IconBrandInstagram } from "@tabler/icons-react";
-import { NavLink } from "react-router-dom";
 import Heading from "../components/shared/Heading";
 import HighlightedText from "../components/shared/HighlightedText";
 import PageContainer from "../components/shared/PageContainer";
@@ -37,24 +36,24 @@ const AboutPage = () => {
             email: <HighlightedText text="info@brentawildrace.it" />
           </ParagraphText>
           <Flex gap={rem(24)}>
-            <NavLink
-              to={socialLinks.instagram}
+            <a
+              href={socialLinks.instagram}
               target="_blank"
               rel="noopener noreferrer"
               className={classes.iconLink}
             >
               <IconBrandInstagram style={iconStyle} />
               <Text size="xs">Instagram</Text>
-            </NavLink>
-            <NavLink
-              to={socialLinks.facebook}
+            </a>
+            <a
+              href={socialLinks.facebook}
               target="_blank"
               rel="noopener noreferrer"
               className={classes.iconLink}
             >
               <IconBrandFacebook style={iconStyle} />
               <Text size="xs">Facebook</Text>
-            </NavLink>
+            </a>
           </Flex>
         </PageSection>
         <PageSection>
@@ -63,56 +62,56 @@ const AboutPage = () => {
             <ul style={{ margin: "0px" }}>
               <li>
                 <ParagraphText>
-                  <NavLink
-                    to="https://www.trifogliovaldinon.com/"
+                  <a
+                    href="https://www.trifogliovaldinon.com/"
                     className={classes.link}
                   >
                     <HighlightedText text="B&B Al Trifoglio" />
-                  </NavLink>{" "}
+                  </a>{" "}
                   - Lover di Campodenno
                 </ParagraphText>
               </li>
               <li>
                 <ParagraphText>
-                  <NavLink
-                    to="https://www.airbnb.it/rooms/4636190?source_impression_id=p3_1709671572_gB%2BPVW68fdxsCn5k"
+                  <a
+                    href="https://www.airbnb.it/rooms/4636190?source_impression_id=p3_1709671572_gB%2BPVW68fdxsCn5k"
                     className={classes.link}
                   >
                     <HighlightedText text="Agrihouse" />
-                  </NavLink>{" "}
+                  </a>{" "}
                   - Dercolo di Campodenno
                 </ParagraphText>
               </li>
               <li>
                 <ParagraphText>
-                  <NavLink
-                    to="https://www.beblacasadelsoletrentino.com/"
+                  <a
+                    href="https://www.beblacasadelsoletrentino.com/"
                     className={classes.link}
                   >
                     <HighlightedText text="B&B Casa del sole" />
-                  </NavLink>{" "}
+                  </a>{" "}
                   - Campodenno
                 </ParagraphText>
               </li>
               <li>
                 <ParagraphText>
-                  <NavLink
-                    to="http://www.casadellefate.it/"
+                  <a
+                    href="http://www.casadellefate.it/"
                     className={classes.link}
                   >
                     <HighlightedText text="B&B Casa delle Fate" />
-                  </NavLink>{" "}
+                  </a>{" "}
                   - Termon di Campodenno
                 </ParagraphText>
               </li>
               <li>
                 <ParagraphText>
-                  <NavLink
-                    to="https://www.goldenpause.it/"
+                  <a
+                    href="https://www.goldenpause.it/"
                     className={classes.link}
                   >
                     <HighlightedText text="Agritur Golden Pause" />
-                  </NavLink>{" "}
+                  </a>{" "}
                   - Toss di Ton
                 </ParagraphText>
               </li>

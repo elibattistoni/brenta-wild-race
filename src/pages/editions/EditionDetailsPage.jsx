@@ -1,4 +1,4 @@
-import { NavLink, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Heading from "../../components/shared/Heading";
 import PageContainer from "../../components/shared/PageContainer";
 import PageSection from "../../components/shared/PageSection";
@@ -24,50 +24,50 @@ const EditionDetailsPage = () => {
         <ul>
           <li>
             <ParagraphText>
-              <NavLink
-                to="https://www.brentaskyrace.it/partenza-e-arrivi.html"
+              <a
+                href="https://www.brentaskyrace.it/partenza-e-arrivi.html"
                 className={classes.link}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Foto delle partenze e arrivi
-              </NavLink>
+              </a>
             </ParagraphText>
           </li>
           <li>
             <ParagraphText>
-              <NavLink
-                to="https://www.brentaskyrace.it/foto-della-gara.html"
+              <a
+                href="https://www.brentaskyrace.it/foto-della-gara.html"
                 className={classes.link}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Foto della gara
-              </NavLink>
+              </a>
             </ParagraphText>
           </li>
           <li>
             <ParagraphText>
-              <NavLink
-                to="https://www.brentaskyrace.it/foto-del-territorio.html"
+              <a
+                href="https://www.brentaskyrace.it/foto-del-territorio.html"
                 className={classes.link}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Foto del territorio
-              </NavLink>
+              </a>
             </ParagraphText>
           </li>
           <li>
             <ParagraphText>
-              <NavLink
-                to="https://www.brentaskyrace.it/video-del-percorso.html"
+              <a
+                href="https://www.brentaskyrace.it/video-del-percorso.html"
                 className={classes.link}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Video del percorso
-              </NavLink>
+              </a>
             </ParagraphText>
           </li>
         </ul>
@@ -77,50 +77,50 @@ const EditionDetailsPage = () => {
         <ul>
           <li>
             <ParagraphText>
-              <NavLink
-                to="https://www.brentaskyrace.it/partenza-e-arrivi-1.html"
+              <a
+                href="https://www.brentaskyrace.it/partenza-e-arrivi-1.html"
                 className={classes.link}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Foto delle partenze e arrivi
-              </NavLink>
+              </a>
             </ParagraphText>
           </li>
           <li>
             <ParagraphText>
-              <NavLink
-                to="https://www.brentaskyrace.it/foto-della-gara-1.html"
+              <a
+                href="https://www.brentaskyrace.it/foto-della-gara-1.html"
                 className={classes.link}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Foto della gara
-              </NavLink>
+              </a>
             </ParagraphText>
           </li>
           <li>
             <ParagraphText>
-              <NavLink
-                to="https://www.brentaskyrace.it/wildrace.html"
+              <a
+                href="https://www.brentaskyrace.it/wildrace.html"
                 className={classes.link}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Wildrace
-              </NavLink>
+              </a>
             </ParagraphText>
           </li>
           <li>
             <ParagraphText>
-              <NavLink
-                to="https://www.brentaskyrace.it/video-della-gara.html"
+              <a
+                href="https://www.brentaskyrace.it/video-della-gara.html"
                 className={classes.link}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Video della gara
-              </NavLink>
+              </a>
             </ParagraphText>
           </li>
         </ul>
@@ -130,26 +130,26 @@ const EditionDetailsPage = () => {
         <ul>
           <li>
             <ParagraphText>
-              <NavLink
-                to="https://www.brentaskyrace.it/foto-della-gara-2.html"
+              <a
+                href="https://www.brentaskyrace.it/foto-della-gara-2.html"
                 className={classes.link}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Foto della gara
-              </NavLink>
+              </a>
             </ParagraphText>
           </li>
           <li>
             <ParagraphText>
-              <NavLink
-                to="https://www.brentaskyrace.it/video-della-gara-1.html"
+              <a
+                href="https://www.brentaskyrace.it/video-della-gara-1.html"
                 className={classes.link}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Video della gara
-              </NavLink>
+              </a>
             </ParagraphText>
           </li>
         </ul>
@@ -157,14 +157,14 @@ const EditionDetailsPage = () => {
     } else {
       content = (
         <ParagraphText>
-          <NavLink
-            to="https://www.facebook.com/brentasky/photos_albums"
+          <a
+            href="https://www.facebook.com/brentasky/photos_albums"
             className={classes.link}
             target="_blank"
             rel="noopener noreferrer"
           >
             Vai alla pagina Facebook con le foto della gara
-          </NavLink>
+          </a>
         </ParagraphText>
       );
     }

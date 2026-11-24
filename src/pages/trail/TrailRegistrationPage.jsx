@@ -1,6 +1,5 @@
 import { Container, Flex, Stack, Text, rem } from "@mantine/core";
 import { IconAlertTriangle } from "@tabler/icons-react";
-import { NavLink } from "react-router-dom";
 import BlueTitleMedium from "../../components/shared/BlueTitleMedium";
 import ButtonPrimary from "../../components/shared/ButtonPrimary";
 import ButtonSecondary from "../../components/shared/ButtonSecondary";
@@ -66,8 +65,8 @@ const RegistrationInstructions = () => {
       <Container fluid className={classes.registrTable}>
         <Flex className={classes.registrRow}>
           <ParagraphText>Se vuoi iscriverti, clicca qui:</ParagraphText>
-          <NavLink
-            to="https://www.wedosport.net/brenta-wild-race-2026?lang=IT"
+          <a
+            href="https://www.wedosport.net/brenta-wild-race-2026?lang=IT"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -75,15 +74,15 @@ const RegistrationInstructions = () => {
               text="Iscriviti"
               style={{ alignSelf: "flex-start" }}
             />
-          </NavLink>
+          </a>
         </Flex>
         <Flex className={classes.registrLastRow}>
           <ParagraphText>
             If you want to complete the registration module in English, click
             here:
           </ParagraphText>
-          <NavLink
-            to="https://www.wedosport.net/brenta-wild-race-2026?lang=EN"
+          <a
+            href="https://www.wedosport.net/brenta-wild-race-2026?lang=EN"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -91,7 +90,7 @@ const RegistrationInstructions = () => {
               text="Enroll"
               style={{ alignSelf: "flex-start" }}
             />
-          </NavLink>
+          </a>
         </Flex>
       </Container>
     </>

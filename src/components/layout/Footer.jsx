@@ -44,6 +44,7 @@ const Footer = () => {
             href={socialLinks.facebook}
             aria-label="Open Facebook Page"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <IconBrandFacebook className={classes.icons} stroke={1.5} />
           </ActionIcon>
@@ -55,6 +56,7 @@ const Footer = () => {
             href={socialLinks.instagram}
             aria-label="Open Instagram Page"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <IconBrandInstagram className={classes.icons} stroke={1.5} />
           </ActionIcon>
@@ -68,6 +70,7 @@ const Footer = () => {
           Powered by{" "}
           <NavLink
             target="_blank"
+            rel="noopener noreferrer"
             to="https://elibattistoni.github.io/develysverse/"
             className={classes.linkCredits}
           >

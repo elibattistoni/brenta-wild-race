@@ -12,7 +12,6 @@ module.exports = {
   settings: { react: { version: '18.3' } },
   plugins: ['react-refresh'],
   rules: {
-    'react/jsx-no-target-blank': 'off',
     // The site copy is Italian and full of apostrophes ("dell'evento").
     // ' and " render fine in JSX text; only > and } are real mistakes
     // (a stray tag end or expression brace), so only those are flagged.

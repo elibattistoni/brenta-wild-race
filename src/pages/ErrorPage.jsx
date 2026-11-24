@@ -16,9 +16,6 @@ const ErrorPage = () => {
         <Text size="sm" pb="xl">
           Qualcosa è andato storto.
         </Text>
-        <Text size="lg" pt="xl">
-          Qualcosa è andato storto.
-        </Text>
         <Text size="lg" pt="xs" pb="xl">
           Mi sa che hai sbagliato sentiero. Ti tocca tornare alla partenza! :)
         </Text>

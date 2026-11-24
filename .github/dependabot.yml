@@ -13,7 +13,16 @@ updates:
     open-pull-requests-limit: 5
     cooldown:
       default-days: 7
+    # A package goes to the first group that matches, so the
+    # "must move together" groups come before the catch-all.
     groups:
+      # @mantine/core and @mantine/hooks must always be on the same
+      # version: one PR for all of them, majors included.
+      mantine:
+        patterns: ["@mantine/*"]
+      # Same for react and react-dom (and their types).
+      react:
+        patterns: ["react", "react-dom", "@types/react", "@types/react-dom"]
       npm-minor-and-patch:
         update-types: ["minor", "patch"]
     commit-message:
